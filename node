@@ -11,3 +11,9 @@ echo "Installing Node.js ..."
 
 echo "Installing CoffeeScript ..."
   npm install -g coffee-script
+
+echo "Installing Stylus..."
+  npm install -g stylus
+
+echo "Installing Ender..."
+  npm install -g ender
