@@ -22,9 +22,20 @@ echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
 
 echo "Installing Bundler ..."
   gem install bundler
+  rbenv rehash
+
+echo "Installing Rake ..."
+  gem install rake
+  rbenv rehash
 
 echo "Installing Rails to write and run web applications ..."
   gem install rails --no-rdoc --no-ri
 
+echo "Installing Sinatra ..."
+  gem install sinatra
+
 echo "Installing Serious gem ..."
-  gem serious
+  gem install serious
+
+echo "Installing Awesome Print gem for pretty print debugging ..."
+  gem install awesome_print
