@@ -5,6 +5,8 @@ echo "Installing Node.js ..."
   ./configure --prefix=~/.node
   make
   make install
+  # we'll set the paths for now but won't matter as we have the 
+  # same ones already set in my dotfiles
   echo 'export PATH="$HOME/.node/bin:$PATH"' >> ~/.bash_profile
 
 echo "Installing CoffeeScript ..."
