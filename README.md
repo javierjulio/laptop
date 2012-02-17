@@ -5,5 +5,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 ## Installation
 
  * [Install Xcode 4.2](http://itunes.apple.com/us/app/xcode/id448457090?mt=12) and this will also install Git or install the GitHub for Mac app
+   * If installing Node.js its best to install Xcode since for some reason it binds to CoreData.
+   * Xcode 4.3 now separates CLI tools into a second download. Details: https://gist.github.com/1847012
  * [Install OSX GCC](https://github.com/kennethreitz/osx-gcc-installer/downloads) for Ruby 1.9.3 support as there is [an issue](https://github.com/sstephenson/ruby-build/pull/87) with setting a compiler flag to use ```clang``` from Xcode 4.2.
  * Run `bash < <(curl -s https://raw.github.com/javierjulio/laptop/master/mac)`
