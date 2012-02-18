@@ -1,3 +1,6 @@
+# Try n for Node version management instead of installing by source
+# https://github.com/visionmedia/n
+
 echo "Installing Node.js ..."
   git clone https://github.com/joyent/node.git -b v0.6.7 ~/.node-source
   mkdir ~/.node
