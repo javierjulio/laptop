@@ -9,7 +9,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
    * If installing Node.js its best to install Xcode since for some reason it binds to CoreData.
    * Xcode 4.3 now separates CLI tools into a second download. Details: https://gist.github.com/1847012
  * Start Xcode -> Preferences -> Downloads -> Install command line tools
- * Run `bash < <(curl -s https://raw.github.com/javierjulio/laptop/master/mac)`
+ * Run `bash < <(curl -s https://raw.github.com/javierjulio/laptop/master/laptop)`
  * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
  * Install [IE7-9 Virtual Machines](https://github.com/xdissent/ievms)
    * http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/
