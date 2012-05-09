@@ -7,3 +7,7 @@ if [ -z "${PREFIX}" ]; then
 fi
 
 echo "Installed ruby-build at ${PREFIX}"
+
+# http://stackoverflow.com/questions/2730766/bash-how-to-invoke-command-and-store-the-result-in-a-variable
+location=$(defaults read com.apple.screencapture location;)
+echo $location
