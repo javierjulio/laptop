@@ -12,11 +12,10 @@ echo "Installing ruby-build as an rbenv plugin ..."
   git clone git://github.com/sstephenson/ruby-build.git
   cd ~/
 
-# if we upgrade to 1.9.3 have to make sure GCC is installed
-echo "Installing Ruby 1.9.2 ..."
-  rbenv install 1.9.2-p290
+echo "Installing Ruby 1.9.3-p194 ..."
+  rbenv install 1.9.3-p194
   rbenv rehash
-  rbenv global 1.9.2-p290
+  rbenv global 1.9.3-p194
   # chown -R ~/.rbenv
 
 echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
