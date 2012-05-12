@@ -30,13 +30,16 @@ echo "Installing Rake ..."
   gem install rake
   rbenv rehash
 
-echo "Installing Rails to write and run web applications ..."
-  gem install rails --no-rdoc --no-ri
+echo "Installing Foreman ..."
+  gem install foreman
+
+echo "Installing Rails ..."
+  gem install rails
 
 echo "Installing Sinatra ..."
   gem install sinatra
 
-echo "Installing Serious gem ..."
+echo "Installing Serious ..."
   gem install serious
 
 echo "Installing Awesome Print gem for pretty print debugging ..."
