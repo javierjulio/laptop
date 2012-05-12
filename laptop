@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# git clone git://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
-# cd ~/Projects/dotfiles
-# rake install
+git clone git://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
+cd ~/Projects/dotfiles
+rake install
 
 echo "Checking for SSH key, generating one if it doesn't exist ..."
   [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
