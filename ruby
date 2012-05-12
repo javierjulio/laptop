@@ -1,9 +1,5 @@
 echo "Installing rbenv for managing Ruby versions ..."
   git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
-  # we'll set the paths for now but won't matter as we have the 
-  # same ones already set in my dotfiles
-  echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bash_profile
-  echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
   exec $SHELL
 
 echo "Installing ruby-build as an rbenv plugin ..."
