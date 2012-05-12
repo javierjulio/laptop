@@ -1,4 +1,4 @@
-echo "Installing rbenv for managing Rubies ..."
+echo "Installing rbenv for managing Ruby versions ..."
   git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
   # we'll set the paths for now but won't matter as we have the 
   # same ones already set in my dotfiles
@@ -6,10 +6,11 @@ echo "Installing rbenv for managing Rubies ..."
   echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
   exec $SHELL
 
-echo "Installing ruby-build to complete and install different versions of Ruby ..."
-  git clone git://github.com/sstephenson/ruby-build.git ~/.ruby-build-source
-  export PREFIX=~/.ruby-build
-  ~/.ruby-build-source/install.sh
+echo "Installing ruby-build as an rbenv plugin ..."
+  mkdir -p ~/.rbenv/plugins
+  cd ~/.rbenv/plugins
+  git clone git://github.com/sstephenson/ruby-build.git
+  cd ~/
 
 # if we upgrade to 1.9.3 have to make sure GCC is installed
 echo "Installing Ruby 1.9.2 ..."
