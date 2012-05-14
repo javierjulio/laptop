@@ -17,6 +17,7 @@ echo "Installing Ruby 1.9.3-p194 ..."
 echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
   gem update --system
   gem update
+  rbenv rehash
 
 echo "Installing Bundler ..."
   gem install bundler
@@ -28,15 +29,20 @@ echo "Installing Rake ..."
 
 echo "Installing Foreman ..."
   gem install foreman
+  rbenv rehash
 
 echo "Installing Rails ..."
   gem install rails
+  rbenv rehash
 
 echo "Installing Sinatra ..."
   gem install sinatra
+  rbenv rehash
 
 echo "Installing Serious ..."
   gem install serious
+  rbenv rehash
 
 echo "Installing Awesome Print gem for pretty print debugging ..."
   gem install awesome_print
+  rbenv rehash
