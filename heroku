@@ -1,3 +1,4 @@
 echo "Installing the Heroku gem ..."
   gem install heroku
   rbenv rehash
+  heroku keys:add
