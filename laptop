@@ -25,6 +25,7 @@ export PATH='/usr/local/bin:$PATH'" >> ~/.bash_profile
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   brew install imagemagick
 
+./projects
 
 ./ruby
 
