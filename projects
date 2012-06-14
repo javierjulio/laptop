@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+echo "Cloning GitHub projects ..."
+
+git clone git://github.com/javierjulio/laptop.git ~/Projects/laptop
+
+git clone git://github.com/javierjulio/learning-ruby-the-hard-way.git ~/Projects/learning-ruby-the-hard-way
+
+git clone git://github.com/javierjulio/node-hello-world.git ~/Projects/node-hello-world
+
+git clone git://github.com/javierjulio/now-or-later.git ~/Projects/now-or-later
+
+git clone git://github.com/javierjulio/ruby-notes.git ~/Projects/ruby-notes
+
+git clone git://github.com/javierjulio/ruby-koans-completed.git ~/Projects/ruby-koans
+
+git clone git://github.com/javierjulio/salesforce_bulk.git ~/Projects/salesforce-bulk
+cd ~/Projects/salesforce-bulk
+git remote add upstream git://github.com/jorgevaldivia/salesforce_bulk.git
+git fetch upstream
+git merge upstream/master
+
+git clone git://github.com/javierjulio/serious.git ~/Projects/serious
+cd ~/Projects/serious
+git remote add upstream git://github.com/colszowka/serious.git
+git fetch upstream
+git merge upstream/master
+
+git clone git://github.com/javierjulio/tweet-list.git ~/Projects/tweet-list
+
+git clone git://github.com/javierjulio/website.git ~/Projects/website
