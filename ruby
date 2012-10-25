@@ -1,5 +1,6 @@
 echo "Installing rbenv for managing Ruby versions ..."
   git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+  # no need to export paths as those are in my dotfiles
   exec $SHELL
 
 echo "Installing ruby-build as an rbenv plugin ..."
@@ -8,10 +9,10 @@ echo "Installing ruby-build as an rbenv plugin ..."
   git clone git://github.com/sstephenson/ruby-build.git
   cd ~/
 
-echo "Installing Ruby 1.9.3-p194 ..."
-  rbenv install 1.9.3-p194
+echo "Installing Ruby 1.9.3-p286 ..."
+  rbenv install 1.9.3-p286
   rbenv rehash
-  rbenv global 1.9.3-p194
+  rbenv global 1.9.3-p286
   # chown -R ~/.rbenv
 
 echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
