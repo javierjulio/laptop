@@ -29,6 +29,4 @@ echo "Installing ImageMagick, good for cropping and re-sizing images ..."
 
 ./ruby
 
-./heroku
-
 ./node
