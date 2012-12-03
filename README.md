@@ -10,9 +10,9 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
  * Install [Things for Mac](http://culturedcode.com/things/)
  * Install [Git](http://git-scm.com/downloads)
  * Install purchased apps from Mac App Store
- * [Install Xcode 4.3](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
+ * [Install Xcode 4.5](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
    * If installing Node.js its best to install Xcode since for some reason it binds to CoreData.
-   * Xcode 4.3 now separates CLI tools into a second download. Details: https://gist.github.com/1847012
+   * Xcode 4.5 now separates CLI tools into a second download. Details: https://gist.github.com/1847012
  * Start Xcode -> Preferences -> Downloads -> Install command line tools
  * Run `bash < <(curl -s https://raw.github.com/javierjulio/laptop/master/laptop)`
  * Install Heroku Toolbelt (gem has been sunsetted)
