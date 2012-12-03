@@ -5,12 +5,13 @@ cd ~/Projects/dotfiles
 rake install
 reload
 
-echo "Checking for SSH key, generating one if it doesn't exist ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] || ssh-keygen -t rsa
-
-echo "Copying public key to clipboard. Paste it into your Github account ..."
-  [[ -f ~/.ssh/id_rsa.pub ]] && cat ~/.ssh/id_rsa.pub | pbcopy
-  open https://github.com/account/ssh
+# When using HTTPS and not SSH for git repositories to avoid being prompted 
+# for a login on every push we need to use OSX KeyChain credential caching 
+# https://github.com/blog/1104-credential-caching-for-wrist-friendly-git-usage
+echo "Installing git credential OSX Keychain ..."
+  cd /usr/local/bin
+  curl -O http://github-media-downloads.s3.amazonaws.com/osx/git-credential-osxkeychain
+  git config --global credential.helper osxkeychain
 
 echo "Installing Homebrew, a good OS X package manager ..."
   /usr/bin/ruby -e "$(/usr/bin/curl -fsSL https://raw.github.com/mxcl/homebrew/master/Library/Contributions/install_homebrew.rb)"
