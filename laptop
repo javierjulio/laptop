@@ -24,6 +24,9 @@ echo "Setup git credential osxkeychain ..."
   git config --global credential.helper osxkeychain
   chmod 755 git-credential-osxkeychain
 
+echo "Installing PostgreSQL ..."
+  brew install postgresql
+
 echo "Installing ImageMagick, good for cropping and re-sizing images ..."
   brew install imagemagick
 
