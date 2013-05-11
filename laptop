@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
+echo "Installing my dotfiles ..."
+
 git clone git://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 rake install
 reload
 
-echo "Installing Homebrew, a good OS X package manager ..."
+echo "Installing Homebrew, an OS X package manager ..."
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
   brew update
 
 # Best we use latest version of git and its easiest to install from Homebrew 
 # since it also takes care of installing contrib so we get the credential 
 # osxkeychain and bash completion and prompt
-brew install git
+echo "Installing git ..."
+  brew install git
 
 # When using HTTPS and not SSH for git repositories to avoid being prompted 
 # for a login on every push we need to use OSX KeyChain credential caching 
