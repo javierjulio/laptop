@@ -6,6 +6,7 @@ git clone git://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 rake install
 reload
+cd ~
 
 echo "Installing Homebrew, an OS X package manager ..."
   ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
@@ -27,8 +28,18 @@ echo "Setup git credential osxkeychain ..."
 echo "Installing PostgreSQL ..."
   brew install postgresql
 
-echo "Installing ImageMagick, good for cropping and re-sizing images ..."
+echo "Installing ImageMagick ..."
   brew install imagemagick
+
+# Fix paths so rmagick gem will install successfully
+# https://coderwall.com/p/wnomjg
+if [ -d /usr/local/Cellar/imagemagick/6.8.0-10/lib ]; then
+  echo "Fixing imagemagick 6.8.0-10 lib symlinks so rmagick gem will install successfully."
+  cd /usr/local/Cellar/imagemagick/6.8.0-10/lib
+  ln -s libMagick++-Q16.7.dylib libMagick++.dylib
+  ln -s libMagickCore-Q16.7.dylib libMagickCore.dylib
+  ln -s libMagickWand-Q16.7.dylib libMagickWand.dylib
+fi
 
 ./projects
 
