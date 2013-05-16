@@ -6,10 +6,10 @@ echo "Installing rbenv for managing Ruby versions ..."
 echo "Installing ruby-build as an rbenv plugin ..."
   git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins
 
-echo "Installing Ruby 1.9.3-p392 ..."
-  rbenv install 1.9.3-p392
+echo "Installing Ruby 1.9.3-p429 ..."
+  rbenv install 1.9.3-p429
   rbenv rehash
-  rbenv global 1.9.3-p392
+  rbenv global 1.9.3-p429
   # chown -R ~/.rbenv
 
 echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
