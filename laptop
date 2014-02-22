@@ -9,7 +9,7 @@ reload
 cd ~
 
 echo "Installing Homebrew, an OS X package manager ..."
-  ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   brew update
 
 # Best we use latest version of git and its easiest to install from Homebrew 
