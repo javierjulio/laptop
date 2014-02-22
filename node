@@ -4,7 +4,7 @@
 echo "Installing Node.js ..."
   git clone https://github.com/joyent/node.git ~/.node
   cd ~/.node
-  git checkout v0.8.15
+  git checkout v0.10.26
   # may need to specify CC and CXX (clang) from Xcode 4.5 here
   # https://github.com/joyent/node/wiki/Installation
   ./configure --prefix=~/.node
@@ -14,8 +14,14 @@ echo "Installing Node.js ..."
 echo "Installing CoffeeScript ..."
   npm install -g coffee-script
 
-echo "Installing Stylus..."
+echo "Installing Stylus ..."
   npm install -g stylus
 
-echo "Installing Ender..."
-  npm install -g ender
+echo "Installing Gulp ..."
+  npm install -g gulp
+
+echo "Installing Bower ..."
+  npm install -g bower
+
+echo "Installing Ember Tools ..."
+  npm install -g ember-tools
