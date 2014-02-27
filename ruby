@@ -1,10 +1,10 @@
 echo "Installing rbenv for managing Ruby versions ..."
-  git clone git://github.com/sstephenson/rbenv.git ~/.rbenv
+  git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   # no need to export paths as those are in my dotfiles
   exec $SHELL -l
 
 echo "Installing ruby-build as an rbenv plugin ..."
-  git clone git://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins
+  git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 echo "Installing Ruby 2.1.0 ..."
   rbenv install 2.1.0
