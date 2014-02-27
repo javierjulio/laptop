@@ -2,11 +2,11 @@
 
 echo "Installing my dotfiles ..."
 
-git clone git://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
+git clone https://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
 cd ~/Projects/dotfiles
 rake install
 reload
-cd ~
+home
 
 echo "Installing Homebrew, an OS X package manager ..."
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
