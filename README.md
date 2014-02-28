@@ -8,16 +8,10 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
  * Install [Dropbox](https://www.dropbox.com/)
  * Install [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
  * Install [Things for Mac](http://culturedcode.com/things/)
- * Install [Git](http://git-scm.com/downloads)
  * Install purchased apps from Mac App Store
- * [Install Xcode 4.5](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) or [CLI tools](https://developer.apple.com/downloads/)
-   * If installing Node.js its best to install Xcode since for some reason it binds to CoreData.
-   * Xcode 4.5 now separates CLI tools into a second download. Details: https://gist.github.com/1847012
+ * [Install Xcode](http://itunes.apple.com/us/app/xcode/id497799835?mt=12) or [CLI tools](https://developer.apple.com/downloads/). Seems for Node.js it is best to install Xcode as for some reason it binds to CoreData.
  * Start Xcode -> Preferences -> Downloads -> Install command line tools
- * Run `bash < <(curl -s https://raw.github.com/javierjulio/laptop/master/laptop)` or `git clone git://github.com/javierjulio/laptop.git ~/.laptop` to modify locally
- * Install Heroku Toolbelt (gem has been sunsetted)
-   * http://blog.heroku.com/archives/2012/10/15/upgrading-to-the-heroku-toolbelt/
-   * https://toolbelt.heroku.com/
+ * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop && cd ~/Projects/laptop && ./laptop`
+ * Install [Heroku Toolbelt](https://toolbelt.heroku.com/)
  * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
- * Install [IE7-9 Virtual Machines](https://github.com/xdissent/ievms)
-   * http://osxdaily.com/2011/09/04/internet-explorer-for-mac-ie7-ie8-ie-9-free/
+ * Install [IE9-10 Virtual Machines](https://github.com/xdissent/ievms)
