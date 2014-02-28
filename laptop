@@ -8,31 +8,21 @@ rake install
 reload
 home
 
-echo "Installing Homebrew, an OS X package manager ..."
+echo "Installing Homebrew ..."
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   brew update
 
-# Best we use latest version of git and its easiest to install from Homebrew 
-# since it also takes care of installing contrib so we get the credential 
-# osxkeychain and bash completion and prompt
-echo "Installing git ..."
-  brew install git
+brew install git
 
-# When using HTTPS and not SSH for git repositories to avoid being prompted 
-# for a login on every push we need to use OSX KeyChain credential caching 
-# https://github.com/blog/1104-credential-caching-for-wrist-friendly-git-usage
-echo "Setup git credential osxkeychain ..."
-  git config --global credential.helper osxkeychain
-  chmod 755 git-credential-osxkeychain
+brew install bash-completion
 
 echo "Installing PostgreSQL ..."
-  brew install postgresql
+brew install postgresql
 
 echo "Installing ImageMagick ..."
-  brew install imagemagick
+brew install imagemagick
 
-# Fix paths so rmagick gem will install successfully
-# https://coderwall.com/p/wnomjg
+# Fix paths so rmagick gem will install successfully (https://coderwall.com/p/wnomjg)
 if [ -d /usr/local/Cellar/imagemagick/6.8.0-10/lib ]; then
   echo "Fixing imagemagick 6.8.0-10 lib symlinks so rmagick gem will install successfully."
   cd /usr/local/Cellar/imagemagick/6.8.0-10/lib
@@ -41,8 +31,10 @@ if [ -d /usr/local/Cellar/imagemagick/6.8.0-10/lib ]; then
   ln -s libMagickWand-Q16.7.dylib libMagickWand.dylib
 fi
 
-./projects
+source ./projects
 
-./ruby
+source ./ruby
 
-./node
+source ./node
+
+source ./coda
