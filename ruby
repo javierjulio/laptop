@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "Installing rbenv for managing Ruby versions ..."
   git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
   # no need to export paths as those are in my dotfiles
@@ -17,30 +19,6 @@ echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
   gem update
   rbenv rehash
 
-echo "Installing Bundler ..."
-  gem install bundler
-  rbenv rehash
-
-echo "Installing Rake ..."
-  gem install rake
-  rbenv rehash
-
-echo "Installing Foreman ..."
-  gem install foreman
-  rbenv rehash
-
-echo "Installing Rails ..."
-  gem install rails
-  rbenv rehash
-
-echo "Installing Sinatra ..."
-  gem install sinatra
-  rbenv rehash
-
-echo "Installing Serious ..."
-  gem install serious
-  rbenv rehash
-
-echo "Installing Awesome Print ..."
-  gem install awesome_print
+echo "Installing common gems ..."
+  gem install bundler rake foreman sinatra serious awesome_print rails
   rbenv rehash
