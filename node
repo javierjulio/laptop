@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Try n for Node version management instead of installing by source
 # https://github.com/visionmedia/n
 
@@ -11,20 +13,5 @@ echo "Installing Node.js ..."
   make
   make install
 
-echo "Installing Gulp ..."
-  npm install -g gulp
-
-echo "Installing Grunt ..."
-  npm install -g grunt-cli
-
-echo "Installing Bower ..."
-  npm install -g bower
-
-echo "Installing CoffeeScript ..."
-  npm install -g coffee-script
-
-echo "Installing Stylus ..."
-  npm install -g stylus
-
-echo "Installing Ember Tools ..."
-  npm install -g ember-tools
+echo "Installing common npm packages ..."
+  npm install -g gulp grunt-cli bower coffee-script stylus ember-tools
