@@ -2,26 +2,10 @@
 
 echo "Cloning GitHub projects ..."
 
-git clone https://github.com/javierjulio/website.git ~/Projects/website
+projects=( website textarea-auto-expand CustomBadge featured-carousel lightbox2 browser-bug-reports exercism node-hello-world )
 
-git clone https://github.com/javierjulio/textarea-auto-expand.git ~/Projects/textarea-auto-expand
-
-git clone https://github.com/javierjulio/CustomBadge.git ~/Projects/CustomBadge
+for project in "${projects[@]}"; do
+  git clone "https://github.com/javierjulio/$project.git" "$HOME/Projects/$project"
+done
 
 git clone https://github.com/9mmedia/charcutio-web.git ~/Projects/charcutio-web
-
-git clone https://github.com/javierjulio/featured-carousel.git ~/Projects/featured-carousel
-
-git clone https://github.com/javierjulio/lightbox2.git ~/Projects/lightbox2
-
-git clone https://github.com/javierjulio/browser-bug-reports.git ~/Projects/browser-bug-reports
-
-git clone https://github.com/javierjulio/exercism.git ~/Projects/exercism
-
-git clone https://github.com/javierjulio/node-hello-world.git ~/Projects/node-hello-world
-
-git clone https://github.com/javierjulio/serious.git ~/Projects/serious
-cd ~/Projects/serious
-git remote add upstream https://github.com/colszowka/serious.git
-git fetch upstream
-git merge upstream/master
