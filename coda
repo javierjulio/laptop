@@ -1,0 +1,5 @@
+cd ~/Library/Application\ Support/Coda\ 2/Modes/
+
+git clone https://github.com/wwjamieson3/Coda2-bash-mode.git Bash.mode
+
+git clone https://github.com/caseywebdev/CoffeeScript.mode.git
