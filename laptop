@@ -13,8 +13,9 @@ echo "Installing Homebrew ..."
   brew update
 
 brew install git
-
 brew install bash-completion
+brew install grc # http://wynnnetherland.com/journal/a-stylesheet-author-s-guide-to-terminal-colors
+brew install gawk # used for matching for colorizing (e.g. match-todos)
 
 echo "Installing PostgreSQL ..."
 brew install postgresql
