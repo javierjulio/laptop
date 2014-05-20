@@ -14,4 +14,4 @@ echo "Installing Node.js ..."
   make install
 
 echo "Installing common npm packages ..."
-  npm install -g gulp grunt-cli bower coffee-script stylus ember-tools
+  npm install -g gulp grunt-cli bower coffee-script stylus ember-cli
