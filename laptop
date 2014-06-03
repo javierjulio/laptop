@@ -25,9 +25,9 @@ brew install pkgconfig
 brew install imagemagick
 
 # Fix paths so rmagick gem will install successfully (https://coderwall.com/p/wnomjg)
-if [ -d /usr/local/Cellar/imagemagick/6.8.0-10/lib ]; then
-  echo "Fixing imagemagick 6.8.0-10 lib symlinks so rmagick gem will install successfully."
-  cd /usr/local/Cellar/imagemagick/6.8.0-10/lib
+if [ -d /usr/local/Cellar/imagemagick/6.8.9-1/lib ]; then
+  echo "Fixing imagemagick 6.8.9-1 lib symlinks so rmagick gem will install successfully."
+  cd /usr/local/Cellar/imagemagick/6.8.9-1/lib
   ln -s libMagick++-Q16.7.dylib libMagick++.dylib
   ln -s libMagickCore-Q16.7.dylib libMagickCore.dylib
   ln -s libMagickWand-Q16.7.dylib libMagickWand.dylib
