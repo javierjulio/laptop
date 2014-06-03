@@ -12,6 +12,7 @@ echo "Installing Node.js ..."
   ./configure --prefix=~/.node
   make
   make install
+  reload
 
 echo "Installing common npm packages ..."
   npm install -g gulp grunt-cli bower coffee-script stylus ember-cli
