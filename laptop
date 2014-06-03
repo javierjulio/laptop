@@ -21,6 +21,7 @@ echo "Installing PostgreSQL ..."
 brew install postgresql
 
 echo "Installing ImageMagick ..."
+brew install pkgconfig
 brew install imagemagick
 
 # Fix paths so rmagick gem will install successfully (https://coderwall.com/p/wnomjg)
