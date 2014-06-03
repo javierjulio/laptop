@@ -5,10 +5,10 @@ echo "Installing pyenv for managing Python versions ..."
   # no need to export paths as those are in my dotfiles
   exec $SHELL -l
 
-echo "Installing Python 3.4.0 ..."
-  pyenv install 3.4.0
+echo "Installing Python 3.4.1 ..."
+  pyenv install 3.4.1
   pyenv rehash
-  pyenv global 3.4.0
+  pyenv global 3.4.1
   # chown -R ~/.pyenv
 
 echo "Updating PIP and default eggs for Python" `pyenv global` "..."
