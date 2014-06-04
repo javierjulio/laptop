@@ -20,5 +20,5 @@ echo "Updating RubyGems and default gems for Ruby" `rbenv global` "..."
   rbenv rehash
 
 echo "Installing common gems ..."
-  gem install bundler rake foreman sinatra serious awesome_print rails
+  gem install bundler rake foreman sinatra serious awesome_print rails pry
   rbenv rehash
