@@ -7,3 +7,15 @@ projects=( website textarea-autosize browser-bug-reports exercism node-hello-wor
 for project in "${projects[@]}"; do
   git clone "https://github.com/javierjulio/$project.git" "$HOME/Projects/$project"
 done
+
+
+echo -e "\nSetup SSH key with retrieved Heroku passphrase ...\n"
+
+ssh-keygen -t rsa -C "jjfutbol@gmail.com" -f "/Users/javierjulio/.ssh/heroku-javierjulio_rsa"
+
+echo -e "\nAdd SSH key locally so Heroku CLI functions ...\n"
+
+ssh-add -K ~/.ssh/heroku-javierjulio_rsa
+
+heroku login
+heroku keys:add
