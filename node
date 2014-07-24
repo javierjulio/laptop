@@ -1,9 +1,16 @@
 #!/usr/bin/env bash
 
+shopt -s expand_aliases
+source ~/.bashrc
+reload
+
 # Try n for Node version management instead of installing by source
 # https://github.com/visionmedia/n
 
-echo "Installing Node.js ..."
+if [ -d ~/.node ]; then
+  echo -e "\nNode.js `node --version` already installed."
+else
+  echo -e "\nInstalling Node.js..."
   git clone https://github.com/joyent/node.git ~/.node
   cd ~/.node
   git checkout v0.10.28
@@ -14,5 +21,6 @@ echo "Installing Node.js ..."
   make install
   reload
 
-echo "Installing common npm packages ..."
+  echo -e "\nInstalling common npm packages..."
   npm install -g gulp grunt-cli bower coffee-script stylus ember-cli
+fi

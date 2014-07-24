@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo -e "\nUpdating Cloud 66 toolbelt..."
+
+curl https://app.cloud66.com/toolbelt/osx -L -o cloud66.zip
+
+unzip cloud66.zip
+
+cp cx_*_darwin_amd64/cx ~/Projects/dotfiles/bin/cx
+
+rm -rf cloud66.zip cx_*_darwin_amd64

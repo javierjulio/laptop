@@ -1,4 +1,10 @@
-cd ~/Library/Application\ Support/Coda\ 2/Modes/
+#!/usr/bin/env bash
+
+cd "$HOME/Library/Application Support/Coda 2/Modes/"
+
+rm -rf Bash.mode CoffeeScript.mode
+
+echo -e "\nInstalling Coda 2 Syntax Modes..."
 
 git clone https://github.com/wwjamieson3/Coda2-bash-mode.git Bash.mode
 mv Bash.mode/bash.mode/* Bash.mode/

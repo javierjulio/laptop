@@ -1,42 +1,44 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-echo "Installing my dotfiles ..."
-
-git clone https://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
-cd ~/Projects/dotfiles
-rake install
-reload
-home
-
-echo "Installing Homebrew ..."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  brew update
-
-brew install git
-brew install bash-completion
-brew install grc # http://wynnnetherland.com/journal/a-stylesheet-author-s-guide-to-terminal-colors
-brew install gawk # used for matching for colorizing (e.g. match-todos)
-
-echo "Installing PostgreSQL ..."
-brew install postgresql
-
-echo "Installing ImageMagick ..."
-brew install pkgconfig
-brew install imagemagick
-
-# Fix paths so rmagick gem will install successfully (https://coderwall.com/p/wnomjg)
-if [ -d /usr/local/Cellar/imagemagick/6.8.9-1/lib ]; then
-  echo "Fixing imagemagick 6.8.9-1 lib symlinks so rmagick gem will install successfully."
-  cd /usr/local/Cellar/imagemagick/6.8.9-1/lib
-  ln -s libMagick++-Q16.7.dylib libMagick++.dylib
-  ln -s libMagickCore-Q16.7.dylib libMagickCore.dylib
-  ln -s libMagickWand-Q16.7.dylib libMagickWand.dylib
+if [ -d ~/Projects/dotfiles ]; then
+  echo "My dotfiles already installed."
+else
+  echo "Installing my dotfiles..."
+  git clone https://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
+  cd ~/Projects/dotfiles
+  rake install
 fi
 
-source ./projects
+shopt -s expand_aliases
+source ~/.bashrc
+reload
 
-source ./ruby
+if type brew &>/dev/null; then
+  echo -e "\nUpdating Homebrew formula..."
+  brew update
+else
+  echo -e "\nInstalling Homebrew..."
+  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+fi
 
-source ./node
+# grc - http://wynnnetherland.com/journal/a-stylesheet-author-s-guide-to-terminal-colors
+# gawk - used for matching for colorizing (e.g. match-todos)
+brew install git bash-completion grc gawk pkgconfig ghostscript imagemagick postgresql
 
-source ./coda
+echo -e "\nRead following Postgres info to setup auto start."
+pause_and_prompt_to_continue
+
+brew info postgresql
+
+pause_and_prompt_to_continue
+
+cd ~/Projects/laptop
+
+./cloud66
+./projects
+./ruby
+./python
+./node
+./coda
+
+echo -e "\nDone."

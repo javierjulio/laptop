@@ -1,17 +1,27 @@
 #!/usr/bin/env bash
 
-echo "Installing pyenv for managing Python versions ..."
+shopt -s expand_aliases
+source ~/.bashrc
+reload
+
+if [ -d ~/.pyenv ]; then
+  echo -e "\nUpdating pyenv..."
+  cd ~/.pyenv
+  git pull
+else
+  echo -e "\nInstalling pyenv..."
   git clone https://github.com/yyuu/pyenv.git ~/.pyenv
   # no need to export paths as those are in my dotfiles
-  exec $SHELL -l
+  reload
 
-echo "Installing Python 3.4.1 ..."
+  echo -e "\nInstalling Python 3.4.1..."
   pyenv install 3.4.1
   pyenv rehash
   pyenv global 3.4.1
   # chown -R ~/.pyenv
 
-echo "Updating PIP and default eggs for Python" `pyenv global` "..."
+  echo -e "\nUpdating PIP and default eggs for Python" `pyenv global` "..."
   pip install --upgrade pip
   pip install plumbum
   pyenv rehash
+fi
