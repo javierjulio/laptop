@@ -2,7 +2,7 @@
 
 echo -e "\nCloning GitHub projects..."
 
-projects=( website textarea-autosize browser-bug-reports exercism node-hello-world )
+projects=( website textarea-autosize browser-bug-reports exercism node-hello-world sinatra-blog )
 
 for project in "${projects[@]}"; do
   git clone "https://github.com/javierjulio/$project.git" "$HOME/Projects/$project" &>/dev/null
