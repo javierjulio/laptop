@@ -1,16 +1,16 @@
 #!/bin/bash
 
-if [ -d ~/Projects/dotfiles ]; then
+if [ -d $HOME/Projects/dotfiles ]; then
   echo "My dotfiles already installed."
 else
   echo "Installing my dotfiles..."
-  git clone https://github.com/javierjulio/dotfiles.git ~/Projects/dotfiles
-  cd ~/Projects/dotfiles
+  git clone https://github.com/javierjulio/dotfiles.git $HOME/Projects/dotfiles
+  cd $HOME/Projects/dotfiles
   rake install
 fi
 
 shopt -s expand_aliases
-source ~/.bashrc
+source $HOME/.bashrc
 reload
 
 if type brew &>/dev/null; then
@@ -32,7 +32,7 @@ brew info postgresql
 
 pause_and_prompt_to_continue
 
-cd ~/Projects/laptop
+cd $HOME/Projects/laptop
 
 ./cloud66
 ./projects

@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
 
 shopt -s expand_aliases
-source ~/.bashrc
+source $HOME/.bashrc
 reload
 
-if [ -d ~/.nvm ]; then
+NVM_PREFIX="$HOME/.nvm"
+
+if [ -d $NVM_PREFIX ]; then
   echo -e "\nUpdating nvm..."
-  cd ~/.nvm
+  cd $NVM_PREFIX
   git pull
   reload
   echo -e "\nUsing Node.js" `nvm current` "..."
 else
   echo -e "\nInstalling nvm..."
-  git clone https://github.com/creationix/nvm.git ~/.nvm
+  git clone https://github.com/creationix/nvm.git $NVM_PREFIX
   reload
 
   nvm install 0.10

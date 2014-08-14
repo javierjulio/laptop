@@ -6,6 +6,6 @@ curl https://app.cloud66.com/toolbelt/osx -L -o cloud66.zip
 
 unzip cloud66.zip
 
-cp cx_*_darwin_amd64/cx ~/Projects/dotfiles/bin/cx
+cp cx_*_darwin_amd64/cx $HOME/Projects/dotfiles/bin/cx
 
 rm -rf cloud66.zip cx_*_darwin_amd64
