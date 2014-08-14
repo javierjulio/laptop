@@ -39,6 +39,7 @@ cd ~/Projects/laptop
 ./ruby
 ./python
 ./node
+./bats
 ./coda
 
 echo -e "\nDone."
