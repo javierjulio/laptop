@@ -6,7 +6,7 @@ if [ -z "${PREFIX}" ]; then
   PREFIX="/usr/local"
 fi
 
-echo "Installed ruby-build at ${PREFIX}"
+echo "Prefix at ${PREFIX}"
 
 
 # http://stackoverflow.com/questions/1989439/bash-function-to-prompt-for-and-return-input
