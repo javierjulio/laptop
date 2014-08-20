@@ -1,11 +1,15 @@
 #!/bin/bash
 
-if [ -d $HOME/Projects/dotfiles ]; then
+DOTFILES_PATH="$HOME/Projects/dotfiles"
+LAPTOP_PATH="$HOME/Projects/laptop"
+
+
+if [ -d "$DOTFILES_PATH" ]; then
   echo "My dotfiles already installed."
 else
   echo "Installing my dotfiles..."
-  git clone https://github.com/javierjulio/dotfiles.git $HOME/Projects/dotfiles
-  cd $HOME/Projects/dotfiles
+  git clone https://github.com/javierjulio/dotfiles.git "$DOTFILES_PATH"
+  cd "$DOTFILES_PATH"
   rake install
 fi
 
@@ -32,7 +36,7 @@ brew info postgresql
 
 pause_and_prompt_to_continue
 
-cd $HOME/Projects/laptop
+cd "$LAPTOP_PATH"
 
 ./cloud66
 ./projects
