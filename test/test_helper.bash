@@ -5,11 +5,11 @@ FIXTURES_ROOT="${BATS_TEST_DIRNAME}/fixtures"
 
 export PATH="${SCRIPT_ROOT}:${FIXTURES_ROOT}:$PATH"
 
-LAPTOP_TEST_DIR="${BATS_TMPDIR}/laptop"
+LAPTOP_TEST_DIR="${BATS_TEST_DIRNAME}/tmp"
 
 dump() {
   rm -f "${SCRIPT_ROOT}/log.txt"
-  echo "$1" >> "${SCRIPT_ROOT}/log.txt"
+  echo "$@" >> "${SCRIPT_ROOT}/log.txt"
 }
 
 teardown() {
