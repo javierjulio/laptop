@@ -3,7 +3,7 @@
 load test_helper
 
 setup() {
-  export HOME="${LAPTOP_TEST_DIR}"
+  common_setup
   export CODA_DIR="${HOME}"
 }
 
