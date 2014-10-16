@@ -44,6 +44,5 @@ cd "$LAPTOP_PATH"
 ./python
 ./node
 ./bats
-./coda
 
 echo -e "\nDone."
