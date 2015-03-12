@@ -6,12 +6,19 @@ if [ -z "$CLOUD66_DIR" ]; then
   CLOUD66_DIR="$HOME/Projects/dotfiles/bin"
 fi
 
-echo -e "\nInstalling latest Cloud 66 toolbelt..."
+CX_PREFIX="$HOME/.bin/cx"
 
-curl https://app.cloud66.com/toolbelt/osx -L -o cloud66.zip
+if [ -f "$CX_PREFIX" ]; then
+  echo -e "\nUpdating Cloud 66 toolbelt..."
+  cx update
+else
+  echo -e "\nInstalling latest Cloud 66 toolbelt..."
 
-unzip cloud66.zip
+  curl https://app.cloud66.com/toolbelt/osx -L -o cloud66.zip
 
-cp cx_*_darwin_amd64/cx "$CLOUD66_DIR"
+  unzip cloud66.zip
 
-rm -rf cloud66.zip cx_*_darwin_amd64
+  cp cx_*_darwin_amd64/cx "$CLOUD66_DIR"
+
+  rm -rf cloud66.zip cx_*_darwin_amd64
+fi
