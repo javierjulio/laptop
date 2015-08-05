@@ -4,7 +4,7 @@ echo -e "\nCloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
-projects=( website textarea-autosize browser-bug-reports exercism node-hello-world sinatra-blog )
+projects=( javierjulio.github.io website textarea-autosize browser-bug-reports exercism )
 
 for project in "${projects[@]}"; do
   git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$project" &>/dev/null
