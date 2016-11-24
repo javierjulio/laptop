@@ -33,7 +33,7 @@ if [ ! -d $RUBY_BUILD_PREFIX ]; then
   git clone https://github.com/sstephenson/ruby-build.git $RUBY_BUILD_PREFIX
 
   echo -e "\nInstalling Ruby 2.3.1..."
-  rbenv install 2.3.1
+  RUBY_CONFIGURE_OPTS=--with-openssl-dir=/usr/local/opt/openssl rbenv install -s 2.3.1
   rbenv global 2.3.1
   # chown -R $RBENV_PREFIX
 
