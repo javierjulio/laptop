@@ -32,9 +32,9 @@ if [ ! -d $RUBY_BUILD_PREFIX ]; then
   echo -e "\nInstalling ruby-build..."
   git clone https://github.com/sstephenson/ruby-build.git $RUBY_BUILD_PREFIX
 
-  echo -e "\nInstalling Ruby 2.2.1..."
-  rbenv install 2.2.1
-  rbenv global 2.2.1
+  echo -e "\nInstalling Ruby 2.3.1..."
+  rbenv install 2.3.1
+  rbenv global 2.3.1
   # chown -R $RBENV_PREFIX
 
   echo -e "\nUpdating system and default gems for Ruby" `rbenv global` "..."
@@ -42,7 +42,7 @@ if [ ! -d $RUBY_BUILD_PREFIX ]; then
   gem update
 
   echo -e "\nInstalling common gems..."
-  gem install bundler foreman sinatra serious awesome_print rails pry
+  gem install bundler foreman rails
 fi
 
 echo -e "\nUpdating rbenv and all installed plugins..."
