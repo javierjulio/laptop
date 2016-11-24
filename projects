@@ -4,7 +4,7 @@ echo -e "\nCloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
-projects=( javierjulio.github.io website textarea-autosize browser-bug-reports exercism )
+projects=( javierjulio.github.io website textarea-autosize synapse_payments paysafe activeadmin )
 
 for project in "${projects[@]}"; do
   git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$project" &>/dev/null
@@ -14,11 +14,8 @@ for project in "${projects[@]}"; do
     echo "Cloned $project successfully."
   fi
 
-  # HTTP GIT now default for Heroku (no SSH auth needed as before)
-  # https://blog.heroku.com/archives/2014/12/5/http_git_now_generally_available
-
   if [ "$project" == "website" ]; then
-    ( cd "$PROJECTS_PREFIX/$project" ; heroku git:remote )
+    ( cd "$PROJECTS_PREFIX/$project" ; heroku git:remote --app javierjulio )
   fi
 
 done
