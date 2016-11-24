@@ -27,7 +27,7 @@ fi
 
 # grc - http://wynnnetherland.com/journal/a-stylesheet-author-s-guide-to-terminal-colors
 # gawk - used for matching for colorizing (e.g. match-todos)
-brew install git git-lfs bash-completion grc gawk pkgconfig ghostscript imagemagick postgresql redis
+brew install git git-lfs bash-completion grc gawk pkgconfig ghostscript imagemagick postgresql postgis redis
 
 # Git LFS is a command line extension and specification for managing large files with Git.
 git lfs install --force
