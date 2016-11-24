@@ -3,7 +3,6 @@
 DOTFILES_PATH="$HOME/Projects/dotfiles"
 LAPTOP_PATH="$HOME/Projects/laptop"
 
-
 if [ -d "$DOTFILES_PATH" ]; then
   echo "My dotfiles already installed."
 else
@@ -25,12 +24,14 @@ else
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 fi
 
-# grc - http://wynnnetherland.com/journal/a-stylesheet-author-s-guide-to-terminal-colors
-# gawk - used for matching for colorizing (e.g. match-todos)
-brew install git git-lfs bash-completion grc gawk pkgconfig ghostscript imagemagick postgresql postgis redis
+brew install git git-lfs bash-completion grc pkgconfig ghostscript imagemagick
+brew install openssl
+brew install libyaml # should come after openssl
 
 # Git LFS is a command line extension and specification for managing large files with Git.
 git lfs install --force
+
+brew install postgresql postgis redis
 
 echo -e "\nRead following Postgres info to setup auto start."
 pause_and_prompt_to_continue
