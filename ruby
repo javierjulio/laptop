@@ -6,7 +6,6 @@ reload
 
 RBENV_PREFIX="$HOME/.rbenv"
 RBENV_UPDATE_PREFIX="$HOME/.rbenv/plugins/rbenv-update"
-RBENV_GEM_REHASH_PREFIX="$HOME/.rbenv/plugins/rbenv-gem-rehash"
 RUBY_BUILD_PREFIX="$HOME/.rbenv/plugins/ruby-build"
 
 if [ ! -d $RBENV_PREFIX ]; then
@@ -22,17 +21,13 @@ if [ ! -d $RBENV_UPDATE_PREFIX ]; then
   git clone https://github.com/rkh/rbenv-update.git $RBENV_UPDATE_PREFIX
 fi
 
-if [ ! -d $RBENV_GEM_REHASH_PREFIX ]; then
-  echo -e "\nInstalling rbenv-gem-rehash..."
-  # never have to run rbenv rehash again
-  git clone https://github.com/sstephenson/rbenv-gem-rehash.git $RBENV_GEM_REHASH_PREFIX
-fi
-
 if [ ! -d $RUBY_BUILD_PREFIX ]; then
   echo -e "\nInstalling ruby-build..."
   git clone https://github.com/sstephenson/ruby-build.git $RUBY_BUILD_PREFIX
 
   echo -e "\nInstalling Ruby 2.3.1..."
+  # For more info on specifying openssl path
+  # https://github.com/thoughtbot/laptop/commit/c8dca7705b5c4e272d12a903f9d65a3ae01f2498
   RUBY_CONFIGURE_OPTS=--with-openssl-dir=/usr/local/opt/openssl rbenv install -s 2.3.1
   rbenv global 2.3.1
   # chown -R $RBENV_PREFIX
@@ -45,5 +40,5 @@ if [ ! -d $RUBY_BUILD_PREFIX ]; then
   gem install bundler foreman rails
 fi
 
-echo -e "\nUpdating rbenv and all installed plugins..."
+echo -e "\nUpdating rbenv and plugins..."
 rbenv update
