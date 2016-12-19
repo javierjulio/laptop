@@ -2,13 +2,11 @@
 
 set -e
 
-if [ -z "$CLOUD66_DIR" ]; then
-  CLOUD66_DIR="$HOME/Projects/dotfiles/bin"
+if [ -z "$CX_PREFIX" ]; then
+  CX_PREFIX="$HOME/.bin"
 fi
 
-CX_PREFIX="$HOME/.bin/cx"
-
-if [ -f "$CX_PREFIX" ]; then
+if [ -f "$CX_PREFIX/cx" ]; then
   echo -e "\nUpdating Cloud 66 toolbelt..."
   cx update
 else
@@ -18,7 +16,7 @@ else
 
   unzip cloud66.zip
 
-  cp cx_*_darwin_amd64/cx "$CLOUD66_DIR"
+  cp cx_*_darwin_amd64/cx "$CX_PREFIX"
 
   rm -rf cloud66.zip cx_*_darwin_amd64
 fi

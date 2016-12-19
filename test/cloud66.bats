@@ -4,7 +4,7 @@ load test_helper
 
 setup() {
   common_setup
-  export CLOUD66_DIR="${HOME}"
+  export CX_PREFIX="${HOME}"
   export PATH="${HOME}:$PATH"
 }
 
