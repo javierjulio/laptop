@@ -16,7 +16,11 @@ shopt -s expand_aliases
 source $HOME/.profile
 reload
 
-if type brew &>/dev/null; then
+command_exists () {
+  type -P "$1" &> /dev/null ;
+}
+
+if command_exists brew ; then
   echo -e "\nUpdating Homebrew formula..."
   brew update
 else
