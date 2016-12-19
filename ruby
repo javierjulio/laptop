@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 shopt -s expand_aliases
-source $HOME/.bashrc
+source $HOME/.profile
 reload
 
 RBENV_PREFIX="$HOME/.rbenv"

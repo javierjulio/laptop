@@ -13,7 +13,7 @@ else
 fi
 
 shopt -s expand_aliases
-source $HOME/.bashrc
+source $HOME/.profile
 reload
 
 if type brew &>/dev/null; then
