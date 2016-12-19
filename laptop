@@ -45,7 +45,6 @@ cd "$LAPTOP_PATH"
 ./cloud66
 ./projects
 ./ruby
-./python
 ./node
 ./bats
 
