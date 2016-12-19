@@ -53,7 +53,8 @@ alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
 alias p='cd ~/Projects'
 alias projects='cd ~/Projects'
-alias dotfiles='cd ~/Projects/dotfiles'
+alias laptop='cd ~/Projects/laptop'
+alias dotfiles='cd ~/Projects/laptop/dotfiles'
 alias jj='cd ~/Projects/javierjulio'
 
 
