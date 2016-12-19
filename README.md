@@ -5,17 +5,29 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 ## Installation
 
  * Run Software Update
- * Install [Dropbox](https://www.dropbox.com/) and [Things for Mac](http://culturedcode.com/things/)
- * Install purchased apps from Mac App Store including 1Password and [Xcode](http://itunes.apple.com/us/app/xcode/id497799835?mt=12)
  * `xcode-select --install` to install Command Line Developer Tools
- * Use [Terminal Ocean Dark Theme](https://github.com/mdo/ocean-terminal)
- * Install [Heroku Toolbelt](https://toolbelt.heroku.com/)
+ * Use [Terminal Ocean Dark Theme](https://github.com/mdo/ocean-terminal) and update font to Menlo Regular 12 pt.
  * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
  * `cd ~/Projects/laptop && ./laptop`
- * Install [Visual Studio Code](https://code.visualstudio.com/) and install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and provide GitHub access token
- * Install a Postgres Mac app: [PSequel](http://www.psequel.com), [Postico](https://eggerapps.at/postico/), [DBGlass](http://dbglass.web-pal.com) and [SQLPro for Postgres](http://macpostgresclient.com). Stick with PSequel for now.
+ * Install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) for Visual Studio Code and provide GitHub access token
+ * Install a Postgres Mac app: [PSequel](http://www.psequel.com), [Postico](https://eggerapps.at/postico/), [DBGlass](http://dbglass.web-pal.com) and [SQLPro for Postgres](http://macpostgresclient.com).
 
 ### Optional
 
- * Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
- * Install [IE9-10 Virtual Machines](https://github.com/xdissent/ievms)
+For IE browser testing use [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [IE Virtual Machines](https://github.com/xdissent/ievms)
+
+## Dotfiles
+
+Create a `~/.bash_local` file for system specific settings as existing `~/.profile` will load it if it exists.
+
+### Resources
+
+* https://github.com/ascarter/dotfiles
+* https://github.com/holman/dotfiles
+* https://github.com/rtomayko/dotfiles
+* https://github.com/ryanb/dotfiles
+* https://github.com/minhajuddin/dotfiles
+* https://github.com/mathiasbynens/dotfiles
+* https://github.com/gf3/dotfiles
+* https://github.com/janmoesen/tilde
+* https://github.com/krishicks/dotfiles
