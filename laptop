@@ -27,18 +27,10 @@ fi
 brew install git git-lfs bash-completion grc pkgconfig ghostscript imagemagick
 brew install openssl
 brew install libyaml # should come after openssl
+brew install postgresql postgis redis
 
 # Git LFS is a command line extension and specification for managing large files with Git.
 git lfs install --force
-
-brew install postgresql postgis redis
-
-echo -e "\nRead following Postgres info to setup auto start."
-pause_and_prompt_to_continue
-
-brew info postgresql
-
-pause_and_prompt_to_continue
 
 cd "$LAPTOP_PATH"
 
