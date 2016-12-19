@@ -17,8 +17,8 @@ else
   git clone https://github.com/creationix/nvm.git $NVM_PREFIX
   reload
 
-  nvm install 7.2.0
-  nvm alias default 7.2.0
+  nvm install 7.2.1
+  nvm alias default 7.2.1
 
   echo -e "\nInstalling common npm packages..."
   npm install -g gulp bower ember-cli
