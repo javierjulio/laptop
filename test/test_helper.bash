@@ -8,7 +8,7 @@ export PATH="${SCRIPT_ROOT}:${FIXTURES_ROOT}:$PATH"
 TMP_DIR="${BATS_TEST_DIRNAME}/tmp"
 
 dump() {
-  rm -f "${SCRIPT_ROOT}/log.txt"
+  # rm -f "${SCRIPT_ROOT}/log.txt"
   echo "$@" >> "${SCRIPT_ROOT}/log.txt"
 }
 
