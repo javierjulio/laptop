@@ -1,0 +1,46 @@
+[user]
+	name = Javier Julio
+	email = jjfutbol@gmail.com
+[credential]
+  helper = osxkeychain
+[core]
+	excludesfile = ~/.gitignore
+[color]
+  ui = auto
+  branch = auto
+[color "diff"]
+  meta = yellow bold
+  frag = magenta bold
+  old = red bold
+  new = green bold
+[color "status"]
+  added = yellow
+  changed = green
+  untracked = cyan
+[alias]
+  # Show list of all aliases in this file.
+  a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  b = branch
+  db = branch -D
+  nb = checkout -b
+  ci = commit
+  co = checkout
+  cgl = config --global --list
+  f = fetch
+  fo = fetch origin
+  go = checkout -B
+  lg = log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
+  lg2 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+  p = push
+  po = push origin
+  pos = push origin staging
+  pom = push origin master
+  phm = push heroku master
+  r = rebase
+  rb = rebase
+  ros = rebase origin/staging
+  rom = rebase origin/master
+  s = status
+  todos = !"git ls-files | xargs match-todos | awk -F: '{ print $1,$2; print $3,$4; print $5}' | grcat conf.todos"
+  # Undo the last commit but keep changes intact.
+  uci = reset --soft HEAD^

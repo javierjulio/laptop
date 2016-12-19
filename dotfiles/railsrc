@@ -1,0 +1,40 @@
+#!/usr/bin/ruby
+#
+# Resources
+# http://ozmm.org/posts/railsrc.html
+# http://rbjl.net/49-railsrc-rails-console-snippets
+
+if defined?(Rails)
+  ActiveRecord::Base.logger = Logger.new(STDOUT)
+  ActionController::Base.logger = Logger.new(STDOUT)
+end
+
+# Show the date/time format strings defined and example output
+# http://www.onrails.org/2008/08/20/what-are-all-the-rails-date-formats
+def date_formats
+  now = Time.now
+  [:to_date, :to_datetime, :to_time].each do |conv_meth|
+    obj = now.send(conv_meth)
+    puts obj.class.name
+    puts "=" * obj.class.name.length
+    name_and_fmts = obj.class::DATE_FORMATS.map { |k, v| [k, %Q('#{String === v ? v : '&proc'}')] }
+    max_name_size = name_and_fmts.map { |k, _| k.to_s.length }.max + 2
+    max_fmt_size = name_and_fmts.map { |_, v| v.length }.max + 1
+    name_and_fmts.each do |format_name, format_str|
+      puts sprintf("%#{max_name_size}s:%-#{max_fmt_size}s %s", format_name, format_str, obj.to_s(format_name))
+    end
+    puts
+  end
+end
+
+def schema(obj)
+  y(obj.send("column_names"))
+end
+
+def sql(query)
+  ActiveRecord::Base.connection.select_all(query)
+end
+
+def user(email)
+  User.find_by(email: email)
+end

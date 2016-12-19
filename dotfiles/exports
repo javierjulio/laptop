@@ -1,0 +1,54 @@
+# ========================================
+# Path settings
+# ========================================
+
+# Lazy load NVM to speed up shell start time.
+# https://gist.github.com/fl0w/07ce79bd44788f647deab307c94d6922
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR=~/.nvm
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+}
+
+nvm() {
+  lazynvm
+  nvm $@
+}
+
+node() {
+  lazynvm
+  node $@
+}
+
+npm() {
+  lazynvm
+  npm $@
+}
+
+if [ -d $HOME/.rbenv ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+if [ -d $HOME/.bats ]; then
+  export PATH="$HOME/.bats/bin:$PATH"
+fi
+
+# dotfiles bin
+export PATH="$HOME/.bin:$PATH"
+
+
+# ========================================
+# Shell preferences
+# ========================================
+
+CYAN='\[\e[0;36m\]'
+BLUE='\[\e[0;34m\]'
+RED='\[\e[0;31m\]'
+YELLOW='\[\e[0;33m\]'
+GREEN='\[\e[0;32m\]'
+END='\[\e[0m\]' # reset text to default color
+
+# customize Terminal prompt
+export PS1="${CYAN}\W:${END}${YELLOW}\$(__git_ps1)${END} "
