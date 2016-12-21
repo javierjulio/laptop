@@ -1,3 +1,5 @@
+#!/bin/bash
+
 alias reload='source ~/.profile'
 alias r='source ~/.profile'
 alias c='clear'
@@ -47,7 +49,6 @@ alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo 
 alias opendir='open -R .'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias ~='cd ~'
 alias home='cd ~'
 alias docs='cd ~/Documents'
 alias documents='cd ~/Documents'
@@ -90,16 +91,3 @@ alias hrc='heroku run rails console'
 alias hrr='heroku run rake'
 alias hrdm='heroku run rake db:migrate'
 alias hp='heroku ps'
-
-
-# ========================================
-# Applications
-# ========================================
-
-# Examples
-#
-#   coda ~/Documents/Notes.txt
-#   iawriter ~/Documents/Notes.txt
-#
-alias coda='open -b com.panic.Coda2'
-alias iawriter='open -b jp.informationarchitects.WriterForMacOSX'
