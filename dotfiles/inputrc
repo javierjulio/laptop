@@ -1,2 +1,2 @@
-# Make Tab autocompletion case-insensitive (cd ~/dow<Tab> => cd ~/Downloads/).
+# Make Tab autocompletion case-insensitive
 set completion-ignore-case On

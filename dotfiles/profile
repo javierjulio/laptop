@@ -1,3 +1,14 @@
+#!/bin/bash
+
+# Autocorrect typos in path names when using `cd`
+shopt -s cdspell
+
+# Append to the Bash history file, rather than overwriting it
+shopt -s histappend
+
+# Case-insensitive globbing (used in pathname expansion)
+shopt -s nocaseglob
+
 # Load bash completion
 if [ -f `brew --prefix`/etc/bash_completion ]; then
   . `brew --prefix`/etc/bash_completion
