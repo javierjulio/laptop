@@ -1,3 +1,13 @@
+#!/bin/bash
+
+code() {
+  VSCODE_CWD="$PWD" open -n -a "Visual Studio Code" --args $*
+}
+
+vscode() {
+  code $*
+}
+
 # e.g. countdown 5 'Importing database'
 countdown() {
   for (( i=$1; i>0; i--)); do
@@ -28,7 +38,7 @@ executable() {
   chmod +x $@
 }
 
-ghwd() {
+github() {
   if ! git rev-parse --is-inside-work-tree ; then
     open "https://github.com/javierjulio"
     return
