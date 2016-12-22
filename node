@@ -1,20 +1,21 @@
 #!/usr/bin/env bash
 
 shopt -s expand_aliases
-source $HOME/.profile
+# shellcheck disable=SC1090
+source "$HOME/.profile"
 reload
 
 NVM_PREFIX="$HOME/.nvm"
 
-if [ -d $NVM_PREFIX ]; then
+if [ -d "$NVM_PREFIX" ]; then
   echo -e "\nUpdating nvm..."
-  cd $NVM_PREFIX
+  cd "$NVM_PREFIX" || exit
   git pull
   reload
-  echo -e "\nUsing Node.js" `nvm current` "..."
+  echo -e "\nUsing Node.js $(nvm current) ..."
 else
   echo -e "\nInstalling nvm..."
-  git clone https://github.com/creationix/nvm.git $NVM_PREFIX
+  git clone https://github.com/creationix/nvm.git "$NVM_PREFIX"
   reload
 
   nvm install 7.2.1

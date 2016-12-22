@@ -9,6 +9,7 @@ set_base_path() {
     [[ $SOURCE != /* ]] && SOURCE="${DIR}/$SOURCE"
     DIR="$( cd -P "$(dirname "$SOURCE")" && pwd )"
   done
+  # shellcheck disable=SC2034
   BASE_PATH="$(cd "$DIR" && pwd)"
 }
 

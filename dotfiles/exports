@@ -5,37 +5,39 @@
 lazynvm() {
   unset -f nvm node npm
   export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . $NVM_DIR/nvm.sh
-  [ -r "$NVM_DIR/bash_completion" ] && . $NVM_DIR/bash_completion
+  # shellcheck disable=SC1090
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  # shellcheck disable=SC1090
+  [ -r "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 }
 
 nvm() {
   lazynvm
-  nvm $@
+  nvm "$@"
 }
 
 node() {
   lazynvm
-  node $@
+  node "$@"
 }
 
 npm() {
   lazynvm
-  npm $@
+  npm "$@"
 }
 
-if [ -d $HOME/.rbenv ]; then
+if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
 
-if [ -d $HOME/.bats ]; then
+if [ -d "$HOME/.bats" ]; then
   export PATH="$HOME/.bats/bin:$PATH"
 fi
 
-if [ -d $HOME/.bin ]; then
+if [ -d "$HOME/.bin" ]; then
   export PATH="$HOME/.bin:$PATH"
 fi
 
 # Custom bash prompt
-export PS1="\[$(tput setaf 6)\]\W:\[$(tput setaf 3)\]\$(__git_ps1) \[$(tput sgr0)\]"
+export PS1="\[\e[0;36m\]\W:\[\e[0;33m\]\$(__git_ps1)\[\e[0m\] "

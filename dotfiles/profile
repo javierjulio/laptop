@@ -9,18 +9,24 @@ shopt -s histappend
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
+brew_prefix="$(brew --prefix)"
+
 # Load bash completion
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-  . `brew --prefix`/etc/bash_completion
+if [ -f "${brew_prefix}/etc/bash_completion" ]; then
+  # shellcheck disable=SC1090
+  . "${brew_prefix}/etc/bash_completion"
 
   # setup autocomplete for git alias "g"
   -complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
 fi
 
 # Load grc (Terminal colorizer)
-if [ -f `brew --prefix`/etc/grc.bashrc ]; then
-  . `brew --prefix`/etc/grc.bashrc
+if [ -f "${brew_prefix}/etc/grc.bashrc" ]; then
+  # shellcheck disable=SC1090
+  . "${brew_prefix}/etc/grc.bashrc"
 fi
+
+unset brew_prefix
 
 # ========================================
 # Load and initialize
@@ -29,6 +35,6 @@ fi
 # Load bash files
 # ~/.bash_local can be used for settings you don’t want to commit
 for file in exports bash_aliases bash_functions bash_local; do
-  file="$HOME/.$file"
-  [ -e "$file" ] && source "$file"
+  # shellcheck disable=SC1090
+  [ -e "$HOME/.$file" ] && source "$HOME/.$file"
 done
