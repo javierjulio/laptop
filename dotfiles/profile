@@ -16,8 +16,8 @@ if [ -f "${brew_prefix}/etc/bash_completion" ]; then
   # shellcheck disable=SC1090
   . "${brew_prefix}/etc/bash_completion"
 
-  # setup autocomplete for git alias "g"
-  -complete -o bashdefault -o default -o nospace -F _git g 2>/dev/null \ || complete -o default -o nospace -F _git g
+  # Set autocomplete for "g" git alias
+  __git_complete g __git_main
 fi
 
 # Load grc (Terminal colorizer)
