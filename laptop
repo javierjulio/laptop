@@ -40,4 +40,13 @@ brew install postgresql postgis redis
 ./node
 ./bats
 
+terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
+
+if [ "$terminal_theme" != "terminal-ocean-dark" ]; then
+  echo -e "\nDon't forget to install Terminal theme."
+  echo -e "Location: laptop/themes/terminal-ocean-dark.terminal"
+fi
+
+unset terminal_theme
+
 echo -e "\nDone."
