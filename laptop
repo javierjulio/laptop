@@ -22,20 +22,17 @@ command_exists () {
 }
 
 if command_exists brew ; then
-  echo -e "\nUpdating Homebrew formula..."
+  echo -e "\nUpdating Homebrew..."
   brew update
 else
   echo -e "\nInstalling Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install git git-lfs bash-completion grc pkgconfig ghostscript imagemagick
+brew install git bash-completion grc pkgconfig ghostscript imagemagick
 brew install openssl
 brew install libyaml # should come after openssl
 brew install postgresql postgis redis
-
-# Git LFS is a command line extension and specification for managing large files with Git.
-git lfs install --force
 
 ./cloud66
 ./projects
