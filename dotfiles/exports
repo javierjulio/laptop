@@ -5,7 +5,7 @@ export HISTSIZE=50000
 export HISTFILESIZE=100000
 
 # Avoid duplicate entries
-export HISTCONTROL="erasedups:ignoreboth"
+export HISTCONTROL="ignoredups"
 
 # Use standard ISO 8601 timestamp
 # %F equivalent to %Y-%m-%d
