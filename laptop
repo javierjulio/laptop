@@ -17,6 +17,8 @@ set_base_path
 
 . link_dotfiles
 
+softwareupdate --install --all
+
 command_exists () {
   type -P "$1" &> /dev/null ;
 }
@@ -43,7 +45,7 @@ brew install postgresql postgis redis
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 
 if [ "$terminal_theme" != "terminal-ocean-dark" ]; then
-  echo -e "\nDon't forget to install Terminal theme."
+  echo -e "\nInstall Terminal theme."
   echo -e "Location: laptop/themes/terminal-ocean-dark.terminal"
 fi
 
