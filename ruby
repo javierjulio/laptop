@@ -11,15 +11,15 @@ RUBY_BUILD_PREFIX="$HOME/.rbenv/plugins/ruby-build"
 
 if [ ! -d "$RBENV_PREFIX" ]; then
   echo -e "\nInstalling rbenv..."
-  git clone https://github.com/sstephenson/rbenv.git "$RBENV_PREFIX"
-  # no need to export paths as those are in my dotfiles
+  git clone https://github.com/rbenv/rbenv.git "$RBENV_PREFIX"
   reload
 fi
 
 if [ ! -d "$RBENV_UPDATE_PREFIX" ]; then
   echo -e "\nInstalling rbenv-update..."
-  # use `rbenv update` to update rbenv and all installed plugins
   git clone https://github.com/rkh/rbenv-update.git "$RBENV_UPDATE_PREFIX"
+else
+  rbenv update
 fi
 
 find_latest_ruby() {
@@ -48,6 +48,3 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   echo -e "\nInstalling common gems..."
   gem install bundler foreman rails
 fi
-
-echo -e "\nUpdating rbenv and plugins..."
-rbenv update
