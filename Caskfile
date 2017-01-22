@@ -1,0 +1,26 @@
+cask_args appdir: '/Applications'
+tap 'caskroom/cask'
+
+# These Mac apps auto update.
+cask 'things' unless Dir.exists?('/Applications/Things.app')
+cask 'visual-studio-code' unless Dir.exists?('/Applications/Visual Studio Code.app')
+
+cask 'rocket'
+cask 'openemu'
+
+# Automatically prompted to sign in to MAS if signed out.
+mas 'Spark', id: 1176895641
+mas '1Password', id: 443987910
+mas 'Fantastical 2', id: 975937182
+mas 'Reeder', id: 880001334
+mas 'Xcode', id: 497799835
+mas 'iA Writer', id: 775737590
+mas 'iPhoto', id: 408981381
+mas 'Slack', id: 803453959
+mas 'Day One', id: 1055511498
+mas 'CheatSheet', id: 529456740
+mas 'The Unarchiver', id: 425424353
+mas 'DaisyDisk', id: 411643860
+mas 'Keynote', id: 409183694
+mas 'Pages', id: 409201541
+mas 'Numbers', id: 409203825
