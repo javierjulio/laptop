@@ -4,9 +4,8 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
 ## Installation
 
- * Run Software Update
+ * Set [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) and update font to Menlo Regular 12 pt
  * `xcode-select --install` to install Command Line Developer Tools
- * Use [Terminal Ocean Dark Theme](https://github.com/mdo/ocean-terminal) and update font to Menlo Regular 12 pt.
  * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
  * `cd ~/Projects/laptop && ./laptop`
  * Install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) for Visual Studio Code and provide GitHub access token
