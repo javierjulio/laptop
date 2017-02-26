@@ -17,7 +17,9 @@ set_base_path
 
 . link_dotfiles
 
-softwareupdate --install --all
+# This doesn't work right as sometimes it reports no updates
+# but the MAS app shows there are updates, just remove it
+# softwareupdate --install --all
 
 command_exists () {
   type -P "$1" &> /dev/null ;
@@ -32,9 +34,8 @@ else
 fi
 
 brew install git bash-completion grc pkgconfig ghostscript imagemagick
-brew install openssl
-brew install libyaml # should come after openssl
-brew install postgresql postgis redis
+brew install openssl # always *before* libyaml
+brew install libyaml postgresql postgis redis
 
 ./cloud66
 ./projects
