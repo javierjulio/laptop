@@ -1,22 +1,9 @@
 #!/usr/bin/ruby
-#
-# Resources
-# https://gist.github.com/406963
-# https://github.com/atmos/smeagol/blob/master/cookbooks/ruby/templates/default/dot.irbrc.erb
-# https://github.com/holman/dotfiles/blob/master/ruby/irbrc.symlink
 
-%w[
-  rubygems
-  irb/completion
-  irb/ext/save-history
-  pp
-].each do |path|
-  begin
-    require path
-  rescue LoadError
-    puts "#{path} is not installed. Run: gem install #{path}"
-  end
-end
+require 'irb/completion'
+require 'irb/ext/save-history'
+require 'rubygems'
+require 'pp'
 
 # Automatic Indentation
 IRB.conf[:AUTO_INDENT] = true
@@ -57,13 +44,12 @@ def q
   exit
 end
 
-# Clear the screen
 def clear
   system 'clear'
-  if ENV['RAILS_ENV']
-    return "Rails environment: " + ENV['RAILS_ENV']
+  if ENV['RAILS_ENV'] || defined? Rails
+    return "In #{Rails.env} environment (Rails #{Rails.version})"
   else
-    return "No rails environment - happy hacking!";
+    return "No Rails environment - happy hacking!"
   end
 end
 
@@ -75,7 +61,6 @@ def time(times = 1)
   ret
 end
 
-# load railsrc
-load File.dirname(__FILE__) + '/.railsrc' if ENV['RAILS_ENV'] || defined? Rails
+load "#{File.dirname(__FILE__)}/.railsrc" if ENV['RAILS_ENV'] || defined? Rails
 
 puts "#{RUBY_DESCRIPTION.split(' ')[0..1].join(' ').capitalize}"
