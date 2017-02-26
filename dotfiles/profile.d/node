@@ -1,0 +1,27 @@
+#!/bin/bash -e
+
+# Lazy load NVM to speed up shell start time.
+# https://gist.github.com/fl0w/07ce79bd44788f647deab307c94d6922
+lazynvm() {
+  unset -f nvm node npm
+  export NVM_DIR="$HOME/.nvm"
+  # shellcheck disable=SC1090
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+  # shellcheck disable=SC1090
+  [ -r "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+nvm() {
+  lazynvm
+  nvm "$@"
+}
+
+node() {
+  lazynvm
+  node "$@"
+}
+
+npm() {
+  lazynvm
+  npm "$@"
+}

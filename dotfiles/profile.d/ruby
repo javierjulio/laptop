@@ -1,0 +1,20 @@
+#!/bin/bash -e
+
+alias be='bundle exec'
+alias bi='bundle install'
+alias bu='bundle update'
+alias bo='bundle outdated'
+alias bopen='bundle open' # bundle open GEM_NAME
+alias ber='bundle exec rake'
+alias bert='bundle exec rake test'
+alias rt='bundle exec ruby -Itest'
+
+alias rs='bundle exec rails log:clear && start'
+alias berc='bundle exec rails console'
+alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test'
+alias rl='tail -f log/development.log'
+
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi

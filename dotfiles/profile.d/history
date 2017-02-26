@@ -1,0 +1,13 @@
+#!/bin/bash -e
+
+# Huge history. Doesn't appear to slow things down, so why not?
+export HISTSIZE=50000
+export HISTFILESIZE=100000
+
+# Avoid duplicate entries
+export HISTCONTROL="ignoredups"
+
+# Use standard ISO 8601 timestamp
+# %F equivalent to %Y-%m-%d
+# %T equivalent to %H:%M:%S (24-hours format)
+export HISTTIMEFORMAT='%F %T '

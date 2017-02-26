@@ -1,0 +1,5 @@
+#!/bin/bash -e
+
+if [ -d "$HOME/.bats" ]; then
+  export PATH="$HOME/.bats/bin:$PATH"
+fi

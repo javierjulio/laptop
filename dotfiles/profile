@@ -25,13 +25,11 @@ fi
 
 unset brew_prefix
 
-# ========================================
-# Load and initialize
-# ========================================
-
-# Load bash files
-# ~/.bash_local can be used for settings you don’t want to commit
-for file in exports bash_aliases bash_functions bash_local; do
+for profile_config in ${HOME}/.profile.d/*
+do
   # shellcheck disable=SC1090
-  [ -e "$HOME/.$file" ] && source "$HOME/.$file"
+  source "$profile_config"
 done
+
+# shellcheck disable=SC1090
+[ -e "$HOME/.bash_local" ] && source "$HOME/.bash_local"

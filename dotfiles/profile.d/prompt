@@ -1,0 +1,4 @@
+#!/bin/bash -e
+
+# folder_name: (git_branch_name)
+export PS1="\[\e[0;36m\]\W:\[\e[0;33m\]\$(__git_ps1)\[\e[0m\] "
