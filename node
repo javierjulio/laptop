@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-shopt -s expand_aliases
 # shellcheck disable=SC1090
 source "$HOME/.profile"
 reload
