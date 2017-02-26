@@ -4,12 +4,10 @@ echo -e "\nCloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
-projects=( javierjulio.github.io website textarea-autosize synapse_payments paysafe activeadmin )
+projects=( javierjulio.github.io website paysafe activeadmin )
 
 for project in "${projects[@]}"; do
-  if [ -d "$PROJECTS_PREFIX/$project" ]; then
-    echo "$project already exists."
-  else
+  if [ ! -d "$PROJECTS_PREFIX/$project" ]; then
     git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$project"
     echo "Cloned $project successfully."
   fi
