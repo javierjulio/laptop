@@ -33,9 +33,8 @@ else
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-brew install git bash-completion grc pkgconfig ghostscript imagemagick
-brew install openssl # always *before* libyaml
-brew install libyaml postgresql postgis redis
+brew bundle --no-upgrade
+brew bundle --file=Caskfile
 
 ./cloud66
 ./projects
