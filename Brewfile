@@ -4,7 +4,7 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 brew 'readline'
 brew 'git', args: ['with-brewed-openssl']
-brew 'grc'
+brew 'grc' # Terminal colorizer
 brew 'gawk'
 brew 'bash-completion'
 brew 'openssl'
@@ -20,7 +20,7 @@ brew 'zeromq'
 brew 'erlang'
 brew 'elixir'
 brew 'heroku'
-brew 'mas'
+brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'autoconf'
 brew 'automake'

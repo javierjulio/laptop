@@ -2,7 +2,6 @@
 
 alias g='git'
 alias gb='git branch'
-alias gci='git commit'
 alias gco='git checkout'
 alias gfo='git fetch origin'
 alias gs='git status'
