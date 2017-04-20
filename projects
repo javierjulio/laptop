@@ -4,15 +4,16 @@ echo -e "\nCloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
-projects=( javierjulio.github.io website paysafe activeadmin )
-
-for project in "${projects[@]}"; do
+clone_project() {
+  local project=$1
+  local directory="${2:-$project}"
   if [ ! -d "$PROJECTS_PREFIX/$project" ]; then
-    git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$project"
+    git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$directory"
     echo "Cloned $project successfully."
   fi
-done
+}
 
-pushd "$PROJECTS_PREFIX/website" >&-
-  heroku git:remote --app javierjulio
-popd >&-
+clone_project "javierjulio.github.io" "javierjulio"
+clone_project "paysafe"
+clone_project "jsoneditor-rails"
+clone_project "activeadmin"
