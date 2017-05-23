@@ -39,23 +39,6 @@ def copy
   "copied \'#{last_value}' to your clipboard"
 end
 
-def r
-  reload!
-end
-
-def q
-  exit
-end
-
-def clear
-  system 'clear'
-  if ENV['RAILS_ENV'] || defined? Rails
-    return "In #{Rails.env} environment (Rails #{Rails.version})"
-  else
-    return "No Rails environment - happy hacking!"
-  end
-end
-
 # http://ozmm.org/posts/time_in_irb.html
 def time(times = 1)
   require 'benchmark'
@@ -64,6 +47,16 @@ def time(times = 1)
   ret
 end
 
-load "#{File.dirname(__FILE__)}/.railsrc" if ENV['RAILS_ENV'] || defined? Rails
+def q
+  exit
+end
+
+def clear
+  system 'clear'
+  return "In a plain Ruby environment - happy hacking!"
+end
+
+railsrc = File.expand_path('~/.railsrc')
+load railsrc if File.exist?(railsrc) && (ENV['RAILS_ENV'] || defined? Rails)
 
 puts "#{RUBY_DESCRIPTION.split(' ')[0..1].join(' ').capitalize}"
