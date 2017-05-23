@@ -9,23 +9,23 @@ shopt -s nocaseglob
 brew_prefix="$(brew --prefix)"
 
 # Load bash completion
-if [ -f "${brew_prefix}/etc/bash_completion" ]; then
+if [ -f "$brew_prefix/etc/bash_completion" ]; then
   # shellcheck disable=SC1090
-  . "${brew_prefix}/etc/bash_completion"
+  . "$brew_prefix/etc/bash_completion"
 
   # Set autocomplete for "g" git alias
   __git_complete g __git_main
 fi
 
 # Load grc (Terminal colorizer)
-if [ -f "${brew_prefix}/etc/grc.bashrc" ]; then
+if [ -f "$brew_prefix/etc/grc.bashrc" ]; then
   # shellcheck disable=SC1090
-  . "${brew_prefix}/etc/grc.bashrc"
+  . "$brew_prefix/etc/grc.bashrc"
 fi
 
 unset brew_prefix
 
-for profile_config in ${HOME}/.profile.d/*
+for profile_config in $HOME/.profile.d/*
 do
   # shellcheck disable=SC1090
   source "$profile_config"
