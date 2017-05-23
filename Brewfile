@@ -24,3 +24,4 @@ brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'autoconf'
 brew 'automake'
+brew 'deis'
