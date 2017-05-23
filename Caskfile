@@ -2,13 +2,13 @@ cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 
 # These Mac apps auto update.
-cask 'things' unless Dir.exists?('/Applications/Things.app')
 cask 'visual-studio-code' unless Dir.exists?('/Applications/Visual Studio Code.app')
 
 cask 'rocket'
 cask 'openemu'
 
 # Automatically prompted to sign in to MAS if signed out.
+mas 'Things3', id: 904280696
 mas 'Spark', id: 1176895641
 mas '1Password', id: 443987910
 mas 'Fantastical 2', id: 975937182
