@@ -4,9 +4,16 @@
 # http://ozmm.org/posts/railsrc.html
 # http://rbjl.net/49-railsrc-rails-console-snippets
 
-if defined?(Rails)
-  ActiveRecord::Base.logger = Logger.new(STDOUT)
-  ActionController::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActionController::Base.logger = Logger.new(STDOUT)
+
+def r
+  reload!
+end
+
+def clear
+  system 'clear'
+  return "In #{Rails.env} environment (Rails #{Rails.version})"
 end
 
 # Show the date/time format strings defined and example output
