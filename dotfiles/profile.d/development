@@ -1,7 +1,7 @@
 #!/bin/bash -e
 
 code() {
-  VSCODE_CWD="$PWD" open -n -a "Visual Studio Code" --args "$@"
+  VSCODE_CWD="$PWD" open -nW -a "Visual Studio Code" --args "$@"
 }
 
 vscode() {
