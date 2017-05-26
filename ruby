@@ -35,7 +35,9 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
 
   echo -e "\nInstalling Ruby ${ruby_version}..."
 
-  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-readline-dir=$(brew --prefix readline) --with-openssl-dir=$(brew --prefix openssl)"
+  readline_dir="--with-readline-dir=$(brew --prefix readline)"
+  openssl_dir="--with-openssl-dir=$(brew --prefix openssl)"
+  export RUBY_CONFIGURE_OPTS="--disable-install-doc $readline_dir $openssl_dir"
   # For more info on specifying openssl path
   # https://github.com/thoughtbot/laptop/commit/c8dca7705b5c4e272d12a903f9d65a3ae01f2498
   rbenv install -s "$ruby_version"
