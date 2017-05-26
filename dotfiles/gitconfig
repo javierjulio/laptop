@@ -5,6 +5,7 @@
   helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore
+	editor = "open -W -n" # Uses TextEdit by default
 [alias]
   # Show list of all aliases in this file.
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
@@ -43,7 +44,7 @@
   changed = green
   untracked = cyan
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
