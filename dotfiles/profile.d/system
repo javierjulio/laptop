@@ -17,14 +17,19 @@ alias jj='cd ~/Projects/javierjulio'
 alias h='history'
 alias hsearch='history | grep --color=auto'
 
-alias localip="ifconfig | sed -En 's/127.0.0.1//;s/.*inet (addr:)?(([0-9]*\.){3}[0-9]*).*/\2/p'"
-alias remoteip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
-
 alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
 
 alias r='reload'
 alias c='clear'
 alias q='exit'
+
+localip() {
+  ifconfig | grep broadcast | awk '{ print $2 }'
+}
+
+remoteip() {
+  curl -s ipecho.net/plain && echo ''
+}
 
 todos() {
   grep -r -EI "TODO|FIXME" --exclude-dir={.git,public,vendor,node_modules,tmp,.vscode} . |
