@@ -7,6 +7,8 @@ cask 'visual-studio-code' unless Dir.exists?('/Applications/Visual Studio Code.a
 cask 'rocket'
 cask 'openemu'
 cask 'google-cloud-sdk'
+cask 'psequel'
+cask 'postico'
 
 # Automatically prompted to sign in to MAS if signed out.
 mas 'Things3', id: 904280696

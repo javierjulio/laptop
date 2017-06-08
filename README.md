@@ -9,7 +9,6 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
  * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
  * `cd ~/Projects/laptop && ./laptop`
  * Install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) for Visual Studio Code and provide GitHub access token
- * Install a Postgres Mac app: [PSequel](http://www.psequel.com), [Postico](https://eggerapps.at/postico/), [DBGlass](http://dbglass.web-pal.com) and [SQLPro for Postgres](http://macpostgresclient.com).
  * `touch ~/.bash_local` for system specific settings
 
 ### Optional
