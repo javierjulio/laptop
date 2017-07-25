@@ -36,7 +36,6 @@ fi
 brew bundle --no-upgrade
 brew bundle --file=Caskfile
 
-./cloud66
 ./projects
 ./ruby
 ./node
