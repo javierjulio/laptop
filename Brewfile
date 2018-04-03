@@ -3,12 +3,11 @@ tap 'homebrew/completions'
 tap 'homebrew/core'
 tap 'homebrew/services'
 brew 'readline'
-brew 'git', args: ['with-brewed-openssl']
+brew 'git', args: ["with-openssl"]
 brew 'grc' # Terminal colorizer
 brew 'gawk'
 brew 'bash-completion'
-brew 'openssl'
-brew 'libyaml' # always after openssl
+brew 'libyaml'
 brew 'libffi'
 brew 'pkg-config'
 brew 'ghostscript'
