@@ -7,15 +7,11 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
  * Set [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) and update font to Menlo Regular 12 pt
  * `xcode-select --install` to install Command Line Developer Tools
  * `sudo xcodebuild -license` to agree to the Xcode license
- * Have GitHub personal access token handy for CLI login
+ * GitHub access tokens for CLI login in 1Password
  * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
  * `cd ~/Projects/laptop && ./laptop`
  * Install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) for Visual Studio Code and provide GitHub access token
  * `touch ~/.bash_local` for system specific settings
-
-### Optional
-
-For IE browser testing use [VirtualBox](https://www.virtualbox.org/wiki/Downloads) and [ievms](https://github.com/xdissent/ievms).
 
 ## Dotfiles
 
