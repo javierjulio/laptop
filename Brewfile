@@ -10,7 +10,7 @@ brew 'libyaml'
 brew 'libffi'
 brew 'pkg-config'
 brew 'ghostscript'
-brew 'imagemagick'
+brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
 brew 'postgresql', restart_service: true
 brew 'postgis'
 brew 'redis', restart_service: true
@@ -22,5 +22,6 @@ brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'autoconf'
 brew 'automake'
+brew 'cmake'
 brew 'deis'
 brew 'kubectl'
