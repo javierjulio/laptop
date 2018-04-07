@@ -6,7 +6,6 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
  * Set [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) and update font to Menlo Regular 12 pt
  * `xcode-select --install` to install Command Line Developer Tools
- * `sudo xcodebuild -license` to agree to the Xcode license
  * GitHub access tokens for CLI login in 1Password
  * `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
  * `cd ~/Projects/laptop && ./laptop`

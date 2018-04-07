@@ -1,5 +1,4 @@
 tap 'homebrew/bundle'
-tap 'homebrew/completions'
 tap 'homebrew/core'
 tap 'homebrew/services'
 brew 'readline'
