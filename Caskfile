@@ -6,8 +6,10 @@ cask 'github'
 cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'openemu'
+cask 'origin'
 cask 'psequel'
 cask 'rocket'
+cask 'steam'
 cask 'visual-studio-code'
 
 # Automatically prompted to sign in to MAS if signed out.
@@ -22,4 +24,3 @@ mas 'iA Writer', id: 775737590
 mas 'Reeder', id: 880001334
 mas 'Slack', id: 803453959
 mas 'The Unarchiver', id: 425424353
-mas 'Xcode', id: 497799835
