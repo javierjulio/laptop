@@ -4,16 +4,19 @@ echo -e "\nCloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
-clone_project() {
-  local project=$1
-  local directory="${2:-$project}"
-  if [ ! -d "$PROJECTS_PREFIX/$project" ]; then
-    git clone "https://github.com/javierjulio/$project.git" "$PROJECTS_PREFIX/$directory"
-    echo "Cloned $project successfully."
+clone_repo() {
+  local repo=$1
+  local directory="${2:-$repo}"
+  if [ ! -d "$PROJECTS_PREFIX/$directory" ]; then
+    git clone "https://javierjulio@github.com/javierjulio/$repo.git" "$PROJECTS_PREFIX/$directory"
+    echo "Cloned $repo successfully."
   fi
 }
 
-clone_project "javierjulio.github.io" "javierjulio"
-clone_project "paysafe"
-clone_project "jsoneditor-rails"
-clone_project "activeadmin"
+clone_repo "javierjulio.github.io" "javierjulio"
+clone_repo "activeadmin"
+clone_repo "binlist-elixir"
+clone_repo "dwolla-v2-ruby"
+clone_repo "envied"
+clone_repo "jsoneditor-rails"
+clone_repo "paysafe"
