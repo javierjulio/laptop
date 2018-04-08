@@ -11,7 +11,7 @@ brew 'libffi'
 brew 'pkg-config'
 brew 'ghostscript'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
-brew 'postgresql', restart_service: true
+brew 'postgresql@9.6', link: true, restart_service: true
 brew 'postgis'
 brew 'redis', restart_service: true
 brew 'zeromq'
