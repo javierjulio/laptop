@@ -39,9 +39,9 @@ brew bundle --file=Caskfile
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 
-if [ "$terminal_theme" != "terminal-ocean-dark" ]; then
+if [ "$terminal_theme" != "Ocean Dark" ]; then
   echo -e "\nInstall Terminal theme."
-  echo -e "Location: laptop/themes/terminal-ocean-dark.terminal"
+  echo -e "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
 unset terminal_theme

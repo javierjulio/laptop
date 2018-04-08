@@ -19,3 +19,6 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/janmoesen/tilde
 * https://github.com/gerhard/setup
+#### Terminal Themes
+* https://github.com/lysyi3m/osx-terminal-themes
+* https://draculatheme.com/terminal/
