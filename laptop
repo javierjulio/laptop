@@ -17,10 +17,6 @@ set_base_path
 
 . link_dotfiles
 
-# This doesn't work right as sometimes it reports no updates
-# but the MAS app shows there are updates, just remove it
-# softwareupdate --install --all
-
 command_exists () {
   type -P "$1" &> /dev/null ;
 }
