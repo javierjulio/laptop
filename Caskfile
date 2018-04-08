@@ -1,6 +1,9 @@
 cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 
+cask '1password'
+cask 'appcleaner'
+cask 'cheatsheet'
 cask 'firefox'
 cask 'github'
 cask 'google-chrome'
@@ -13,10 +16,8 @@ cask 'steam'
 cask 'visual-studio-code'
 
 # Automatically prompted to sign in to MAS if signed out.
-mas '1Password', id: 443987910
 mas 'Spark', id: 1176895641
 mas 'Things3', id: 904280696
-mas 'CheatSheet', id: 529456740
 mas 'DaisyDisk', id: 411643860
 mas 'Day One', id: 1055511498
 mas 'Fantastical 2', id: 975937182
