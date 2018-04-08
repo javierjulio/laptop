@@ -12,9 +12,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
  * Install [sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) for Visual Studio Code and provide GitHub access token
  * `touch ~/.bash_local` for system specific settings
 
-## Dotfiles
-
-### Resources
+### Other Interesting Dotfiles Setups
 
 * https://github.com/ascarter/dotfiles
 * https://github.com/holman/dotfiles

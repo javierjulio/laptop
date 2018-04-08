@@ -2,7 +2,7 @@
 	name = Javier Julio
 	email = jjfutbol@gmail.com
 [credential]
-  helper = osxkeychain
+	helper = osxkeychain
 [core]
 	excludesfile = ~/.gitignore
 	editor = "open -W -n" # Uses TextEdit by default
