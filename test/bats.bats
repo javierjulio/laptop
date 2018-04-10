@@ -18,5 +18,5 @@ setup() {
   run bats
   assert_success
   assert_line 0 "Updating Bats..."
-  assert_line 1 "Already up-to-date."
+  assert_line 1 "Already up to date."
 }
