@@ -4,7 +4,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
 ## Installation
 * `xcode-select --install` to install Command Line Developer Tools
-* `git clone https://github.com/javierjulio/laptop.git ~/Projects/laptop`
+* `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
 * Import [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) and set as default
 * `cd ~/Projects/laptop && ./laptop`
 * Install [Visual Studio Code sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and provide GitHub access token
@@ -15,7 +15,6 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 #### Dotfiles
 * https://github.com/ascarter/dotfiles
 * https://github.com/holman/dotfiles
-* https://github.com/rtomayko/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/janmoesen/tilde
 * https://github.com/gerhard/setup
