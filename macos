@@ -1,0 +1,66 @@
+#!/usr/bin/env bash
+
+# shellcheck disable=SC1090
+source "$HOME/.profile"
+reload
+
+echo -e ""
+echo "Setting macOS defaults..."
+
+# Close any open System Preferences panes, to prevent them from
+# overriding settings we're about to change.
+osascript -e 'tell application "System Preferences" to quit'
+
+# Show the ~/Library folder.
+chflags nohidden ~/Library
+
+#
+# Dock
+#
+
+# Automatically hide and show Dock
+defaults write com.apple.dock autohide -bool true
+
+#
+# Safari
+#
+
+# Hide Favorites bar by default
+defaults write com.apple.Safari ShowFavoritesBar-v2 -bool false
+
+# Safari opens with all windows from last session
+defaults write com.apple.Safari AlwaysRestoreSessionAtLaunch -bool true
+
+# New windows and tabs open with empty page
+defaults write com.apple.Safari NewWindowBehavior -int 1
+defaults write com.apple.Safari NewTabBehavior -int 1
+
+# Remove history items after one month
+defaults write com.apple.Safari HistoryAgeInDaysLimit -int 31
+
+# Disable AutoFill
+defaults write com.apple.Safari AutoFillPasswords -bool false
+
+# Smart Search Field
+defaults write com.apple.Safari PreloadTopHit -bool false
+defaults write com.apple.Safari ShowFavoritesUnderSmartSearchField -bool false
+
+# Enable "Do Not Track"
+defaults write com.apple.Safari SendDoNotTrackHTTPHeader -bool true
+
+# Enable the Develop menu and the Web Inspector in Safari
+defaults write com.apple.Safari IncludeDevelopMenu -bool true
+defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+
+#
+# TextEdit
+#
+
+# Start with plain text
+defaults write com.apple.TextEdit RichText -int 0
+
+# Do not show ruler on start
+defaults write com.apple.TextEdit ShowRuler -int 0
+
+echo "Defaults set."

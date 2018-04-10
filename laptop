@@ -32,6 +32,7 @@ fi
 brew bundle --no-upgrade
 brew bundle --file=Caskfile
 
+./macos
 ./projects
 ./ruby
 ./node
