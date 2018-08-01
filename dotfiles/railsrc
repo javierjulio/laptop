@@ -1,11 +1,22 @@
 #!/usr/bin/ruby
-#
+
 # Resources
 # http://ozmm.org/posts/railsrc.html
 # http://rbjl.net/49-railsrc-rails-console-snippets
 
+# Show queries after running AR methods in console.
 ActiveRecord::Base.logger = Logger.new(STDOUT)
-ActionController::Base.logger = Logger.new(STDOUT)
+
+# View full debug query even if they fail with a StatementInvalid
+# error. In the console, we would just see the error message with
+# part of the query. By adding another logger to a file, there we
+# will see the full debug query with all parameter values.
+# Solution: https://stackoverflow.com/a/26704547
+ActiveRecord::Base.logger.extend(
+  ActiveSupport::Logger.broadcast(
+    Logger.new(Rails.root.join('log', 'console.log'))
+  )
+)
 
 def r
   reload!
@@ -35,7 +46,7 @@ def date_formats
 end
 
 def schema(obj)
-  y(obj.send("column_names"))
+  y(obj.send(:column_names))
 end
 
 def sql(query)
