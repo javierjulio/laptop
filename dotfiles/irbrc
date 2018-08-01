@@ -11,39 +11,24 @@ IRB.conf[:SAVE_HISTORY] = 5000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-save-history"
 
 class Object
-  # list methods which aren't in superclass
+  # List methods which are not in superclass.
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-
-  # print documentation
-  #
-  #   ri 'Array#pop'
-  #   Array.ri
-  #   Array.ri :pop
-  #   arr.ri :pop
-  def ri(method = nil)
-    unless method && method =~ /^[A-Z]/ # if class isn't specified
-      klass = self.kind_of?(Class) ? name : self.class.name
-      method = [klass, method].compact.join('#')
-    end
-    puts `ri '#{method}'`
-  end
 end
 
-# Copies the result of the last operation you ran in IRB to the clipboard.
+# Copies the last IRB result to the clipboard.
 def copy
-  last_value = IRB.CurrentContext.last_value
-  %x[echo '#{last_value}' | pbcopy]
-  "copied \'#{last_value}' to your clipboard"
+  %x[echo "#{IRB.CurrentContext.last_value}" | pbcopy]
+  true
 end
 
 # http://ozmm.org/posts/time_in_irb.html
-def time(times = 1)
+def time(iterations: 1)
   require 'benchmark'
-  ret = nil
-  Benchmark.bm { |x| x.report { times.times { ret = yield } } }
-  ret
+  result = nil
+  Benchmark.bm { |x| x.report { iterations.times { result = yield } } }
+  result
 end
 
 def q
@@ -52,10 +37,10 @@ end
 
 def clear
   system 'clear'
-  return "In a plain Ruby environment - happy hacking!"
+  return 'In a plain Ruby environment - happy hacking!'
 end
 
 railsrc = File.expand_path('~/.railsrc')
 load railsrc if File.exist?(railsrc) && (ENV['RAILS_ENV'] || defined? Rails)
 
-puts "#{RUBY_DESCRIPTION.split(' ')[0..1].join(' ').capitalize}"
+puts "Ruby #{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
