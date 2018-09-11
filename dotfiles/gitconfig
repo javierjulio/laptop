@@ -7,13 +7,10 @@
 	excludesfile = ~/.gitignore
 	editor = "open -W -n" # Uses TextEdit by default
 [alias]
-  # Show list of all aliases in this file.
-  a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
+  a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' # List all git aliases
   b = branch
-  # Delete Branch
-  db = branch -D
-  # New Branch
-  nb = checkout -b
+  db = branch -D # Delete branch
+  nb = checkout -b # New branch
   ci = commit
   co = checkout
   cgl = config --global --list
@@ -29,8 +26,7 @@
   rom = rebase origin/master
   s = status
   todos = grep -EI "TODO|FIXME" -- './*' ':!vendor/' ':!tmp/' | grcat conf.todos
-  # Undo the last commit but keep changes intact.
-  uci = reset --soft HEAD^
+  uci = reset --soft HEAD^ # Undo last commit with changes intact
 [color]
   ui = auto
   branch = auto
