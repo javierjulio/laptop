@@ -27,7 +27,7 @@ find_latest_ruby() {
 
 if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   echo -e "\nInstalling ruby-build..."
-  git clone https://github.com/sstephenson/ruby-build.git "$RUBY_BUILD_PREFIX"
+  git clone https://github.com/rbenv/ruby-build.git "$RUBY_BUILD_PREFIX"
 
   ruby_version="$(find_latest_ruby)"
 
