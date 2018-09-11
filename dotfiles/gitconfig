@@ -16,6 +16,7 @@
   cgl = config --global --list
   f = fetch
   fo = fetch origin
+  fu = fetch upstream
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   p = push
   po = push origin
@@ -24,6 +25,8 @@
   phm = push heroku master
   ros = rebase origin/staging
   rom = rebase origin/master
+  rus = rebase usptream/staging
+  rum = rebase upstream/master
   s = status
   todos = grep -EI "TODO|FIXME" -- './*' ':!vendor/' ':!tmp/' | grcat conf.todos
   uci = reset --soft HEAD^ # Undo last commit with changes intact
