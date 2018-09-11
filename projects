@@ -8,7 +8,7 @@ clone_repo() {
   local repo=$1
   local directory="${2:-$repo}"
   if [ ! -d "$PROJECTS_PREFIX/$directory" ]; then
-    git clone "https://javierjulio@github.com/javierjulio/$repo.git" "$PROJECTS_PREFIX/$directory"
+    git clone "https://github.com/javierjulio/$repo.git" "$PROJECTS_PREFIX/$directory"
     echo "Cloned $repo successfully."
   fi
 }
