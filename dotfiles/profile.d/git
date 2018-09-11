@@ -6,7 +6,6 @@ alias gco='git checkout'
 alias gfo='git fetch origin'
 alias gfu='git fetch upstream'
 alias gs='git status'
-alias guci='git reset --soft HEAD^' # undo last commit
 
 github() {
   # Default: open my github if not a git repo
