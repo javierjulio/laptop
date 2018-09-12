@@ -25,7 +25,7 @@
   phm = push heroku master
   ros = rebase origin/staging
   rom = rebase origin/master
-  rus = rebase usptream/staging
+  rus = rebase upstream/staging
   rum = rebase upstream/master
   s = status
   todos = grep -EI "TODO|FIXME" -- './*' ':!vendor/' ':!tmp/' | grcat conf.todos
