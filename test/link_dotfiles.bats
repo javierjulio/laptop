@@ -13,7 +13,6 @@ setup() {
   assert [ -d "${TMP_DIR}/.grc" ]
   assert [ -f "${TMP_DIR}/.grc/conf.todos" ]
   assert [ -d "${TMP_DIR}/.profile.d" ]
-  assert [ -f "${TMP_DIR}/.profile.d/bats" ]
   assert [ -f "${TMP_DIR}/.profile.d/development" ]
   assert [ -f "${TMP_DIR}/.profile.d/git" ]
   assert [ -f "${TMP_DIR}/.profile.d/google" ]

@@ -8,6 +8,7 @@ brew 'gawk'
 brew 'bash-completion'
 brew 'libyaml'
 brew 'libffi'
+brew 'bats-core'
 brew 'pkg-config'
 brew 'ghostscript'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892

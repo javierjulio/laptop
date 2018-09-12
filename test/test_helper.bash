@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 SCRIPT_ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && dirname $PWD )" # http://stackoverflow.com/a/246128
 FIXTURES_ROOT="${BATS_TEST_DIRNAME}/fixtures"
 

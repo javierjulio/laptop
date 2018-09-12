@@ -36,7 +36,6 @@ brew bundle --file=Caskfile
 ./projects
 ./ruby
 ./node
-./bats
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 
