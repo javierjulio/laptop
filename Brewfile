@@ -19,6 +19,7 @@ brew 'elixir'
 brew 'heroku'
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
+brew 'exiftool' # File metadata editor
 brew 'yarn', args: ['--without-node']
 brew 'deis'
 # brew 'kubernetes-cli' # Install version 1.10.5 below
