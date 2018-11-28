@@ -63,4 +63,10 @@ defaults write com.apple.TextEdit RichText -int 0
 # Do not show ruler on start
 defaults write com.apple.TextEdit ShowRuler -int 0
 
+# Set font
+defaults write com.apple.TextEdit NSFixedPitchFont -string "Menlo-Regular"
+
+# Set larger font size
+defaults write com.apple.TextEdit NSFixedPitchFontSize -int 13
+
 echo "Defaults set."
