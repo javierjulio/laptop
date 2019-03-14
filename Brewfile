@@ -1,6 +1,7 @@
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
+tap 'heroku/brew'
 brew 'readline'
 brew 'git', args: ["with-openssl"]
 brew 'grc' # Terminal colorizer
