@@ -13,7 +13,7 @@ brew 'bats-core'
 brew 'pkg-config'
 brew 'ghostscript'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
-brew 'postgresql@9.6', link: true, restart_service: true
+brew 'postgresql@10', link: true, restart_service: true
 brew 'redis', restart_service: true
 brew 'erlang'
 brew 'elixir'
