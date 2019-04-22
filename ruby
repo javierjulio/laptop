@@ -28,7 +28,8 @@ find_latest_ruby() {
 if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   # Resolve warning: "Insecure world writable dir /Users/username in PATH, mode 040777"
   # https://stackoverflow.com/a/6196644
-  chmod go-w ~
+  # chmod go-w /Users
+  # chmod go-w ~
 
   echo -e "\nInstalling ruby-build..."
   git clone https://github.com/rbenv/ruby-build.git "$RUBY_BUILD_PREFIX"
