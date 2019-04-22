@@ -21,7 +21,7 @@ brew 'heroku'
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
-brew 'yarn', args: ['--without-node']
+brew 'yarn', args: ['ignore-dependencies']
 brew 'deis'
 # brew 'kubernetes-cli' # Install version 1.10.5 below
 system "brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/d09d97241b17a5e02a25fc51fc56e2a5de74501c/Formula/kubernetes-cli.rb"
