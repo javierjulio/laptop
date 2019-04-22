@@ -52,6 +52,11 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   gem update --system
   gem update
 
+  echo -e "\nResolve 'already initialized constant' warnings..."
+  # https://github.com/ruby/fileutils/issues/22#issuecomment-424230668
+  gem uninstall fileutils
+  gem update fileutils --default
+
   echo -e "\nInstalling common gems..."
   gem install bundler foreman rails
 fi
