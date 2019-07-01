@@ -25,7 +25,7 @@ fi
 
 unset brew_prefix
 
-for profile_config in $HOME/.profile.d/*
+for profile_config in "$HOME"/.profile.d/*
 do
   # shellcheck disable=SC1090
   source "$profile_config"
