@@ -13,7 +13,6 @@ cask 'openemu'
 cask 'origin'
 cask 'tableplus'
 cask 'psequel'
-cask 'rocket'
 cask 'steam'
 cask 'visual-studio-code'
 
