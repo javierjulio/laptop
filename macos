@@ -21,6 +21,9 @@ chflags nohidden ~/Library
 # Automatically hide and show Dock
 defaults write com.apple.dock autohide -bool true
 
+# Don’t show recent applications in Dock
+defaults write com.apple.dock show-recents -bool false
+
 #
 # Safari
 #
