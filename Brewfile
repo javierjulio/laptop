@@ -3,7 +3,7 @@ tap 'homebrew/core'
 tap 'homebrew/services'
 tap 'heroku/brew'
 brew 'readline'
-brew 'git', args: ["with-openssl"]
+brew 'git'
 brew 'grc' # Terminal colorizer
 brew 'gawk'
 brew 'bash-completion'
