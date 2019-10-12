@@ -2,7 +2,6 @@
 
 # shellcheck disable=SC1090
 source "$HOME/.profile"
-reload
 
 RBENV_PREFIX="$HOME/.rbenv"
 RBENV_UPDATE_PREFIX="$HOME/.rbenv/plugins/rbenv-update"

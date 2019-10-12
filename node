@@ -2,7 +2,6 @@
 
 # shellcheck disable=SC1090
 source "$HOME/.profile"
-reload
 
 NVM_PREFIX="$HOME/.nvm"
 
