@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
 alias aliases="alias | sed 's/alias //g' | sed 's/=/ = /g'"
-alias paths='echo -e ${PATH//:/\\n}' # pretty print all paths
 
 alias opendir='open -R .'
 alias ..='cd ..'

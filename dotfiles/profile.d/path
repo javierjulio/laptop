@@ -1,4 +1,8 @@
-#!/bin/bash -e
+#!/bin/sh
+
+paths() {
+  echo "$PATH" | tr : '\n' # pretty print all paths
+}
 
 if [ -d "$HOME/.bin" ]; then
   export PATH="$HOME/.bin:$PATH"
