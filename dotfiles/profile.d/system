@@ -30,16 +30,6 @@ remoteip() {
   curl -s ipecho.net/plain && echo ''
 }
 
-todos() {
-  grep -r -EI "TODO|FIXME" --exclude-dir={.git,public,vendor,node_modules,tmp,.vscode} . |
-    # Colorize search results (by default looks in ~/.grc)
-    grcat conf.todos |
-    # print file name and then on a new line show only the matching text
-    awk -F: '{ printf "\n"; print $1; print substr($0,index($0,$2));}' |
-    # Replace any leading whitespaces with a set of 4 (tabs are too much)
-    sed -E "s/[[:blank:]]{2,}/    /"
-}
-
 reload() {
   # shellcheck disable=SC1090
   source "$HOME/.profile"
@@ -76,10 +66,19 @@ emptytrash() {
   sudo rm -rfv /private/var/log/asl/*.asl
 }
 
-# with edits: http://www.anthonysmith.me.uk/2008/01/08/moving-files-to-trash-from-the-mac-command-line/
-trash() {
-  local path
-  for path in "$@"; do
-    osascript -e "tell application \"Finder\"" -e "delete POSIX file \"${PWD}/$path\"" -e "end tell"
-  done
+todos() {
+  grep -r -EI "TODO|FIXME" \
+    --exclude-dir=.git \
+    --exclude-dir=coverage \
+    --exclude-dir=public \
+    --exclude-dir=vendor \
+    --exclude-dir=node_modules \
+    --exclude-dir=tmp \
+    --exclude-dir=.vscode . |
+    # Colorize search results (by default looks in ~/.grc)
+    grcat conf.todos |
+    # print file name and then on a new line show only the matching text
+    awk -F: '{ printf "\n"; print $1; print substr($0,index($0,$2));}' |
+    # Replace any leading whitespaces with a set of 4 (tabs are too much)
+    sed -E "s/[[:blank:]]{2,}/    /"
 }
