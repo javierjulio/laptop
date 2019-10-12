@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # to override PREFIX first run: export PREFIX=~/some-directory
 # and then this script
@@ -19,7 +19,7 @@ if [ -z "$pid" ]; then
   pid=$(promptValue "Enter some number")
 fi
 
-if [ -z "$pid" ]; then 
+if [ -z "$pid" ]; then
   echo "ERROR: No pid set!"
 fi
 

@@ -1,8 +1,10 @@
-#!/bin/bash -e
+#!/bin/sh
 
-pushd "${BASE_PATH}/dotfiles" >&-
+(
+  cd dotfiles || exit
+
   for dotfile in *
   do
     ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
   done
-popd >&-
+)

@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh
 
 alias hrc='heroku run rails console'
 alias hrr='heroku run rake'

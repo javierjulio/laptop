@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh
 
 alias be='bundle exec'
 alias bi='bundle install'

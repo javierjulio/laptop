@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh
 
 code() {
   VSCODE_CWD="$PWD" open -nW -a "Visual Studio Code" --args "$@"
@@ -8,39 +8,32 @@ vscode() {
   code "$@"
 }
 
-alias s='start'
+alias s="start_dev_server"
 
-start() {
-  local red="\033[1;31m"
-  local purple="\033[1;35m"
-  local green="\033[1;32m"
-  local reset="\033[0;0m"
-  local messagea
-  local commanda
-
+start_dev_server() {
   if [ -f ./Procfile.dev ]; then
-    messagea="Procfile.dev detected"
-    commanda="foreman start -f Procfile.dev"
-  elif [ -f ./Procfile ]; then
-    messagea="Procfile detected"
-    commanda="foreman start"
-  elif [ -f ./package.json ]; then
-    messagea="NPM app detected"
-    commanda="npm start"
-  else
-    messagea="No app found. Looking for Procfile or package.json."
-    echo -e "$red$messagea$reset"
-    return 1
-  fi
-
-  echo -e "$purple$messagea$reset"
-  if [ -n "$commanda" ]; then
+    echo "Procfile.dev detected"
     if [ -f ./config/boot.rb ]; then
       echo "Removing logs..."
       bundle exec rails log:clear
     fi
-
-    echo -e "Running $green$commanda$reset"
-    $commanda
+    echo "Running: foreman start -f Procfile.dev"
+    foreman start -f Procfile.dev
+  elif [ -f ./Procfile ]; then
+    echo "Procfile detected"
+    if [ -f ./config/boot.rb ]; then
+      echo "Removing logs..."
+      bundle exec rails log:clear
+    fi
+    echo "Running: foreman start"
+    foreman start
+  elif [ -f ./package.json ]; then
+    echo "NPM package detected"
+    echo "Running: npm start"
+    npm start
+  else
+    echo "\033[1;31m** No app server found. **"
+    echo "\033[1;31m** Looking for a Procfile(.dev) or package.json file. **"
+    return 1
   fi
 }

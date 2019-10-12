@@ -1,9 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # shellcheck disable=SC1090
-source "$HOME/.profile"
+source "$HOME/.zprofile"
 
-echo -e ""
+echo ""
 echo "Setting macOS defaults..."
 
 # Close any open System Preferences panes, to prevent them from

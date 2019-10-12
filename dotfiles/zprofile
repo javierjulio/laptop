@@ -1,0 +1,85 @@
+#!/bin/zsh
+
+# Case-insensitive globbing (used in pathname expansion)
+setopt NO_CASE_GLOB
+
+# Try to correct the spelling of commands.
+#   > Dekstop
+#   zsh: correct 'Dekstop' to 'Desktop' [nyae]?
+setopt CORRECT
+
+setopt HIST_VERIFY
+setopt SHARE_HISTORY
+setopt EXTENDED_HISTORY # add timestamps to history
+setopt INC_APPEND_HISTORY # adds history incrementally
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_NO_STORE # don't add history commands to history
+
+brew_prefix="$(brew --prefix)"
+
+# # Load bash completion
+if [ -f "$brew_prefix/etc/bash_completion" ]; then
+  # shellcheck disable=SC1090
+  # source "$brew_prefix/etc/bash_completion.d/git-completion.bash"
+  # echo 'bash completion!'
+# if type brew &>/dev/null; then
+#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+# fi
+
+# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+autoload -U +X bashcompinit && bashcompinit
+autoload -U +X compinit && compinit
+source "$brew_prefix/etc/bash_completion.d/git-completion.bash"
+source "$brew_prefix/etc/bash_completion.d/git-prompt.sh"
+# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+  # . "$brew_prefix/etc/bash_completion"
+  # __git_complete g _git
+  # Set autocomplete for "g" git alias
+  # __git_complete g __git_main
+# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
+# fpath=(~/.zsh $fpath)
+
+  # Set autocomplete for "g" git alias
+  # __git_complete g __git_main
+
+# autoload -Uz compinit && compinit
+
+  # [[ -f /usr/local/share/zsh/site-functions/_git ]] && \
+  #   rm  -f /usr/local/share/zsh/site-functions/_git
+
+  # source "/usr/local/share/zsh/site-functions/git-completion.bash"
+  # zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
+  # completion='$(brew --prefix)/share/zsh/site-functions/_git'
+  # if test -f $completion
+  # then
+    # source $completion
+  # fi
+fi
+
+# Load grc (Terminal colorizer)
+if [ -f "$brew_prefix/etc/grc.zsh" ]; then
+  . "$brew_prefix/etc/grc.zsh"
+fi
+
+unset brew_prefix
+
+# bindkey "^[f" forward-word
+# bindkey "^[b" backward-word
+# bindkey -e
+# bindkey '^[[1;9C' forward-word
+# bindkey '^[[1;9D' backward-word
+
+# Make tabbing autocomplete regardless of case. (https://superuser.com/a/1092328)
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+for profile_config in "$HOME"/.profile.d/*
+do
+  source "$profile_config"
+done
+
+[ -e "$HOME/.zsh_local" ] && source "$HOME/.zsh_local"
+
+# compinit -u
+# bashcompinit

@@ -1,20 +1,22 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # shellcheck disable=SC1090
-source "$HOME/.profile"
+source "$HOME/.zprofile"
 
 RBENV_PREFIX="$HOME/.rbenv"
 RBENV_UPDATE_PREFIX="$HOME/.rbenv/plugins/rbenv-update"
 RUBY_BUILD_PREFIX="$HOME/.rbenv/plugins/ruby-build"
 
+echo ""
+
 if [ ! -d "$RBENV_PREFIX" ]; then
-  echo -e "\nInstalling rbenv..."
+  echo "Installing rbenv..."
   git clone https://github.com/rbenv/rbenv.git "$RBENV_PREFIX"
   reload
 fi
 
 if [ ! -d "$RBENV_UPDATE_PREFIX" ]; then
-  echo -e "\nInstalling rbenv-update..."
+  echo "Installing rbenv-update..."
   git clone https://github.com/rkh/rbenv-update.git "$RBENV_UPDATE_PREFIX"
 else
   rbenv update
@@ -30,14 +32,14 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   # chmod go-w /Users
   # chmod go-w ~
 
-  echo -e "\nInstalling ruby-build..."
+  echo "Installing ruby-build..."
   git clone https://github.com/rbenv/ruby-build.git "$RUBY_BUILD_PREFIX"
 
   ruby_version="$(find_latest_ruby)"
 
   eval "$(rbenv init -)"
 
-  echo -e "\nInstalling Ruby ${ruby_version}..."
+  echo "Installing Ruby ${ruby_version}..."
 
   readline_dir="--with-readline-dir=$(brew --prefix readline)"
   openssl_dir="--with-openssl-dir=$(brew --prefix openssl)"
@@ -48,15 +50,15 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   rbenv global "$ruby_version"
   rbenv shell "$ruby_version"
 
-  echo -e "\nUpdating default gems for Ruby ${ruby_version}..."
+  echo "Updating default gems for Ruby ${ruby_version}..."
   gem update --system
   gem update
 
-  echo -e "\nResolve 'already initialized constant' warnings..."
+  echo "Resolve 'already initialized constant' warnings..."
   # https://github.com/ruby/fileutils/issues/22#issuecomment-424230668
   gem uninstall fileutils
   gem update fileutils --default
 
-  echo -e "\nInstalling common gems..."
+  echo "Installing common gems..."
   gem install bundler foreman rails
 fi

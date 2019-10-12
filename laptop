@@ -1,33 +1,18 @@
-#!/bin/bash
-
-set_base_path() {
-  SOURCE="${BASH_SOURCE[0]}"
-  DIR="$( dirname "$SOURCE" )"
-  while [ -h "$SOURCE" ]
-  do
-    SOURCE="$(readlink "$SOURCE")"
-    [[ $SOURCE != /* ]] && SOURCE="${DIR}/$SOURCE"
-    DIR="$( cd -P "$(dirname "$SOURCE")" && pwd )"
-  done
-  # shellcheck disable=SC2034
-  BASE_PATH="$(cd "$DIR" && pwd)"
-}
-
-set_base_path
+#!/bin/sh
 
 . link_dotfiles
 
-command_exists () {
-  type -P "$1" &> /dev/null ;
-}
-
-if command_exists brew ; then
-  echo -e "\nUpdating Homebrew..."
+if command -v brew >/dev/null 2>&1; then
+  echo ""
+  echo "Updating Homebrew..."
   brew update
 else
-  echo -e "\nInstalling Homebrew..."
+  echo ""
+  echo "Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
+
+echo ""
 
 brew bundle --no-upgrade
 brew bundle --file=Caskfile
@@ -40,10 +25,12 @@ brew bundle --file=Caskfile
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 
 if [ "$terminal_theme" != "Ocean Dark" ]; then
-  echo -e "\nInstall Terminal theme."
-  echo -e "Location: laptop/themes/Ocean Dark.terminal"
+  echo ""
+  echo "Install Terminal theme."
+  echo "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
 unset terminal_theme
 
-echo -e "\nDone."
+echo ""
+echo "Done."

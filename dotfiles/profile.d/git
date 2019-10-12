@@ -1,4 +1,4 @@
-#!/bin/bash -e
+#!/bin/sh
 
 alias g='git'
 alias gb='git branch'

@@ -1,27 +1,29 @@
-#!/usr/bin/env bash
+#!/bin/zsh
 
 # shellcheck disable=SC1090
-source "$HOME/.profile"
+source "$HOME/.zprofile"
 
 NVM_PREFIX="$HOME/.nvm"
 
+echo ""
+
 if [ -d "$NVM_PREFIX" ]; then
-  echo -e "\nUpdating nvm..."
+  echo "Updating nvm..."
   cd "$NVM_PREFIX" || exit
   git pull
   reload
-  echo -e "\nUsing Node.js $(nvm current) ..."
+  echo "Using Node.js $(nvm current) ..."
 else
-  echo -e "\nInstalling nvm..."
+  echo "Installing nvm..."
   git clone https://github.com/creationix/nvm.git "$NVM_PREFIX"
   reload
 
   nvm install 10.7.0
   nvm alias default 10.7.0
 
-  echo -e "\nInstalling latest npm..."
+  echo "Installing latest npm..."
   npm install -g npm
 
-  echo -e "\nInstalling common npm packages..."
-  npm install -g gulp-cli ember-cli
+  echo "Installing common npm packages..."
+  npm install -g gulp-cli ember-cli parcel
 fi

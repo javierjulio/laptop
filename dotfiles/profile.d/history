@@ -1,13 +1,36 @@
-#!/bin/bash -e
+#!/bin/sh
 
-# Increase Bash history size. Allow 32³ entries; the default is 500.
-export HISTSIZE='32768';
-export HISTFILESIZE="${HISTSIZE}";
+export HISTSIZE="50000" # Number of lines kept in session history
 
-# Avoid duplicate entries.
-export HISTCONTROL="ignoredups"
+if [ -n "$ZSH_VERSION" ]; then
+  export HISTFILE=~/.zsh_history
+  export SAVEHIST="${HISTSIZE}" # Number of lines saved in history after logout
 
-# Use standard ISO 8601 timestamp.
-# %F equivalent to %Y-%m-%d
-# %T equivalent to %H:%M:%S (24-hours format)
-export HISTTIMEFORMAT='%F %T '
+  # Use standard ISO 8601 timestamp.
+  # %F equivalent to %Y-%m-%d
+  # %T equivalent to %H:%M:%S (24-hours format)
+  alias h="history -t '%F %T '"
+  alias hsearch="h | grep --color=auto"
+
+  hstats() {
+    history 1 |
+      cat |
+      awk '{CMD[$2]++;count++;}END { for (a in CMD)print CMD[a] " " CMD[a]/count*100 "% " a; }' |
+      grep -v "./" |
+      column -c3 -s " " -t |
+      sort -nr |
+      nl |
+      head -n10
+  }
+elif [ -n "$BASH" ]; then
+  export HISTFILESIZE="${HISTSIZE}";
+  export HISTCONTROL="ignoredups"
+
+  # Use standard ISO 8601 timestamp.
+  # %F equivalent to %Y-%m-%d
+  # %T equivalent to %H:%M:%S (24-hours format)
+  export HISTTIMEFORMAT='%F %T '
+
+  alias h='history'
+  alias hsearch='history | grep --color=auto'
+fi

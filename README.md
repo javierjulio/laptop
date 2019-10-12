@@ -21,3 +21,10 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 #### Terminal Themes
 * https://github.com/lysyi3m/osx-terminal-themes
 * https://draculatheme.com/terminal/
+#### zsh Transition
+* https://support.apple.com/en-us/HT208050
+* https://scriptingosx.com/2019/06/moving-to-zsh/
+* For git completion with `g` alias:
+  * https://github.com/robbyrussell/oh-my-zsh/issues/7459#issuecomment-499487413
+  * https://medium.com/@oliverspryn/adding-git-completion-to-zsh-60f3b0e7ffbc
+* For bash completion: https://github.com/eddiezane/lunchy/issues/57#issuecomment-448588918

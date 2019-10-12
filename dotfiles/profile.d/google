@@ -1,18 +1,21 @@
-#!/bin/bash -e
+#!/bin/sh
 
 source_google_cloud_sdk_file() {
-  local filename=$1
-  local path="/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk"
-  if [ -f "$path/$filename" ]; then
+  if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/$1" ]; then
     # shellcheck disable=SC1090
-    source "$path/$filename"
+    . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/$1"
   fi
 }
 
-# Updates PATH for the Google Cloud SDK.
-source_google_cloud_sdk_file "path.bash.inc"
+if [ -n "$ZSH_VERSION" ]; then
+  # Updates PATH for the Google Cloud SDK.
+  source_google_cloud_sdk_file "path.zsh.inc"
 
-# Enables shell command completion for gcloud.
-source_google_cloud_sdk_file "completion.bash.inc"
+  # Enables shell command completion for gcloud.
+  source_google_cloud_sdk_file "completion.zsh.inc"
+elif [ -n "$BASH" ]; then
+  source_google_cloud_sdk_file "path.bash.inc"
+  source_google_cloud_sdk_file "completion.bash.inc"
+fi
 
 unset -f source_google_cloud_sdk_file
