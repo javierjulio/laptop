@@ -30,6 +30,4 @@ if [ "$terminal_theme" != "Ocean Dark" ]; then
   log_warn "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
-unset terminal_theme
-
 log_pass "DONE"
