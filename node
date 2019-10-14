@@ -7,25 +7,26 @@ source "$HOME/.zprofile"
 
 log_echo "Running Node setup..."
 
-NVM_PREFIX="$HOME/.nvm"
+NODENV_PREFIX="$HOME/.nodenv"
 
-if [ -d "$NVM_PREFIX" ]; then
-  log_echo "Updating nvm..."
-  cd "$NVM_PREFIX" || exit
-  git pull
-  reload
-  log_echo "Using Node.js $(nvm current) ..."
+find_latest_node() {
+  nodenv install -l | grep "^[[:space:]]*\d*\.\d*\.\d*" | tail -1 | sed -e 's/^ *//'
+}
+
+num_nodes="$(nodenv versions --bare | wc -l)"
+
+if [ $num_nodes -eq 0 ]; then
+  node_version="$(find_latest_node)"
+  log_echo "Installing Node ${node_version}..."
+
+  nodenv install -s "$node_version"
+  nodenv global "$node_version"
+  nodenv shell "$node_version"
+
+  log_echo "Installing common packages..."
+  npm install -g npm localtunnel parcel
+
+  log_pass "Node ${node_version} installed."
 else
-  log_echo "Installing nvm..."
-  git clone https://github.com/creationix/nvm.git "$NVM_PREFIX"
-  reload
-
-  nvm install 10.7.0
-  nvm alias default 10.7.0
-
-  log_echo "Installing latest npm..."
-  npm install -g npm
-
-  log_echo "Installing common npm packages..."
-  npm install -g gulp-cli ember-cli parcel
+  log_echo "Using Node $(nodenv global)."
 fi
