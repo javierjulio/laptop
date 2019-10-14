@@ -9,7 +9,7 @@ if [ -n "$ZSH_VERSION" ]; then
   # Use standard ISO 8601 timestamp.
   # %F equivalent to %Y-%m-%d
   # %T equivalent to %H:%M:%S (24-hours format)
-  alias h="history -t '%F %T '"
+  alias h="history -t '%F %T ' 1"
   alias hsearch="h | grep --color=auto"
 
   hstats() {
