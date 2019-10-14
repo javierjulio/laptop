@@ -1,5 +1,9 @@
 #!/bin/sh
 
+. ./helpers.sh
+
+log_echo "Symlinking dotfiles..."
+
 (
   cd dotfiles || exit
 
@@ -8,3 +12,5 @@
     ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
   done
 )
+
+log_pass "Dotfiles symlinked."

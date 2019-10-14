@@ -13,6 +13,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
 ### Resources
 #### Dotfiles
+* https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
 * https://github.com/holman/dotfiles
 * https://github.com/mathiasbynens/dotfiles

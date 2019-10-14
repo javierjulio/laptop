@@ -1,19 +1,20 @@
 #!/bin/sh
 
+. ./helpers.sh
+
+log_info "Running laptop script..."
+
 . link_dotfiles
 
 if command -v brew >/dev/null 2>&1; then
-  echo ""
-  echo "Updating Homebrew..."
+  log_info "Updating Homebrew..."
   brew update
 else
-  echo ""
-  echo "Installing Homebrew..."
+  log_echo "Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
-echo ""
-
+log_info "Running Brew bundler..."
 brew bundle --no-upgrade
 brew bundle --file=Caskfile
 
@@ -25,12 +26,10 @@ brew bundle --file=Caskfile
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 
 if [ "$terminal_theme" != "Ocean Dark" ]; then
-  echo ""
-  echo "Install Terminal theme."
-  echo "Location: laptop/themes/Ocean Dark.terminal"
+  log_warn "Install Terminal theme."
+  log_warn "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
 unset terminal_theme
 
-echo ""
-echo "Done."
+log_pass "DONE"

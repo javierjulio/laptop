@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+. ./helpers.sh
+
 # shellcheck disable=SC1090
 source "$HOME/.zprofile"
 
