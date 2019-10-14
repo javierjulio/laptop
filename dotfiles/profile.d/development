@@ -1,12 +1,10 @@
 #!/bin/sh
 
-code() {
-  VSCODE_CWD="$PWD" open -nW -a "Visual Studio Code" --args "$@"
-}
-
-vscode() {
-  code "$@"
-}
+# Run `code` to open Visual Studio Code from the Terminal.
+# https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
+  export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
+fi
 
 alias s="start_dev_server"
 
