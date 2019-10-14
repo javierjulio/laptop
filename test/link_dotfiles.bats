@@ -30,4 +30,5 @@ setup() {
   assert [ -f "${TMP_DIR}/.irbrc" ]
   assert [ -f "${TMP_DIR}/.profile" ]
   assert [ -f "${TMP_DIR}/.railsrc" ]
+  assert [ -f "${TMP_DIR}/.zprofile" ]
 }
