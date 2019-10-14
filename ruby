@@ -5,43 +5,24 @@
 # shellcheck disable=SC1090
 source "$HOME/.zprofile"
 
+log_echo "Running Ruby setup..."
+
 RBENV_PREFIX="$HOME/.rbenv"
-RBENV_UPDATE_PREFIX="$HOME/.rbenv/plugins/rbenv-update"
-RUBY_BUILD_PREFIX="$HOME/.rbenv/plugins/ruby-build"
-
-echo ""
-
-if [ ! -d "$RBENV_PREFIX" ]; then
-  echo "Installing rbenv..."
-  git clone https://github.com/rbenv/rbenv.git "$RBENV_PREFIX"
-  reload
-fi
-
-if [ ! -d "$RBENV_UPDATE_PREFIX" ]; then
-  echo "Installing rbenv-update..."
-  git clone https://github.com/rkh/rbenv-update.git "$RBENV_UPDATE_PREFIX"
-else
-  rbenv update
-fi
 
 find_latest_ruby() {
   rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
 }
 
-if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
+num_rubies="$(rbenv versions --bare | wc -l)"
+
+if [ $num_rubies -eq 0 ]; then
+  ruby_version="$(find_latest_ruby)"
+  log_echo "Installing Ruby ${ruby_version}..."
+
   # Resolve warning: "Insecure world writable dir /Users/username in PATH, mode 040777"
   # https://stackoverflow.com/a/6196644
   # chmod go-w /Users
   # chmod go-w ~
-
-  echo "Installing ruby-build..."
-  git clone https://github.com/rbenv/ruby-build.git "$RUBY_BUILD_PREFIX"
-
-  ruby_version="$(find_latest_ruby)"
-
-  eval "$(rbenv init -)"
-
-  echo "Installing Ruby ${ruby_version}..."
 
   readline_dir="--with-readline-dir=$(brew --prefix readline)"
   openssl_dir="--with-openssl-dir=$(brew --prefix openssl)"
@@ -52,15 +33,19 @@ if [ ! -d "$RUBY_BUILD_PREFIX" ]; then
   rbenv global "$ruby_version"
   rbenv shell "$ruby_version"
 
-  echo "Updating default gems for Ruby ${ruby_version}..."
+  log_echo "Updating system gems..."
   gem update --system
   gem update
 
-  echo "Resolve 'already initialized constant' warnings..."
+  log_echo "Resolve 'already initialized constant' warnings..."
   # https://github.com/ruby/fileutils/issues/22#issuecomment-424230668
   gem uninstall fileutils
   gem update fileutils --default
 
-  echo "Installing common gems..."
+  log_echo "Installing commonly used gems..."
   gem install bundler foreman rails
+
+  log_pass "Ruby ${ruby_version} installed."
+else
+  log_echo "Using Ruby $(rbenv global)."
 fi

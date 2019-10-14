@@ -15,6 +15,5 @@ alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_
 alias rl='tail -f log/development.log'
 
 if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
