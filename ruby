@@ -43,6 +43,7 @@ if [ $num_rubies -eq 0 ]; then
   gem update fileutils --default
 
   log_echo "Installing commonly used gems..."
+  # Answer "yes" with overriding executables e.g. bundler
   gem install bundler foreman rails
 
   log_pass "Ruby ${ruby_version} installed."
