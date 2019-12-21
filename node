@@ -3,7 +3,7 @@
 . ./helpers.sh
 
 # shellcheck disable=SC1090
-source "$HOME/.zprofile"
+source "$HOME/.zshrc"
 
 log_echo "Running Node setup..."
 
