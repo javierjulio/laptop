@@ -8,10 +8,7 @@ source_google_cloud_sdk_file() {
 }
 
 if [ -n "$ZSH_VERSION" ]; then
-  # Updates PATH for the Google Cloud SDK.
   source_google_cloud_sdk_file "path.zsh.inc"
-
-  # Enables shell command completion for gcloud.
   source_google_cloud_sdk_file "completion.zsh.inc"
 elif [ -n "$BASH" ]; then
   source_google_cloud_sdk_file "path.bash.inc"
