@@ -5,7 +5,7 @@
         "revision": "bed1552647b7a181e84c7f89a532128d485bef75"
       },
       "homebrew/core": {
-        "revision": "8c8874cc0600bb8827d40cb2e176b5878f1792c5"
+        "revision": "964ad30ec2f112919cc28f3ccd390dc489dbe680"
       },
       "homebrew/services": {
         "revision": "eca39722f130e8bc1e2e322588db493ca0398c01"
@@ -336,16 +336,16 @@
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.catalina.bottle.tar.gz",
-              "sha256": "1e901f31a951ef0a8c3fc32902003c1a012ce9598092913c2f8510224720d572"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.1.catalina.bottle.tar.gz",
+              "sha256": "49208976475bfcf3180fde91dc1c223f44d48a9e54016cbc048ff9a9de2efb19"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.mojave.bottle.tar.gz",
-              "sha256": "dd7a2b6b247cb85588a264cc147d0a4ed09af2391a8f8cac8e05cd4d772c72de"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.1.mojave.bottle.tar.gz",
+              "sha256": "f6029f4d5c77dc4fe76fab60d3e0a8b466102b59c885c1f89346083e3fab1219"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.high_sierra.bottle.tar.gz",
-              "sha256": "58445e027848ec1d1d1d0eed5ac4a72169bfa62a441288b8b4e5c5c028450d1f"
+              "url": "https://homebrew.bintray.com/bottles/erlang-22.2.1.high_sierra.bottle.tar.gz",
+              "sha256": "de011859f132db86f136cd2bd3610475403a5fb387422cba2f5eb4861e6b06ea"
             }
           }
         }
@@ -495,7 +495,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.2.1",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "8c8874cc0600bb8827d40cb2e176b5878f1792c5",
+        "Homebrew/homebrew-core": "964ad30ec2f112919cc28f3ccd390dc489dbe680",
         "CLT": "11.0.0.0.1.1567737322",
         "Xcode": "11.2.1",
         "macOS": "10.15.2"
