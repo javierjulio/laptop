@@ -7,8 +7,6 @@ source "$HOME/.zshrc"
 
 log_echo "Running Ruby setup..."
 
-RBENV_PREFIX="$HOME/.rbenv"
-
 find_latest_ruby() {
   rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
 }

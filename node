@@ -7,8 +7,6 @@ source "$HOME/.zshrc"
 
 log_echo "Running Node setup..."
 
-NODENV_PREFIX="$HOME/.nodenv"
-
 find_latest_node() {
   nodenv install -l | grep "^[[:space:]]*\d*\.\d*\.\d*" | tail -1 | sed -e 's/^ *//'
 }
