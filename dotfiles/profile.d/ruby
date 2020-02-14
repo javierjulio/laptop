@@ -16,3 +16,6 @@ alias rl='tail -f log/development.log'
 if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
+
+# Use VS Code when opening a gem
+export BUNDLER_EDITOR="code"
