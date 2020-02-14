@@ -9,7 +9,6 @@ alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
 alias rt='bundle exec ruby -Itest'
 
-alias rs='bundle exec rails log:clear && start'
 alias berc='bundle exec rails console'
 alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test'
 alias rl='tail -f log/development.log'
