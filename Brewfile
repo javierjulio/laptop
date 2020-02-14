@@ -17,7 +17,6 @@ brew 'nodenv'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
 brew 'postgresql@10', link: true, restart_service: true
 brew 'redis', restart_service: true
-brew 'erlang'
 brew 'elixir'
 brew 'heroku'
 brew 'mas' # Mac App Store command line interface
