@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "a425bb19df9dc042ff566c94c13781f7e1b6c563"
+        "revision": "d64c2eeb1e949b08bd224542899cb45d3f51f02b"
       }
     },
     "cask": {
@@ -146,7 +146,7 @@
       "Things 3": null,
       "DaisyDisk": {
         "id": "411643860",
-        "version": "4.9"
+        "version": "4.10"
       },
       "Day One": {
         "id": "1055511498",
@@ -176,7 +176,7 @@
       },
       "The Unarchiver": {
         "id": "425424353",
-        "version": "4.1.0"
+        "version": "4.2.0"
       },
       "Honey": {
         "id": "1472777122",
@@ -188,11 +188,11 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "98.0.0"
+        "version": "99.0.0"
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.10"
+        "version": "1.11"
       }
     }
   },
@@ -207,9 +207,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.7",
+        "HOMEBREW_VERSION": "2.2.10",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "315b9f858edda64fedb0af242aedf022577845e6",
+        "Homebrew/homebrew-core": "dd33b35a9f616b0193b8a71dfa3a341990b7e828",
         "CLT": "11.0.33.17",
         "Xcode": "11.3",
         "macOS": "10.15.3"
