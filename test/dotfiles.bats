@@ -35,8 +35,7 @@ setup() {
   assert [ -f "${TMP_DIR}/.zshrc" ]
 }
 
-@test "makes the BUNDLE_EDITOR variable available" {
-  run link_dotfiles
+@test "the BUNDLER_EDITOR variable is set" {
   run echo $BUNDLER_EDITOR
   assert_success
   assert_output "code"
