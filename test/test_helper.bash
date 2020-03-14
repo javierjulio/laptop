@@ -54,6 +54,14 @@ assert_equal() {
   fi
 }
 
+assert_output_match() {
+  if [[ ! "${output}" =~ ${1} ]]; then
+    echo "regex:  ${1}"
+    echo "actual: ${output}"
+    return 1
+  fi
+}
+
 assert_output() {
   local expected
   if [ $# -eq 0 ]; then expected="$(cat -)"
