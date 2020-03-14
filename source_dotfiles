@@ -1,0 +1,13 @@
+#!/bin/sh
+
+. ./helpers.sh
+
+log_echo "Sourcing dotfiles..."
+
+for file in "$HOME"/.profile.d/*
+do
+  # shellcheck disable=SC1090
+  source "$file"
+done
+
+log_pass "Dotfiles sourced."

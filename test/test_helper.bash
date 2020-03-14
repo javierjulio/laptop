@@ -14,6 +14,8 @@ dump() {
 common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
+  . link_dotfiles
+  . source_dotfiles
 }
 
 teardown() {
