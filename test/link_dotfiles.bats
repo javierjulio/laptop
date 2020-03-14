@@ -4,7 +4,6 @@ load test_helper
 
 setup() {
   common_setup
-  export BASE_PATH="${PWD}"
 }
 
 @test "creates symlink (hidden) for dotfiles in tmp home directory" {
