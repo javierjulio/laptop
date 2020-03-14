@@ -36,6 +36,7 @@ setup() {
 }
 
 @test "makes the BUNDLE_EDITOR variable available" {
+  run link_dotfiles
   run echo $BUNDLER_EDITOR
   assert_success
   assert_output "code"
