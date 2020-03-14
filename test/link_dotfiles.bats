@@ -12,6 +12,9 @@ setup() {
   assert_success
   assert [ -d "${TMP_DIR}/.grc" ]
   assert [ -f "${TMP_DIR}/.grc/conf.todos" ]
+  assert [ -d "${TMP_DIR}/.bin" ]
+  assert [ -f "${TMP_DIR}/.bin/local-ip" ]
+  assert [ -f "${TMP_DIR}/.bin/remote-ip" ]
   assert [ -d "${TMP_DIR}/.profile.d" ]
   assert [ -f "${TMP_DIR}/.profile.d/development" ]
   assert [ -f "${TMP_DIR}/.profile.d/git" ]

@@ -18,14 +18,6 @@ alias r='reload'
 alias c='clear'
 alias q='exit'
 
-localip() {
-  ifconfig | grep broadcast | awk '{ print $2 }'
-}
-
-remoteip() {
-  curl -s ipecho.net/plain && echo ''
-}
-
 reload() {
   # shellcheck disable=SC1090
   if [ -n "$ZSH_VERSION" ]; then
