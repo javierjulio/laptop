@@ -32,3 +32,9 @@ setup() {
   assert [ -f "${TMP_DIR}/.railsrc" ]
   assert [ -f "${TMP_DIR}/.zshrc" ]
 }
+
+@test "makes the BUNDLE_EDITOR variable available" {
+  run echo $BUNDLER_EDITOR
+  assert_success
+  assert_output "code"
+}
