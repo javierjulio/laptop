@@ -22,13 +22,11 @@
   po = push origin
   pos = push origin staging
   pom = push origin master
-  phm = push heroku master
   ros = rebase origin/staging
   rom = rebase origin/master
   rus = rebase upstream/staging
   rum = rebase upstream/master
   s = status
-  todos = grep -EI "TODO|FIXME" -- './*' ':!vendor/' ':!tmp/' | grcat conf.todos
   uci = reset --soft HEAD^ # Undo last commit with changes intact
 [color]
   ui = auto
