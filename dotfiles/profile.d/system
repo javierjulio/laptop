@@ -1,7 +1,5 @@
 #!/bin/sh
 
-alias aliases="alias | sed 's/alias //g' | sed 's/=/ = /g'"
-
 alias opendir='open -R .'
 
 alias ..='cd ..'
