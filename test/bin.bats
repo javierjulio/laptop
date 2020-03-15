@@ -7,6 +7,11 @@ setup() {
   source "dotfiles/profile.d/path"
 }
 
+@test "run shellcheck" {
+  run ./shellcheck.sh
+  assert_success
+}
+
 @test "local-ip displays your local IP address" {
   run local-ip
   assert_success
