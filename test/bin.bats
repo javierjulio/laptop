@@ -4,6 +4,7 @@ load test_helper
 
 setup() {
   common_setup
+  source "dotfiles/profile.d/path"
 }
 
 @test "local-ip displays your local IP address" {
