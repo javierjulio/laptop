@@ -12,8 +12,6 @@ alias laptop='cd ~/Projects/laptop'
 alias dotfiles='cd ~/Projects/laptop/dotfiles'
 alias jj='cd ~/Projects/javierjulio'
 
-alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
-
 alias r='reload'
 alias c='clear'
 alias q='exit'

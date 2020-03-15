@@ -5,6 +5,13 @@ export PATH="${SCRIPT_ROOT}:${FIXTURES_ROOT}:$PATH"
 
 TMP_DIR="${BATS_TEST_DIRNAME}/tmp"
 
+create_tmp_file() {
+  (
+    cd $TMP_DIR || exit
+    mkdir -p "$(dirname "$1")" && touch "$1";
+  )
+}
+
 common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
