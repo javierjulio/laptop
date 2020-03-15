@@ -35,19 +35,21 @@ setup() {
 }
 
 @test "the BUNDLER_EDITOR variable is set" {
+  source "dotfiles/profile.d/ruby"
   run echo $BUNDLER_EDITOR
   assert_success
   assert_output "code"
 }
 
 @test "the PATH variable contains dotfiles/.bin path" {
+  source "dotfiles/profile.d/path"
   run echo "$PATH"
   assert_success
   assert_output_match "^${TMP_DIR}\/\.bin\:"
 }
 
-@test "the PATH variable has dotfiles/.bin path as the first entry" {
-  run echo "$(echo "$PATH" | tr : '\n')"
+@test "paths will display each path from PATH variable on a new line" {
+  source "dotfiles/profile.d/path"
+  run paths
   assert_success
-  assert_line 0 "${TMP_DIR}/.bin"
 }
