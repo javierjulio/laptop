@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Example output from running this command:
+#
+# ./path/to/file.rb
+# 145: # TODO: remove this line
+#
+# ./path/to/another/file.rb
+# 213: # TODO: another comment
+
+grep -rn -EI "TODO|FIXME|HACK" \
+  --exclude-dir=.git \
+  --exclude-dir=coverage \
+  --exclude-dir=public \
+  --exclude-dir=vendor \
+  --exclude-dir=node_modules \
+  --exclude-dir=tmp \
+  --exclude-dir=log \
+  --exclude-dir=.vscode . |
+  # prints: file path on 1st line, then line number and search match on 2nd line
+  awk -F: '{ printf "\n"; print $1; printf("%4s:%s%s", $2, $3, $4); printf "\n"; }' |
+  # Colorize search results (by default looks in ~/.grc)
+  grcat conf.todos |
+  # Remove all leading whitepsace from match line
+  sed -E "s/\:[[:blank:]]{2,}/:   /"

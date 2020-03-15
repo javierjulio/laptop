@@ -47,20 +47,3 @@ emptytrash() {
   sudo rm -rfv ~/.Trash
   sudo rm -rfv /private/var/log/asl/*.asl
 }
-
-todos() {
-  grep -r -EI "TODO|FIXME" \
-    --exclude-dir=.git \
-    --exclude-dir=coverage \
-    --exclude-dir=public \
-    --exclude-dir=vendor \
-    --exclude-dir=node_modules \
-    --exclude-dir=tmp \
-    --exclude-dir=.vscode . |
-    # Colorize search results (by default looks in ~/.grc)
-    grcat conf.todos |
-    # print file name and then on a new line show only the matching text
-    awk -F: '{ printf "\n"; print $1; print substr($0,index($0,$2));}' |
-    # Replace any leading whitespaces with a set of 4 (tabs are too much)
-    sed -E "s/[[:blank:]]{2,}/    /"
-}
