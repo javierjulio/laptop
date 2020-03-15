@@ -8,7 +8,7 @@ setup() {
 }
 
 @test "run shellcheck" {
-  run ./shellcheck.sh
+  run shellcheck.sh
   assert_success
 }
 
