@@ -22,9 +22,15 @@ teardown() {
   rm -rf "$TMP_DIR"
 }
 
+print_lines() {
+  for line in "${lines[@]}"; do
+    echo $line
+  done
+}
+
 flunk() {
   { if [ "$#" -eq 0 ]; then cat -
-    else echo "$@"
+    else print_lines && echo "$@"
     fi
   } | sed "s:${BATS_TMPDIR}:TEST_DIR:g" >&2
   return 1
