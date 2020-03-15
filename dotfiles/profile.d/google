@@ -7,12 +7,7 @@ source_google_cloud_sdk_file() {
   fi
 }
 
-if [ -n "$ZSH_VERSION" ]; then
-  source_google_cloud_sdk_file "path.zsh.inc"
-  source_google_cloud_sdk_file "completion.zsh.inc"
-elif [ -n "$BASH" ]; then
-  source_google_cloud_sdk_file "path.bash.inc"
-  source_google_cloud_sdk_file "completion.bash.inc"
-fi
+source_google_cloud_sdk_file "path.zsh.inc"
+source_google_cloud_sdk_file "completion.zsh.inc"
 
 unset -f source_google_cloud_sdk_file
