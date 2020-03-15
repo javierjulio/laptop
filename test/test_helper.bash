@@ -7,7 +7,7 @@ TMP_DIR="${BATS_TEST_DIRNAME}/tmp"
 
 create_tmp_file() {
   (
-    cd $TMP_DIR || exit
+    cd "$TMP_DIR" || exit
     mkdir -p "$(dirname "$1")" && touch "$1";
   )
 }
