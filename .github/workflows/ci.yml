@@ -17,5 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install Shellcheck
+      run: brew install shellcheck
+
     - name: Run tests
       run: bats test/
