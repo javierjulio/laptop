@@ -98,6 +98,12 @@ refute_line() {
   fi
 }
 
+refute() {
+  if "$@"; then
+    flunk "succeeded: $@"
+  fi
+}
+
 assert() {
   if ! "$@"; then
     flunk "failed: $@"
