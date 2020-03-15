@@ -10,21 +10,16 @@ alias s="start_dev_server"
 
 start_dev_server() {
   if [ -f ./Procfile.dev ]; then
-    echo "Procfile.dev detected"
-    rm log/*.log
     echo "Running: foreman start -f Procfile.dev"
-    foreman start -f Procfile.dev
+    rm log/*.log && foreman start -f Procfile.dev
   elif [ -f ./Procfile ]; then
-    echo "Procfile detected"
-    rm log/*.log
     echo "Running: foreman start"
-    foreman start
+    rm log/*.log && foreman start
   elif [ -f ./package.json ]; then
     echo "Running: npm start"
     npm start
   else
     echo "\033[1;31m** No app server found. **\033[0m"
     echo "Looking for a Procfile(.dev) or package.json file."
-    return 1
   fi
 }
