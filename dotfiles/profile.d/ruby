@@ -7,7 +7,6 @@ alias bo='bundle outdated'
 alias bopen='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
-alias rt='bundle exec ruby -Itest'
 
 alias berc='bundle exec rails console'
 alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test'
