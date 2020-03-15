@@ -5,12 +5,6 @@ export PATH="${SCRIPT_ROOT}:${FIXTURES_ROOT}:$PATH"
 
 TMP_DIR="${BATS_TEST_DIRNAME}/tmp"
 
-dump() {
-  # rm -f "${SCRIPT_ROOT}/log.txt"
-  # use `assert_output ""` in test to see what it is
-  echo "$@" >> "${SCRIPT_ROOT}/log.txt"
-}
-
 common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
