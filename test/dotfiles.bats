@@ -40,3 +40,15 @@ setup() {
   assert_success
   assert_output "code"
 }
+
+@test "the PATH variable contains dotfiles/.bin path" {
+  run echo "$PATH"
+  assert_success
+  assert_output_match "^${TMP_DIR}\/\.bin\:"
+}
+
+@test "the PATH variable has dotfiles/.bin path as the first entry" {
+  run echo "$(echo "$PATH" | tr : '\n')"
+  assert_success
+  assert_line 0 "${TMP_DIR}/.bin"
+}
