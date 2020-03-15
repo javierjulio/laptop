@@ -32,12 +32,7 @@ executable() {
 }
 
 search() {
-  searchin . "$@"
-}
-
-searchin () {
-  find "$1" -type f -print0 |
-    xargs -0 grep -l "$2"
+  find . -type f -print0 | xargs -0 grep -l "$1"
 }
 
 # Empty the Trash on all mounted volumes and the main HDD
