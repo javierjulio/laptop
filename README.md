@@ -1,6 +1,8 @@
 # Laptop Setup Script
 
-Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/post/8700977975/2011-rubyists-guide-to-a-mac-os-x-development) inspired me to create my own script to install and update all the tools I use for development and general use. This also serves as documenting what I installed and more importantly **how** since I'm using the same commands I ran but now in reusable shell or zsh/bash scripts.
+![CI Build](https://github.com/javierjulio/laptop/workflows/CI/badge.svg)
+
+Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/post/8700977975/2011-rubyists-guide-to-a-mac-os-x-development) inspired me to create my own script to install and update all the tools I use for development and general use. This also serves as documenting what I installed and more importantly **how** since I'm using the same commands I ran but now in reusable shell scripts.
 
 ## Installation
 * `xcode-select --install` to install Command Line Developer Tools
