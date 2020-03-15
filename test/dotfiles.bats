@@ -18,7 +18,6 @@ setup() {
   assert [ -f "${TMP_DIR}/.profile.d/development" ]
   assert [ -f "${TMP_DIR}/.profile.d/git" ]
   assert [ -f "${TMP_DIR}/.profile.d/google" ]
-  assert [ -f "${TMP_DIR}/.profile.d/heroku" ]
   assert [ -f "${TMP_DIR}/.profile.d/history" ]
   assert [ -f "${TMP_DIR}/.profile.d/node" ]
   assert [ -f "${TMP_DIR}/.profile.d/path" ]
