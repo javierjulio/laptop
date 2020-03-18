@@ -10,11 +10,8 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 # part of the query. By adding another logger to a file, there we
 # will see the full debug query with all parameter values.
 # Solution: https://stackoverflow.com/a/26704547
-ActiveRecord::Base.logger.extend(
-  ActiveSupport::Logger.broadcast(
-    Logger.new(Rails.root.join('log', 'console.log'))
-  )
-)
+console_log = Rails.root.join('log', 'console.log')
+ActiveRecord::Base.logger.extend(ActiveSupport::Logger.broadcast(Logger.new(console_log)))
 
 def r
   reload!
