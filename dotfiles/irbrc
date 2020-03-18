@@ -37,7 +37,7 @@ end
 
 def clear
   system 'clear'
-  return 'In a plain Ruby environment - happy hacking!'
+  "Ruby #{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
 end
 
 railsrc = File.expand_path('~/.railsrc')
