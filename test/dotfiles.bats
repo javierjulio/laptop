@@ -52,4 +52,8 @@ setup() {
   source "dotfiles/profile.d/path"
   run paths
   assert_success
+  assert_line_match 0 "([^\/]*[\/])*[^\/]+"
+  assert [ -d "${lines[0]}" ]
+  assert_line_match 1 "([^\/]*[\/])*[^\/]+"
+  assert [ -d "${lines[1]}" ]
 }

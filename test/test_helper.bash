@@ -76,6 +76,19 @@ assert_output() {
   assert_equal "$expected" "$output"
 }
 
+assert_line_match() {
+  if [ "$1" -ge 0 ] 2>/dev/null; then
+    if [[ ! "${lines[$1]}" =~ ${2} ]]; then
+      echo "regex:  ${2}"
+      echo "actual: ${lines[$1]}"
+      return 1
+    fi
+  else
+    echo "usage: assert_line_match lineNum regex"
+    return 1
+  fi
+}
+
 assert_line() {
   if [ "$1" -ge 0 ] 2>/dev/null; then
     assert_equal "$2" "${lines[$1]}"
