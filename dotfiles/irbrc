@@ -9,24 +9,26 @@ IRB.conf[:USE_READLINE] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE # Use `>>` for prompt.
 IRB.conf[:SAVE_HISTORY] = 5000
 
-class Object
-  # List methods which are not in superclass.
-  def local_methods(obj = self)
-    (obj.methods - obj.class.superclass.instance_methods).sort
-  end
+def local_methods(obj=self)
+  (obj.public_methods - Object.public_methods - Object.instance_methods).sort
 end
 
-# Copies the last IRB result to the clipboard.
-def copy
-  %x[echo "#{IRB.CurrentContext.last_value}" | pbcopy]
-  true
+def predicates(obj=self)
+  local_methods(obj).grep(/\?$/)
+end
+
+def locate(obj, method)
+  obj.method(method.to_sym).source_location
 end
 
 def time(iterations: 1)
   require 'benchmark'
-  result = nil
-  Benchmark.bm { |x| x.report { iterations.times { result = yield } } }
-  result
+  Benchmark.measure { iterations.times { yield } } if block_given?
+end
+
+def copy
+  system "echo #{IRB.CurrentContext.last_value} | pbcopy"
+  true
 end
 
 def q
