@@ -40,7 +40,7 @@ if [ $num_rubies -eq 0 ]; then
   gem uninstall fileutils
   gem update fileutils --default
 
-  log_echo "Installing commonly used gems..."
+  log_echo "Installing common gems... (answer yes on overriding executables)"
   # Answer "yes" with overriding executables e.g. bundler
   gem install bundler foreman rails
 
