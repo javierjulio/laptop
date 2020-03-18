@@ -23,7 +23,6 @@ def copy
   true
 end
 
-# http://ozmm.org/posts/time_in_irb.html
 def time(iterations: 1)
   require 'benchmark'
   result = nil

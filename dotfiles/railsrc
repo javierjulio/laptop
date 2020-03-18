@@ -1,7 +1,5 @@
 #!/usr/bin/ruby
 
-# Resources
-# http://ozmm.org/posts/railsrc.html
 # http://rbjl.net/49-railsrc-rails-console-snippets
 
 # Show queries after running AR methods in console.
