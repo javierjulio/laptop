@@ -42,15 +42,3 @@ def date_formats
     puts
   end
 end
-
-def schema(obj)
-  y(obj.send(:column_names))
-end
-
-def sql(query)
-  ActiveRecord::Base.connection.select_all(query)
-end
-
-def user(email)
-  User.find_by(email: email)
-end
