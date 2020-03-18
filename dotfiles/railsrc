@@ -19,7 +19,7 @@ end
 
 def clear
   system 'clear'
-  return "In #{Rails.env} environment (Rails #{Rails.version})"
+  "#{Rails.env.capitalize} - Rails #{Rails.version} - Ruby #{RUBY_VERSION}"
 end
 
 # Show the date/time format strings defined and example output
