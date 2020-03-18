@@ -4,7 +4,7 @@ require 'irb/completion'
 require 'irb/ext/save-history'
 require 'rubygems'
 
-IRB.conf[:AUTO_INDENT] = true
+IRB.conf[:AUTO_INDENT] = true # Ruby 2.7: true is new default https://bit.ly/2IYxNqc
 IRB.conf[:USE_READLINE] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE # Remove annoying 'irb(main):001:0' and use '>>'
 IRB.conf[:SAVE_HISTORY] = 5000
