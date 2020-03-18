@@ -9,12 +9,16 @@ fi
 alias s="start_dev_server"
 
 start_dev_server() {
+  if [ -f ./config/boot.rb ]; then
+    echo "Removing logs..."
+    bundle exec rails log:clear
+  fi
   if [ -f ./Procfile.dev ]; then
     echo "Running: foreman start -f Procfile.dev"
-    rm log/*.log && foreman start -f Procfile.dev
+    foreman start -f Procfile.dev
   elif [ -f ./Procfile ]; then
     echo "Running: foreman start"
-    rm log/*.log && foreman start
+    foreman start
   elif [ -f ./package.json ]; then
     echo "Running: npm start"
     npm start
