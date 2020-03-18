@@ -32,7 +32,10 @@ setup() {
   run cd $TMP_DIR && delete-ds-store
 
   assert_success
+  assert [ -d "${TMP_DIR}" ]
   refute [ -f "${TMP_DIR}/.DS_Store" ]
+  assert [ -d "${TMP_DIR}/sub" ]
   refute [ -f "${TMP_DIR}/sub/.DS_Store" ]
+  assert [ -d "${TMP_DIR}/sub/sub" ]
   refute [ -f "${TMP_DIR}/sub/sub/.DS_Store" ]
 }
