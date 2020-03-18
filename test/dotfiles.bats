@@ -45,7 +45,7 @@ setup() {
   source "dotfiles/profile.d/path"
   run echo "$PATH"
   assert_success
-  assert_output_match "^${TMP_DIR}\/\.bin\:"
+  assert_output_match "^${TMP_DIR}\/\.bin:"
 }
 
 @test "paths will display each path from PATH variable on a new line" {
