@@ -1,5 +1,8 @@
 #!/bin/sh
 
+alias ni='npm install'
+alias nrb='npm run build'
+
 if [ -d "$HOME/.nodenv" ]; then
   eval "$(nodenv init -)"
 fi
