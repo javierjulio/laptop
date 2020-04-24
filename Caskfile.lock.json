@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "422e67a72867ef785a65ec7480fe7cfa082726d4"
+        "revision": "caa789a06356f1bb9967168f85069c9d1e2f9226"
       }
     },
     "cask": {
@@ -132,10 +132,10 @@
           }
         }
       },
-      "one-switch": {
-        "version": "1.9.2,221",
+      "flotato": {
+        "version": "latest",
         "options": {
-          "full_name": "one-switch",
+          "full_name": "flotato",
           "args": {
             "appdir": "/Applications"
           }
@@ -150,7 +150,7 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "4.9"
+        "version": "4.11.1"
       },
       "Fantastical 2": null,
       "iA Writer": {
@@ -159,24 +159,24 @@
       },
       "Keynote": {
         "id": "409183694",
-        "version": "9.2.1"
+        "version": "10.0"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "6.2.1"
+        "version": "10.0"
       },
       "Pages": {
         "id": "409201541",
-        "version": "8.2.1"
+        "version": "10.0"
       },
       "Reeder 4": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.4.0"
+        "version": "4.4.2"
       },
       "The Unarchiver": {
         "id": "425424353",
-        "version": "4.2.0"
+        "version": "4.2.1"
       },
       "Honey": {
         "id": "1472777122",
@@ -184,15 +184,15 @@
       },
       "Instapaper": {
         "id": "1481302432",
-        "version": "1.0"
+        "version": "1.1"
       },
       "Jira": {
         "id": "1475897096",
-        "version": "100.1.0"
+        "version": "102.0.0"
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.11"
+        "version": "1.12"
       }
     }
   },
@@ -207,12 +207,12 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.10",
+        "HOMEBREW_VERSION": "2.2.13",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "722e64cf6ac02dfb0a2159ddb0698c5d707a41b9",
+        "Homebrew/homebrew-core": "a0e6ed090cd4023cff21f891b98a2b9e333e3e64",
         "CLT": "11.0.33.17",
-        "Xcode": "11.3",
-        "macOS": "10.15.3"
+        "Xcode": "11.4",
+        "macOS": "10.15.4"
       }
     }
   }
