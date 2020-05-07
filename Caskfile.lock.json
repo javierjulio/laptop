@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "caa789a06356f1bb9967168f85069c9d1e2f9226"
+        "revision": "c0135306cc58e65f87cc8c77ab74c61ced061b84"
       }
     },
     "cask": {
@@ -150,7 +150,7 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "4.11.1"
+        "version": "4.12"
       },
       "Fantastical 2": null,
       "iA Writer": {
@@ -172,7 +172,7 @@
       "Reeder 4": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.4.2"
+        "version": "4.5.0"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -188,7 +188,7 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "102.0.0"
+        "version": "103.0.0"
       },
       "Wipr": {
         "id": "1320666476",
@@ -207,11 +207,11 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.2.13",
+        "HOMEBREW_VERSION": "2.2.15",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a0e6ed090cd4023cff21f891b98a2b9e333e3e64",
+        "Homebrew/homebrew-core": "88b65a0c80366208e1e16f1266b13c946d32b5af",
         "CLT": "11.0.33.17",
-        "Xcode": "11.4",
+        "Xcode": "11.4.1",
         "macOS": "10.15.4"
       }
     }
