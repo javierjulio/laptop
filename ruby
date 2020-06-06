@@ -8,7 +8,7 @@ source "$HOME/.zshrc"
 log_echo "Running Ruby setup..."
 
 find_latest_ruby() {
-  rbenv install -l | grep -v - | tail -1 | sed -e 's/^ *//'
+  rbenv install --list-all | grep -v - | tail -1 | sed -e 's/^ *//'
 }
 
 num_rubies="$(rbenv versions --bare | wc -l)"
