@@ -3,6 +3,7 @@ tap 'caskroom/cask'
 
 cask '1password'
 cask 'appcleaner'
+cask 'browserstacklocal'
 cask 'cheatsheet'
 cask 'docker'
 cask 'firefox'
