@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "1d22bacdb4ac07bde155d9e3cd250bb2b701d7d5"
+        "revision": "cf311cb0b724c2761560cfeab747757d22dc2aad"
       }
     },
     "cask": {
@@ -149,6 +149,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "gog-galaxy": {
+        "version": "2.0.16.195",
+        "options": {
+          "full_name": "gog-galaxy",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     },
     "mas": {
@@ -159,12 +168,12 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "4.14"
+        "version": "4.15.1"
       },
       "Fantastical 2": null,
       "iA Writer": {
         "id": "775737590",
-        "version": "5.5.2"
+        "version": "5.5.4"
       },
       "Keynote": {
         "id": "409183694",
@@ -197,11 +206,11 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "105.1.0"
+        "version": "106.0.0"
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.13"
+        "version": "1.14"
       }
     }
   },
@@ -216,9 +225,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.3.0",
+        "HOMEBREW_VERSION": "2.4.0",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "ece3e376cc81cc6b6ba675bb5e8119a173f47d04",
+        "Homebrew/homebrew-core": "073d7ef227f6e4dba61c9e1ff9b3ef8619b59fc9",
         "CLT": "11.0.33.17",
         "Xcode": "11.4.1",
         "macOS": "10.15.5"
