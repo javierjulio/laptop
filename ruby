@@ -42,7 +42,7 @@ if [ $num_rubies -eq 0 ]; then
 
   log_echo "Installing common gems... (answer yes on overriding executables)"
   # Answer "yes" with overriding executables e.g. bundler
-  gem install bundler foreman rails
+  gem install bundler irb foreman rails
 
   log_pass "Ruby ${ruby_version} installed."
 else
