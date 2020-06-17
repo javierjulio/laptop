@@ -10,8 +10,8 @@ alias s="start_dev_server"
 
 start_dev_server() {
   if [ -f ./config/boot.rb ]; then
-    echo "Removing logs..."
-    bundle exec rails log:clear
+    echo "Clearing logs for Rails..."
+    bundle exec rails log:clear LOGS=all
   fi
   if [ -f ./Procfile.dev ]; then
     echo "Running: foreman start -f Procfile.dev"
