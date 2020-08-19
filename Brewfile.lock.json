@@ -426,6 +426,27 @@
       "deis": {
         "version": "2.18.0",
         "bottle": false
+      },
+      "sops": {
+        "version": "3.6.0",
+        "bottle": {
+          "cellar": ":any_skip_relocation",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.catalina.bottle.tar.gz",
+              "sha256": "d12db4156e6c2eef594c07d15d76f92ee22847334206f9d55be31a6ddbfc7e23"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.mojave.bottle.tar.gz",
+              "sha256": "2a7127a49b5bb27ea9ae2ca7da51d4473d6cc182f933e1aa31732ee98b2bc7e3"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.high_sierra.bottle.tar.gz",
+              "sha256": "3f93dfcca630ce24ddf54008c220c76642784e29b05dd4ff7396ace3f489dac3"
+            }
+          }
+        }
       }
     }
   },
