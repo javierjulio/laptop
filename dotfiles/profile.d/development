@@ -6,6 +6,8 @@ if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; the
   export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
 
+export EDITOR="code --wait"
+
 alias s="start_dev_server"
 
 start_dev_server() {
