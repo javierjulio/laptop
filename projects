@@ -2,7 +2,7 @@
 
 . ./helpers.sh
 
-log_echo "Cloning GitHub projects..."
+log_info "Cloning GitHub projects..."
 
 PROJECTS_PREFIX="$HOME/Projects"
 
@@ -22,4 +22,4 @@ clone_repo "inherited_resources"
 clone_repo "jsoneditor-rails"
 clone_repo "paysafe"
 
-log_pass "All projects cloned."
+log_info "Finished cloning projects."

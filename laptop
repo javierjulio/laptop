@@ -10,7 +10,7 @@ if command -v brew >/dev/null 2>&1; then
   log_info "Updating Homebrew..."
   brew update
 else
-  log_echo "Installing Homebrew..."
+  log_info "Installing Homebrew..."
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
@@ -30,4 +30,4 @@ if [ "$terminal_theme" != "Ocean Dark" ]; then
   log_warn "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
-log_pass "DONE"
+log_info "Done"
