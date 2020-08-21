@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "e1f13bb57e108a379fbba5199e0aa3e00e3e403d"
+        "revision": "d79bc9f88fc8028ca03343c70dfc03582fe5aa03"
       }
     },
     "cask": {
@@ -206,7 +206,7 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "110.1.0"
+        "version": "111.1.0"
       },
       "Wipr": {
         "id": "1320666476",
@@ -225,9 +225,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.12",
+        "HOMEBREW_VERSION": "2.4.12-224-gded2927",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "b5d1ecb4880401bb4e2e8b9144ac87207d668467",
+        "Homebrew/homebrew-core": "428842c64c8c5735ea798759b50ecd5ff4fe7852",
         "CLT": "11.0.33.17",
         "Xcode": "11.5",
         "macOS": "10.15.6"
