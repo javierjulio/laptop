@@ -13,6 +13,13 @@ setup() {
   assert_output "code"
 }
 
+@test "the EDITOR variable is set" {
+  source "dotfiles/profile.d/development"
+  run echo $EDITOR
+  assert_success
+  assert_output "code --wait"
+}
+
 @test "the PATH variable contains dotfiles/.bin path" {
   source "dotfiles/profile.d/path"
   run echo "$PATH"
