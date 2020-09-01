@@ -2,7 +2,10 @@
   "entries": {
     "tap": {
       "caskroom/cask": {
-        "revision": "d79bc9f88fc8028ca03343c70dfc03582fe5aa03"
+        "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
+      },
+      "homebrew/cask": {
+        "revision": "c1c3f749378b5b9679a1931ce0fe4d83923fd88e"
       }
     },
     "cask": {
