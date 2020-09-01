@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "c1c3f749378b5b9679a1931ce0fe4d83923fd88e"
+        "revision": "bfdc206ee215b7828c1db9fa867dad35dd3d3bd4"
       }
     },
     "cask": {
@@ -167,11 +167,11 @@
       "Things 3": null,
       "DaisyDisk": {
         "id": "411643860",
-        "version": "4.10"
+        "version": "4.11"
       },
       "Day One": {
         "id": "1055511498",
-        "version": "4.16.1"
+        "version": "5.1"
       },
       "Fantastical 2": null,
       "iA Writer": {
@@ -201,7 +201,7 @@
       },
       "Honey": {
         "id": "1472777122",
-        "version": "11.11.2"
+        "version": "12.4.1"
       },
       "Instapaper": {
         "id": "1481302432",
@@ -228,10 +228,10 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.12-224-gded2927",
+        "HOMEBREW_VERSION": "2.4.16-46-g2b4f364",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "428842c64c8c5735ea798759b50ecd5ff4fe7852",
-        "CLT": "11.0.33.17",
+        "Homebrew/homebrew-core": "48a23bdf7dbbbd0f84d086a236c3b918ca1f9cea",
+        "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.5",
         "macOS": "10.15.6"
       }

@@ -15,7 +15,7 @@ brew 'p7zip' # high compression file archiver (creates .7z files)
 brew 'rbenv'
 brew 'nodenv'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
-brew 'postgresql@10', link: true, restart_service: true
+brew 'postgresql@11', link: true, restart_service: true
 brew 'redis', restart_service: true
 brew 'elixir'
 brew 'heroku'

@@ -2,16 +2,16 @@
   "entries": {
     "tap": {
       "homebrew/bundle": {
-        "revision": "9f44499b36fd4dca63d804ad49af6bff9d6c5588"
+        "revision": "5ddb6cd9f6e7961f1ecd93a9d99abdabdc251bc9"
       },
       "homebrew/core": {
-        "revision": "428842c64c8c5735ea798759b50ecd5ff4fe7852"
+        "revision": "48a23bdf7dbbbd0f84d086a236c3b918ca1f9cea"
       },
       "homebrew/services": {
-        "revision": "a2c3e50e4d1ac0e5f948f7d7fe17281fe1d18f32"
+        "revision": "cddcf1f998b34023b40203a32d8556892e29ed87"
       },
       "heroku/brew": {
-        "revision": "43de466d82a7ae152fa2f6fc3b0ae6598129ad38"
+        "revision": "6799ed0b4abcd57b9de2ca1a60305d2868d7c66c"
       }
     },
     "brew": {
@@ -58,7 +58,7 @@
         }
       },
       "grc": {
-        "version": "1.11.3",
+        "version": "1.11.3_1",
         "bottle": false
       },
       "gawk": {
@@ -137,7 +137,7 @@
         }
       },
       "libffi": {
-        "version": "3.2.1",
+        "version": "3.3",
         "bottle": {
           "cellar": ":any",
           "prefix": "/usr/local",
@@ -233,7 +233,7 @@
         }
       },
       "nodenv": {
-        "version": "1.3.0",
+        "version": "1.4.0",
         "bottle": false
       },
       "imagemagick@6": {
@@ -292,16 +292,16 @@
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.6.catalina.bottle.tar.gz",
-              "sha256": "0559d97459fddbcbf882d30e3c73a00f4b77f7f75544a7cd9c5954ec9ffa1ff8"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.7.catalina.bottle.tar.gz",
+              "sha256": "4b229e8295883472f68218dbda526a85af91ac913a3fed04208fa3ea4ed95b5d"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.6.mojave.bottle.tar.gz",
-              "sha256": "1c82be1e9b5c5fcd3c5716347552e972ee547a40c45ab88620ddd871e96e6f59"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.7.mojave.bottle.tar.gz",
+              "sha256": "67f18b3f04c672f4755d40b3056f012fb08f4330af9c472b706ba0b2bb05220d"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/redis-6.0.6.high_sierra.bottle.tar.gz",
-              "sha256": "963de099575ccda056e785ba344de5fcb8ddbfe45dec5bc57d2a6d42b48198fd"
+              "url": "https://homebrew.bintray.com/bottles/redis-6.0.7.high_sierra.bottle.tar.gz",
+              "sha256": "7918cf6a8d723e9b8fc9d71845015b62d78f6e1a1a5fbe5817b71b4628d70a6e"
             }
           }
         },
@@ -331,7 +331,7 @@
         }
       },
       "elixir": {
-        "version": "1.9.4",
+        "version": "1.10.4",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
@@ -447,6 +447,31 @@
             }
           }
         }
+      },
+      "postgresql@11": {
+        "version": "11.9",
+        "bottle": {
+          "cellar": "/usr/local/Cellar",
+          "prefix": "/usr/local",
+          "files": {
+            "catalina": {
+              "url": "https://homebrew.bintray.com/bottles/postgresql%4011-11.9.catalina.bottle.tar.gz",
+              "sha256": "6ae4d48f4eb3af904ff8bb4a4cd6194500272847636261a049559059a312ac10"
+            },
+            "mojave": {
+              "url": "https://homebrew.bintray.com/bottles/postgresql%4011-11.9.mojave.bottle.tar.gz",
+              "sha256": "816c4f41cc68aa079c3b8840a414ace69006bff6914160a8bfe86d5365cf84eb"
+            },
+            "high_sierra": {
+              "url": "https://homebrew.bintray.com/bottles/postgresql%4011-11.9.high_sierra.bottle.tar.gz",
+              "sha256": "01b6df74f7598494a9d31a6c017bbc7b17e78c6606603387766006705a7914d7"
+            }
+          }
+        },
+        "options": {
+          "link": true,
+          "restart_service": true
+        }
       }
     }
   },
@@ -461,10 +486,10 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.12-224-gded2927",
+        "HOMEBREW_VERSION": "2.4.16-46-g2b4f364",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "428842c64c8c5735ea798759b50ecd5ff4fe7852",
-        "CLT": "11.0.33.17",
+        "Homebrew/homebrew-core": "48a23bdf7dbbbd0f84d086a236c3b918ca1f9cea",
+        "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.5",
         "macOS": "10.15.6"
       }
