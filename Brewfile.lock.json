@@ -415,13 +415,8 @@
         }
       },
       "yarn": {
-        "version": "1.19.2",
-        "bottle": false,
-        "options": {
-          "args": [
-            "ignore-dependencies"
-          ]
-        }
+        "version": "1.22.4",
+        "bottle": false
       },
       "deis": {
         "version": "2.18.0",
