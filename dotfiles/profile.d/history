@@ -1,7 +1,6 @@
 #!/bin/sh
 
 export HISTSIZE="50000" # Number of lines kept in session history
-
 export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST="${HISTSIZE}" # Number of lines saved in history after logout
 
@@ -9,6 +8,8 @@ export SAVEHIST="${HISTSIZE}" # Number of lines saved in history after logout
 # %F equivalent to %Y-%m-%d
 # %T equivalent to %H:%M:%S (24-hours format)
 alias h="history -t '%F %T ' 1"
+
+# Run with search term e.g. `hs yarn` for highlighted output.
 alias hs="h | grep --color=auto"
 
 # List commands used ordered by highest frequency.
