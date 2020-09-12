@@ -8,24 +8,4 @@ fi
 
 export EDITOR="code --wait"
 
-alias s="start_dev_server"
-
-start_dev_server() {
-  if [ -f ./config/boot.rb ]; then
-    echo "Clearing logs for Rails..."
-    bundle exec rails log:clear LOGS=all
-  fi
-  if [ -f ./Procfile.dev ]; then
-    echo "Running: foreman start -f Procfile.dev"
-    foreman start -f Procfile.dev
-  elif [ -f ./Procfile ]; then
-    echo "Running: foreman start"
-    foreman start
-  elif [ -f ./package.json ]; then
-    echo "Running: npm start"
-    npm start
-  else
-    echo "\033[1;31m** No app server found. **\033[0m"
-    echo "Looking for a Procfile(.dev) or package.json file."
-  fi
-}
+alias s="start-development"

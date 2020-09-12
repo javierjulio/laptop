@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+set -o pipefail
+
+if [ -f ./config/boot.rb ]; then
+  ( set -x; bundle exec rails log:clear LOGS=all )
+fi
+
+if [ -f ./Procfile.dev ]; then
+  ( set -x; foreman start -f Procfile.dev )
+elif [ -f ./Procfile ]; then
+  ( set -x; foreman start )
+elif [ -f ./package.json ]; then
+  ( set -x; npm run start )
+else
+  echo "\033[1;31m** No dev server **\033[0m"
+  echo "Looking for a Procfile(.dev) or package.json file."
+fi
