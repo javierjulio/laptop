@@ -28,7 +28,7 @@ unset brew_prefix
 # TODO: if reverting to Bash then explicitly list supported files here
 for profile_config in "$HOME"/.profile.d/*
 do
-  [ "$(basename $profile_config)" = "prompt" ] && continue
+  [ "$(basename "$profile_config")" = "prompt" ] && continue
   # shellcheck disable=SC1090
   source "$profile_config"
 done
