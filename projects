@@ -2,8 +2,6 @@
 
 . ./helpers.sh
 
-log_info "Cloning GitHub projects..."
-
 PROJECTS_PREFIX="$HOME/Projects"
 
 clone_repo() {
@@ -12,6 +10,8 @@ clone_repo() {
     echo "Cloned $1 successfully."
   fi
 }
+
+log_info "Cloning GitHub projects..."
 
 clone_repo "javierjulio.github.io" "javierjulio"
 clone_repo "activeadmin"
