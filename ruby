@@ -22,11 +22,9 @@ if [ $num_rubies -eq 0 ]; then
   # chmod go-w /Users
   # chmod go-w ~
 
-  readline_dir="--with-readline-dir=$(brew --prefix readline)"
-  openssl_dir="--with-openssl-dir=$(brew --prefix openssl)"
-  export RUBY_CONFIGURE_OPTS="--disable-install-doc $readline_dir $openssl_dir"
-  # For more info on specifying openssl path
-  # https://github.com/thoughtbot/laptop/commit/c8dca7705b5c4e272d12a903f9d65a3ae01f2498
+  # Only openssl needs to be specified as readline is taken care of
+  # https://github.com/rbenv/ruby-build/issues/1421#issuecomment-602822981
+  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl)"
   rbenv install -s "$ruby_version"
   rbenv global "$ruby_version"
   rbenv shell "$ruby_version"
