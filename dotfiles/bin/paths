@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+# Print each path on a new line.
+echo "$PATH" | tr : '\n'
