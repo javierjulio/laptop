@@ -26,5 +26,4 @@ brew 'yarn'
 brew 'deis'
 # brew 'kubernetes-cli' # Install version 1.10.5 below
 system "brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/d09d97241b17a5e02a25fc51fc56e2a5de74501c/Formula/kubernetes-cli.rb"
-# brew 'sops' # Install version 3.5.0_1 below
-system "brew install https://raw.githubusercontent.com/Homebrew/homebrew-core/5683adef0c52d824d245ba009cf6743f636d5681/Formula/sops.rb"
+brew 'sops'

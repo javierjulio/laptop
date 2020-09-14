@@ -5,7 +5,7 @@
         "revision": "b84d4569eafe799c7c46c6c12c63215cb8095b6d"
       },
       "homebrew/core": {
-        "revision": "ab72dd1aba052ea550e8a2ef20a7716ccdf29e1f"
+        "revision": "3b988d99e6963bf027b18da5816860f6b536fefd"
       },
       "homebrew/services": {
         "revision": "5ba553ecb4d4dad31eabd9535f262212d5098214"
@@ -423,22 +423,22 @@
         "bottle": false
       },
       "sops": {
-        "version": "3.6.0",
+        "version": "3.6.1",
         "bottle": {
           "cellar": ":any_skip_relocation",
           "prefix": "/usr/local",
           "files": {
             "catalina": {
-              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.catalina.bottle.tar.gz",
-              "sha256": "d12db4156e6c2eef594c07d15d76f92ee22847334206f9d55be31a6ddbfc7e23"
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.1.catalina.bottle.tar.gz",
+              "sha256": "7b883bcead58c088e16a32310a29f4146066329f7f8b203bf69ec5f1fecec950"
             },
             "mojave": {
-              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.mojave.bottle.tar.gz",
-              "sha256": "2a7127a49b5bb27ea9ae2ca7da51d4473d6cc182f933e1aa31732ee98b2bc7e3"
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.1.mojave.bottle.tar.gz",
+              "sha256": "1c0ef6707dee2088bb816d827f6cfd2d7a26ef530b5177b3ae5652aa2a0591eb"
             },
             "high_sierra": {
-              "url": "https://homebrew.bintray.com/bottles/sops-3.6.0.high_sierra.bottle.tar.gz",
-              "sha256": "3f93dfcca630ce24ddf54008c220c76642784e29b05dd4ff7396ace3f489dac3"
+              "url": "https://homebrew.bintray.com/bottles/sops-3.6.1.high_sierra.bottle.tar.gz",
+              "sha256": "b6e72dd038ae5c28786423aa9b5eb31c92b9533feee1b927d72cb697e3c1ddd7"
             }
           }
         }
@@ -481,9 +481,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.0-143-ga613918",
+        "HOMEBREW_VERSION": "2.5.1-6-g7589a35",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "ab72dd1aba052ea550e8a2ef20a7716ccdf29e1f",
+        "Homebrew/homebrew-core": "3b988d99e6963bf027b18da5816860f6b536fefd",
         "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.5",
         "macOS": "10.15.6"
