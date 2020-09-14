@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-. ./helpers.sh
-
 # shellcheck disable=SC1090
 source "$HOME/.zshrc"
+
+log_info() {
+  echo "$(date +%H:%M:%S) - $1"
+}
 
 log_info "Running Node setup..."
 
@@ -24,7 +26,7 @@ if [ $num_nodes -eq 0 ]; then
   log_info "Installing common packages..."
   npm install -g npm localtunnel parcel
 
-  log_pass "Node ${node_version} installed."
+  log_info "Node ${node_version} installed."
 else
   log_info "Using Node $(nodenv global)."
 fi

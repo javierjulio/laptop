@@ -1,9 +1,11 @@
 #!/bin/zsh
 
-. ./helpers.sh
-
 # shellcheck disable=SC1090
 source "$HOME/.zshrc"
+
+log_info() {
+  echo "$(date +%H:%M:%S) - $1"
+}
 
 log_info "Running Ruby setup..."
 
@@ -42,7 +44,7 @@ if [ $num_rubies -eq 0 ]; then
   # Answer "yes" with overriding executables e.g. bundler
   gem install bundler irb foreman rails
 
-  log_pass "Ruby ${ruby_version} installed."
+  log_info "Ruby ${ruby_version} installed."
 else
   log_info "Using Ruby $(rbenv global)."
 fi

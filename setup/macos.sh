@@ -1,11 +1,7 @@
 #!/bin/zsh
 
-. ./helpers.sh
-
 # shellcheck disable=SC1090
 source "$HOME/.zshrc"
-
-log_info "Setting macOS defaults..."
 
 # Close any open System Preferences panes, to prevent them from
 # overriding settings we're about to change.
@@ -71,5 +67,3 @@ defaults write com.apple.TextEdit NSFixedPitchFont -string "Menlo-Regular"
 
 # Set larger font size
 defaults write com.apple.TextEdit NSFixedPitchFontSize -int 13
-
-log_info "Defaults set."

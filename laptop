@@ -1,33 +1,27 @@
-#!/bin/sh
+#!/bin/zsh
 
-. ./helpers.sh
+log_info() {
+  echo "$(date +%H:%M:%S) - $1"
+}
 
 log_info "Running laptop script..."
 
-. link_dotfiles
+setup/dotfiles-symlink.sh
+setup/homebrew.sh
 
-if command -v brew >/dev/null 2>&1; then
-  log_info "Updating Homebrew..."
-  brew update
-else
-  log_info "Installing Homebrew..."
-  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-fi
+log_info "Setting macOS defaults..."
+setup/macos.sh
 
-log_info "Running Brew bundler..."
-brew bundle --no-upgrade
-brew bundle --file=Caskfile
+log_info "Cloning GitHub projects..."
+setup/projects.sh
 
-./macos
-./projects
-./ruby
-./node
+setup/ruby.sh
+setup/node.sh
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
-
 if [ "$terminal_theme" != "Ocean Dark" ]; then
-  log_warn "Install Terminal theme."
-  log_warn "Location: laptop/themes/Ocean Dark.terminal"
+  log_info "Install my Terminal theme."
+  log_info "Location: laptop/themes/Ocean Dark.terminal"
 fi
 
 log_info "Done"

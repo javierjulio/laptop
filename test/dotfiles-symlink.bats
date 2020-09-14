@@ -7,7 +7,7 @@ setup() {
 }
 
 @test "the files in dotfiles root are symlinked" {
-  run link_dotfiles
+  run setup/dotfiles-symlink.sh
   assert_success
 
   for file in $(find dotfiles -type f -maxdepth 1 -exec basename {} \;)
@@ -17,7 +17,7 @@ setup() {
 }
 
 @test "the dotfiles/bin directory is symlinked with files" {
-  run link_dotfiles
+  run setup/dotfiles-symlink.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.bin" ]
@@ -29,7 +29,7 @@ setup() {
 }
 
 @test "the dotfiles/grc directory is symlinked with files" {
-  run link_dotfiles
+  run setup/dotfiles-symlink.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.grc" ]
@@ -37,7 +37,7 @@ setup() {
 }
 
 @test "the dotfiles/profile.d directory is symlinked with files" {
-  run link_dotfiles
+  run setup/dotfiles-symlink.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.profile.d" ]

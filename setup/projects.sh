@@ -1,7 +1,5 @@
 #!/bin/sh
 
-. ./helpers.sh
-
 PROJECTS_PREFIX="$HOME/Projects"
 
 clone_repo() {
@@ -11,8 +9,6 @@ clone_repo() {
   fi
 }
 
-log_info "Cloning GitHub projects..."
-
 clone_repo "javierjulio.github.io" "javierjulio"
 clone_repo "activeadmin"
 clone_repo "binlist-elixir"
@@ -21,5 +17,3 @@ clone_repo "humble-bundle-key-exporter"
 clone_repo "inherited_resources"
 clone_repo "jsoneditor-rails"
 clone_repo "paysafe"
-
-log_info "Finished cloning projects."
