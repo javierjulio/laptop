@@ -15,7 +15,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * `touch ~/.zsh_local` for system specific settings
 
 ### Resources
-#### Dotfiles
+* https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
 * https://github.com/holman/dotfiles
