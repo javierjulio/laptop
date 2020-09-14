@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "bfdc206ee215b7828c1db9fa867dad35dd3d3bd4"
+        "revision": "2399a5838d8cce67f0243fbe6e829a53a7d52bf7"
       }
     },
     "cask": {
@@ -171,7 +171,7 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "5.1"
+        "version": "5.2"
       },
       "Fantastical 2": null,
       "iA Writer": {
@@ -201,7 +201,7 @@
       },
       "Honey": {
         "id": "1472777122",
-        "version": "12.4.1"
+        "version": "12.4.2"
       },
       "Instapaper": {
         "id": "1481302432",
@@ -209,11 +209,11 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "111.1.0"
+        "version": "113.0.0"
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.16"
+        "version": "1.16.1"
       }
     }
   },
@@ -228,9 +228,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.4.16-46-g2b4f364",
+        "HOMEBREW_VERSION": "2.5.0-143-ga613918",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "48a23bdf7dbbbd0f84d086a236c3b918ca1f9cea",
+        "Homebrew/homebrew-core": "ab72dd1aba052ea550e8a2ef20a7716ccdf29e1f",
         "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.5",
         "macOS": "10.15.6"
