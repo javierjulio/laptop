@@ -4,7 +4,7 @@ load test_helper
 
 setup() {
   common_setup
-  source "dotfiles/profile.d/path"
+  source "dotfiles/profile.d/system"
 }
 
 @test "shellcheck.sh runs successfully" {
@@ -62,4 +62,13 @@ setup() {
   run which delete-ds-store
   assert_success
   assert_output "${TMP_DIR}/.bin/delete-ds-store"
+}
+
+@test "paths will display each path from PATH variable on a new line" {
+  run paths
+  assert_success
+  assert_line_match 0 "([^\/]*[\/])*[^\/]+"
+  assert [ -d "${lines[0]}" ]
+  assert_line_match 1 "([^\/]*[\/])*[^\/]+"
+  assert [ -d "${lines[1]}" ]
 }
