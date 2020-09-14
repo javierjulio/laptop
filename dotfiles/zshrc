@@ -17,6 +17,11 @@ setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_NO_STORE # don't add history commands to history
 
+# For Bash-like autocompletion in ZSH
+# https://serverfault.com/a/447549
+setopt NO_AUTO_MENU
+setopt NO_MENU_COMPLETE
+
 brew_prefix="$(brew --prefix)"
 
 # # Load bash completion
