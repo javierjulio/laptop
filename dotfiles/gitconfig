@@ -1,11 +1,11 @@
 [user]
-	name = Javier Julio
-	email = jjfutbol@gmail.com
+  name = Javier Julio
+  email = jjfutbol@gmail.com
 [credential]
-	helper = osxkeychain
+  helper = osxkeychain
 [core]
-	excludesfile = ~/.gitignore
-	editor = "open -W -n" # Uses TextEdit by default
+  excludesfile = ~/.gitignore
+  editor = "open -W -n" # Uses TextEdit by default
 [alias]
   a = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /' # List all git aliases
   b = branch
@@ -41,7 +41,7 @@
   changed = green
   untracked = cyan
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
