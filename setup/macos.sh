@@ -67,3 +67,18 @@ defaults write com.apple.TextEdit NSFixedPitchFont -string "Menlo-Regular"
 
 # Set larger font size
 defaults write com.apple.TextEdit NSFixedPitchFontSize -int 13
+
+#
+# Login
+#
+
+add_login_window_text() {
+  local name phone email
+  echo "macOS: Answer prompts for Lock Screen message (requires password)"
+  printf 'Enter phone: ' && read phone
+  printf 'Enter email: ' && read email
+  sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \
+    "$(printf "Found this computer?\nPhone: $phone\nEmail: $email")"
+}
+
+defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText &>/dev/null || add_login_window_text
