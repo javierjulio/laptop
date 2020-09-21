@@ -16,14 +16,13 @@ jobs:
         # os: [macos-10.15, macos-latest]
     steps:
     - uses: actions/checkout@v2
-
     - name: Setup bats-core
       uses: mig4/setup-bats@v1
       with:
         bats-version: 1.2.1
-
     - name: Install Shellcheck
       run: brew install shellcheck
-
+    - name: Bats version
+      run: bats -v
     - name: Run tests
       run: bats -r test/
