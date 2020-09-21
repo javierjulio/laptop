@@ -33,8 +33,11 @@ do
   source "$profile_config"
 done
 
+if [ ! -f "$HOME/.bash_local" ]; then
+  touch "$HOME/.bash_local"
+fi
 # shellcheck disable=SC1090
-[ -e "$HOME/.bash_local" ] && source "$HOME/.bash_local"
+source "$HOME/.bash_local"
 
 # Google Cloud SDK
 if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then

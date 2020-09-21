@@ -7,18 +7,16 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 ## Installation
 * Set [Terminal with Full Disk Access](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-623799514) temporarily
 * `xcode-select --install` for command line tools
-* Collect GitHub access tokens from 1Password
+* Collect GitHub access tokens from 1Password (CLI and VS Code)
 * `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
 * Import [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) as default and then restart
 * `cd ~/Projects/laptop && ./laptop`
 * Install [Visual Studio Code sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and provide GitHub access token
-* `touch ~/.zsh_local` for system specific settings
 
 ### Resources
 * https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
-* https://github.com/holman/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/janmoesen/tilde
 * https://github.com/gerhard/setup

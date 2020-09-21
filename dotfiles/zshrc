@@ -87,7 +87,10 @@ do
   source "$profile_config"
 done
 
-[ -e "$HOME/.zsh_local" ] && source "$HOME/.zsh_local"
+if [ ! -f "$HOME/.zsh_local" ]; then
+  touch "$HOME/.zsh_local"
+fi
+source "$HOME/.zsh_local"
 
 # compinit -u
 # bashcompinit
