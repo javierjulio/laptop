@@ -1,9 +1,11 @@
 #!/bin/bash
-
-# Usage examples:
-# brew info gh | urls
-# urls README.md
-# urls < README.md
+#
+# Usage: urls
+#        select a url from content to open in a browser
+# Examples:
+#  $ brew info gh | urls
+#  $ urls README.md
+#  $ urls < README.md
 
 if [ -z "$1" ] && [ -t 0 ]; then
   echo "urls: no file arg or pipe input provided"
