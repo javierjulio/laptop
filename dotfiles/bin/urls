@@ -1,0 +1,35 @@
+#!/bin/bash
+
+# Usage examples:
+# brew info gh | urls
+# urls README.md
+# urls < README.md
+
+if [ -z "$1" ] && [ -t 0 ]; then
+  echo "urls: no file arg or pipe input provided"
+  exit 1
+fi
+
+find_urls() {
+  grep -E -o 'https?://[^ ]+'
+}
+
+remove_duplicates() {
+  nl | sort -uk2 | sort -nk1 | cut -f2-
+}
+
+urls=$(cat < "${1:-/dev/stdin}" | find_urls | remove_duplicates)
+
+if [ -z "$urls" ]; then
+  echo "urls: no URLs found"
+  exit 2
+fi
+
+echo "Choose a URL to open in your web browser."
+PS3="Enter: " # Must be set *before* select loop
+select url in $urls; do
+  if [ -n "$url" ]; then
+    open "$url"
+    break;
+  fi
+done </dev/tty

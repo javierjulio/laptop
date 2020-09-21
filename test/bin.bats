@@ -7,6 +7,34 @@ setup() {
   source "dotfiles/profile.d/system"
 }
 
+@test "urls: with no input or file, it fails with error message" {
+  run urls
+  assert_failure
+  assert_output "urls: no file arg or pipe input provided"
+}
+
+@test "urls: with empty input, it fails with error message" {
+  run bash -c 'echo "testing" | urls'
+  assert_failure
+  assert_output "urls: no URLs found"
+}
+
+@test "urls: with empty file, it fails with error message" {
+  create_tmp_file "file.txt"
+  run urls "${TMP_DIR}/file.txt"
+  assert_failure
+  assert_output "urls: no URLs found"
+}
+
+@test "urls: with file but no urls, it fails with error message" {
+  create_tmp_file "file.txt"
+  echo "first line" >> "${TMP_DIR}/file.txt"
+  echo "second line" >> "${TMP_DIR}/file.txt"
+  run urls "${TMP_DIR}/file.txt"
+  assert_failure
+  assert_output "urls: no URLs found"
+}
+
 @test "shellcheck.sh runs successfully" {
   run shellcheck.sh
   assert_success
