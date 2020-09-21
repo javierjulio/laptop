@@ -17,6 +17,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Setup bats-core
+      uses: mig4/setup-bats@master
+      with:
+        bats-version: 1.2.1
+
     - name: Install Shellcheck
       run: brew install shellcheck
 
