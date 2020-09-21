@@ -1,13 +1,13 @@
 #!/usr/bin/env bats
 
-load test_helper
+load ../test_helper
 
 setup() {
   common_setup
 }
 
 @test "the files in dotfiles root are symlinked" {
-  run setup/dotfiles-symlink.sh
+  run setup/dotfiles.sh
   assert_success
 
   for file in $(find dotfiles -type f -maxdepth 1 -exec basename {} \;)
@@ -17,7 +17,7 @@ setup() {
 }
 
 @test "the dotfiles/bin directory is symlinked with files" {
-  run setup/dotfiles-symlink.sh
+  run setup/dotfiles.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.bin" ]
@@ -29,7 +29,7 @@ setup() {
 }
 
 @test "the dotfiles/grc directory is symlinked with files" {
-  run setup/dotfiles-symlink.sh
+  run setup/dotfiles.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.grc" ]
@@ -37,7 +37,7 @@ setup() {
 }
 
 @test "the dotfiles/profile.d directory is symlinked with files" {
-  run setup/dotfiles-symlink.sh
+  run setup/dotfiles.sh
   assert_success
 
   assert [ -d "${TMP_DIR}/.profile.d" ]

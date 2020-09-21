@@ -15,7 +15,8 @@ create_tmp_file() {
 common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
-  setup/dotfiles-symlink.sh # creates symlinks in tmp dir
+  # Create dotfiles symlinks in tmp dir
+  setup/dotfiles.sh
 }
 
 teardown() {

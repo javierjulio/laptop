@@ -6,7 +6,7 @@ log_info() {
 
 log_info "Running laptop script..."
 
-setup/dotfiles-symlink.sh
+setup/dotfiles.sh
 setup/homebrew.sh
 
 log_info "Setting macOS defaults..."
