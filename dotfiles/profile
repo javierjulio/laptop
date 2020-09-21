@@ -23,8 +23,6 @@ if [ -f "$brew_prefix/etc/grc.bashrc" ]; then
   . "$brew_prefix/etc/grc.bashrc"
 fi
 
-unset brew_prefix
-
 # TODO: if reverting to Bash then explicitly list supported files here
 for profile_config in "$HOME"/.profile.d/*
 do
@@ -32,6 +30,8 @@ do
   # shellcheck disable=SC1090
   source "$profile_config"
 done
+
+unset brew_prefix profile_config
 
 if [ ! -f "$HOME/.bash_local" ]; then
   touch "$HOME/.bash_local"

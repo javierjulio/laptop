@@ -71,8 +71,6 @@ if [ -f "$brew_prefix/etc/grc.zsh" ]; then
   . "$brew_prefix/etc/grc.zsh"
 fi
 
-unset brew_prefix
-
 # bindkey "^[f" forward-word
 # bindkey "^[b" backward-word
 # bindkey -e
@@ -94,3 +92,5 @@ source "$HOME/.zsh_local"
 
 # compinit -u
 # bashcompinit
+
+unset brew_prefix profile_config
