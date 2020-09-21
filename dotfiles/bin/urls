@@ -5,7 +5,7 @@
 # urls README.md
 # urls < README.md
 
-if [ -z "$1" ] && [ -t 0 ]; then
+if [ -z "$1" ] || [ -z "$1" ] && [ -t 0 ]; then
   echo "urls: no file arg or pipe input provided"
   exit 1
 fi
