@@ -13,7 +13,11 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * `cd ~/Projects/laptop && ./laptop`
 * Install [Visual Studio Code sync settings extension](https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync) and provide GitHub access token
 
-### Resources
+### Development
+
+Run tests: `bats -r test`
+
+#### Resources
 * https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
