@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "bfccb3c172ba72f624b3569de159f9c65ae199a2"
+        "revision": "a2a18fae3e4506bf5fefdb5224ae983b540e82d3"
       }
     },
     "cask": {
@@ -171,29 +171,29 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "5.2"
+        "version": "5.4"
       },
       "Fantastical 2": null,
       "iA Writer": {
         "id": "775737590",
-        "version": "5.6.1"
+        "version": "5.6.2"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "10.1"
+        "version": "10.2"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "10.1"
+        "version": "10.2"
       },
       "Pages": {
         "id": "409201541",
-        "version": "10.1"
+        "version": "10.2"
       },
       "Reeder 4": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.8.0"
+        "version": "4.10.2"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -209,12 +209,13 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "113.0.0"
+        "version": "114.1.0"
       },
       "Wipr": {
         "id": "1320666476",
         "version": "1.16.1"
-      }
+      },
+      "Reeder 5": null
     }
   },
   "system": {
@@ -228,12 +229,12 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.1-6-g7589a35",
+        "HOMEBREW_VERSION": "2.5.6-65-g1670883",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "3b988d99e6963bf027b18da5816860f6b536fefd",
-        "CLT": "11.5.0.0.1.1588476445",
-        "Xcode": "11.5",
-        "macOS": "10.15.6"
+        "Homebrew/homebrew-core": "9c655c7d05def69464a450530b015211e4fd184f",
+        "CLT": "12.0.32.2",
+        "Xcode": "12.0",
+        "macOS": "10.15.7"
       }
     }
   }
