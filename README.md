@@ -17,6 +17,8 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
 Run tests: `bats -r test`
 
+For more info on setting macOS defaults programmatically: https://lapcatsoftware.com/articles/containers.html
+
 #### Resources
 * https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
