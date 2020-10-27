@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "a2a18fae3e4506bf5fefdb5224ae983b540e82d3"
+        "revision": "dd981320813a22079eb781b2d98fb784dbc9d46d"
       }
     },
     "cask": {
@@ -161,6 +161,15 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "ngrok": {
+        "version": "latest",
+        "options": {
+          "full_name": "ngrok",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     },
     "mas": {
@@ -171,12 +180,12 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "5.4"
+        "version": "5.5"
       },
       "Fantastical 2": null,
       "iA Writer": {
         "id": "775737590",
-        "version": "5.6.2"
+        "version": "5.6.3"
       },
       "Keynote": {
         "id": "409183694",
@@ -193,7 +202,7 @@
       "Reeder 4": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.10.2"
+        "version": "4.10.3"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -209,7 +218,7 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "114.1.0"
+        "version": "115.1.0"
       },
       "Wipr": {
         "id": "1320666476",
@@ -229,9 +238,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.6-65-g1670883",
+        "HOMEBREW_VERSION": "2.5.7-14-ge1b9887",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "9c655c7d05def69464a450530b015211e4fd184f",
+        "Homebrew/homebrew-core": "6aff73d492351f644ac6f79b750c3b5b890776d3",
         "CLT": "12.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
