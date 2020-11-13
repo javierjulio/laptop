@@ -20,17 +20,20 @@ cask 'steam'
 cask 'visual-studio-code'
 
 # Automatically prompted to sign in to MAS if signed out.
-mas 'Things 3', id: 904280696
+mas 'Things', id: 904280696
 mas 'DaisyDisk', id: 411643860
 mas 'Day One', id: 1055511498
-mas 'Fantastical 2', id: 975937182
+mas 'Developer', id: 640199958 # Apple Developer app
+mas 'Fantastical', id: 975937182
 mas 'Honey', id: 1472777122
 mas 'iA Writer', id: 775737590
-mas 'Instapaper', id: 1481302432
+mas 'Instapaper', id: 288545208
 mas 'Jira', id: 1475897096
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
+mas 'Okta Extension App', id: 1439967473
 mas 'Pages', id: 409201541
+mas 'Playgrounds', id: 1496833156 # Swift Playgrounds
 mas 'Reeder 5', id: 1529448980
 mas 'Slack', id: 803453959
 mas 'The Unarchiver', id: 425424353

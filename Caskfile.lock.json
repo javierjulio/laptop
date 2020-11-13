@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "dd981320813a22079eb781b2d98fb784dbc9d46d"
+        "revision": "68fb7b7f6032e2a745d5061f7edb0ed6ee405fa1"
       }
     },
     "cask": {
@@ -154,7 +154,7 @@
         }
       },
       "gog-galaxy": {
-        "version": "2.0.16.195",
+        "version": "2.0.23.3",
         "options": {
           "full_name": "gog-galaxy",
           "args": {
@@ -185,19 +185,19 @@
       "Fantastical 2": null,
       "iA Writer": {
         "id": "775737590",
-        "version": "5.6.3"
+        "version": "5.6.5"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "10.2"
+        "version": "10.3.5"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "10.2"
+        "version": "10.3.5"
       },
       "Pages": {
         "id": "409201541",
-        "version": "10.2"
+        "version": "10.3.5"
       },
       "Reeder 4": null,
       "Slack": {
@@ -210,21 +210,41 @@
       },
       "Honey": {
         "id": "1472777122",
-        "version": "12.4.2"
+        "version": "12.4.7"
       },
       "Instapaper": {
-        "id": "1481302432",
-        "version": "1.1"
+        "id": "288545208",
+        "version": "8.0.1"
       },
       "Jira": {
         "id": "1475897096",
-        "version": "115.1.0"
+        "version": "117.0.0"
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.16.1"
+        "version": "1.18"
       },
-      "Reeder 5": null
+      "Reeder 5": null,
+      "Things": {
+        "id": "904280696",
+        "version": "3.13.3"
+      },
+      "Developer": {
+        "id": "640199958",
+        "version": "8.3.2"
+      },
+      "Fantastical": {
+        "id": "975937182",
+        "version": "3.3"
+      },
+      "Okta Extension App": {
+        "id": "1439967473",
+        "version": "5.42.0"
+      },
+      "Playgrounds": {
+        "id": "1496833156",
+        "version": "3.3.1"
+      }
     }
   },
   "system": {
@@ -238,9 +258,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.7-14-ge1b9887",
+        "HOMEBREW_VERSION": "2.5.10-10-g78f1761",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "6aff73d492351f644ac6f79b750c3b5b890776d3",
+        "Homebrew/homebrew-core": "542ff01c92e32b04301c2c5aa1ca335b8c438da0",
         "CLT": "12.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
