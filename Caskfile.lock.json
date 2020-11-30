@@ -5,7 +5,7 @@
         "revision": "463401d9f0313f60da4e3a8f20f1ea5b17bc276f"
       },
       "homebrew/cask": {
-        "revision": "68fb7b7f6032e2a745d5061f7edb0ed6ee405fa1"
+        "revision": "52d4e1ee8cc20f550ea63999b1960c74dfefe994"
       }
     },
     "cask": {
@@ -28,7 +28,7 @@
         }
       },
       "cheatsheet": {
-        "version": "1.5.2",
+        "version": "1.6",
         "options": {
           "full_name": "cheatsheet",
           "args": {
@@ -176,11 +176,11 @@
       "Things 3": null,
       "DaisyDisk": {
         "id": "411643860",
-        "version": "4.11"
+        "version": "4.12.1"
       },
       "Day One": {
         "id": "1055511498",
-        "version": "5.5"
+        "version": "5.6.1"
       },
       "Fantastical 2": null,
       "iA Writer": {
@@ -206,7 +206,7 @@
       },
       "The Unarchiver": {
         "id": "425424353",
-        "version": "4.2.2"
+        "version": "4.2.4"
       },
       "Honey": {
         "id": "1472777122",
@@ -227,7 +227,7 @@
       "Reeder 5": null,
       "Things": {
         "id": "904280696",
-        "version": "3.13.3"
+        "version": "3.13.5"
       },
       "Developer": {
         "id": "640199958",
@@ -235,7 +235,7 @@
       },
       "Fantastical": {
         "id": "975937182",
-        "version": "3.3"
+        "version": "3.3.1"
       },
       "Okta Extension App": {
         "id": "1439967473",
@@ -243,7 +243,7 @@
       },
       "Playgrounds": {
         "id": "1496833156",
-        "version": "3.3.1"
+        "version": "3.4"
       }
     }
   },
@@ -258,9 +258,9 @@
         "macOS": "10.14.6"
       },
       "catalina": {
-        "HOMEBREW_VERSION": "2.5.10-10-g78f1761",
+        "HOMEBREW_VERSION": "2.5.12-360-g8fe91aa",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "542ff01c92e32b04301c2c5aa1ca335b8c438da0",
+        "Homebrew/homebrew-core": "db30a3267f75d6e480fc05ce64580a85d4c4bc32",
         "CLT": "12.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"

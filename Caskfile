@@ -15,7 +15,6 @@ cask 'google-cloud-sdk'
 cask 'ngrok'
 cask 'openemu'
 cask 'tableplus'
-cask 'psequel'
 cask 'steam'
 cask 'visual-studio-code'
 
