@@ -2,12 +2,12 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "c57d1e415f11c17dfc0c0504b4cfae32a79a8276"
+        "revision": "edcbbce3f824a27e8ff14af115b88de9f8027908"
       }
     },
     "cask": {
       "1password": {
-        "version": "7.0.7",
+        "version": "7.7",
         "options": {
           "full_name": "1password",
           "args": {
@@ -16,7 +16,7 @@
         }
       },
       "appcleaner": {
-        "version": "3.4",
+        "version": "3.6.0,4070",
         "options": {
           "full_name": "appcleaner",
           "args": {
@@ -25,7 +25,7 @@
         }
       },
       "browserstacklocal": {
-        "version": "latest",
+        "version": "2.3,1",
         "options": {
           "full_name": "browserstacklocal",
           "args": {
@@ -43,7 +43,7 @@
         }
       },
       "docker": {
-        "version": "18.03.1-ce-mac65,24312",
+        "version": "3.1.0,51484",
         "options": {
           "full_name": "docker",
           "args": {
@@ -52,7 +52,7 @@
         }
       },
       "firefox": {
-        "version": "61.0.1",
+        "version": "85.0.2",
         "options": {
           "full_name": "firefox",
           "args": {
@@ -61,7 +61,7 @@
         }
       },
       "flotato": {
-        "version": "latest",
+        "version": "32,1",
         "options": {
           "full_name": "flotato",
           "args": {
@@ -70,7 +70,7 @@
         }
       },
       "github": {
-        "version": "1.2.6-908a2695",
+        "version": "2.6.3-51b58c36",
         "options": {
           "full_name": "github",
           "args": {
@@ -79,7 +79,7 @@
         }
       },
       "gog-galaxy": {
-        "version": "2.0.23.3",
+        "version": "2.0.35.19a",
         "options": {
           "full_name": "gog-galaxy",
           "args": {
@@ -88,7 +88,7 @@
         }
       },
       "google-chrome": {
-        "version": "67.0.3396.99",
+        "version": "88.0.4324.182,4324.182",
         "options": {
           "full_name": "google-chrome",
           "args": {
@@ -115,7 +115,7 @@
         }
       },
       "openemu": {
-        "version": "2.0.6.1",
+        "version": "2.3.3",
         "options": {
           "full_name": "openemu",
           "args": {
@@ -124,7 +124,7 @@
         }
       },
       "tableplus": {
-        "version": "1.0,120",
+        "version": "3.12.2,358",
         "options": {
           "full_name": "tableplus",
           "args": {
@@ -133,7 +133,7 @@
         }
       },
       "steam": {
-        "version": "latest",
+        "version": "2021-02-13",
         "options": {
           "full_name": "steam",
           "args": {
@@ -142,9 +142,18 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.25.1,1dfc5e557209371715f655691b1235b6b26a06be",
+        "version": "1.53.2",
         "options": {
           "full_name": "visual-studio-code",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
+      },
+      "epic-games": {
+        "version": "10.19.2",
+        "options": {
+          "full_name": "epic-games",
           "args": {
             "appdir": "/Applications"
           }
@@ -154,7 +163,7 @@
     "mas": {
       "Things": {
         "id": "904280696",
-        "version": "3.13.5"
+        "version": "3.13.8"
       },
       "DaisyDisk": {
         "id": "411643860",
@@ -162,15 +171,15 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "5.6.1"
+        "version": "5.9.1"
       },
       "Developer": {
         "id": "640199958",
-        "version": "8.3.2"
+        "version": "8.4.1"
       },
       "Fantastical": {
         "id": "975937182",
-        "version": "3.3.1"
+        "version": "3.3.4"
       },
       "Honey": {
         "id": "1472777122",
@@ -178,7 +187,7 @@
       },
       "iA Writer": {
         "id": "775737590",
-        "version": "5.6.5"
+        "version": "5.6.8"
       },
       "Instapaper": {
         "id": "288545208",
@@ -186,23 +195,23 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "117.0.0"
+        "version": "122.0.0"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "10.3.5"
+        "version": "10.3.9"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "10.3.5"
+        "version": "10.3.9"
       },
       "Okta Extension App": {
         "id": "1439967473",
-        "version": "5.42.0"
+        "version": "5.43.0"
       },
       "Pages": {
         "id": "409201541",
-        "version": "10.3.5"
+        "version": "10.3.9"
       },
       "Playgrounds": {
         "id": "1496833156",
@@ -211,7 +220,7 @@
       "Reeder 5": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.11.3"
+        "version": "4.12.2"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -219,16 +228,16 @@
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.18"
+        "version": "1.20"
       }
     }
   },
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "2.6.0-16-g77b4275",
+        "HOMEBREW_VERSION": "3.0.1-74-g74fd6c8",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "6e10ca2363b0f6d9ae2a46a8d5ba8444a3ec203e",
+        "Homebrew/homebrew-core": "7195a32290968834b2435d9e7f00051ecb2d5371",
         "CLT": "12.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
