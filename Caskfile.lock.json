@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "edcbbce3f824a27e8ff14af115b88de9f8027908"
+        "revision": "39c3e768bc23e63de054430dd8e3359f0d450da4"
       }
     },
     "cask": {
@@ -43,7 +43,7 @@
         }
       },
       "docker": {
-        "version": "3.1.0,51484",
+        "version": "3.2.0,61504",
         "options": {
           "full_name": "docker",
           "args": {
@@ -52,7 +52,7 @@
         }
       },
       "firefox": {
-        "version": "85.0.2",
+        "version": "86.0",
         "options": {
           "full_name": "firefox",
           "args": {
@@ -70,7 +70,7 @@
         }
       },
       "github": {
-        "version": "2.6.3-51b58c36",
+        "version": "2.6.4-1864024f",
         "options": {
           "full_name": "github",
           "args": {
@@ -88,7 +88,7 @@
         }
       },
       "google-chrome": {
-        "version": "88.0.4324.182,4324.182",
+        "version": "89.0.4389.72,4389.72",
         "options": {
           "full_name": "google-chrome",
           "args": {
@@ -124,7 +124,7 @@
         }
       },
       "tableplus": {
-        "version": "3.12.2,358",
+        "version": "3.12.4,360",
         "options": {
           "full_name": "tableplus",
           "args": {
@@ -158,12 +158,21 @@
             "appdir": "/Applications"
           }
         }
+      },
+      "mailtrackerblocker": {
+        "version": "0.3.16",
+        "options": {
+          "full_name": "mailtrackerblocker",
+          "args": {
+            "appdir": "/Applications"
+          }
+        }
       }
     },
     "mas": {
       "Things": {
         "id": "904280696",
-        "version": "3.13.8"
+        "version": "3.13.9"
       },
       "DaisyDisk": {
         "id": "411643860",
@@ -179,7 +188,7 @@
       },
       "Fantastical": {
         "id": "975937182",
-        "version": "3.3.4"
+        "version": "3.3.5"
       },
       "Honey": {
         "id": "1472777122",
@@ -195,7 +204,7 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "122.0.0"
+        "version": "123.1.0"
       },
       "Keynote": {
         "id": "409183694",
@@ -220,7 +229,7 @@
       "Reeder 5": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.12.2"
+        "version": "4.13.0"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -235,9 +244,9 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "3.0.1-74-g74fd6c8",
+        "HOMEBREW_VERSION": "3.0.4-30-gb8448c4",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "7195a32290968834b2435d9e7f00051ecb2d5371",
+        "Homebrew/homebrew-core": "f3460529852610baebe27ebda8c4e367a6e8ee33",
         "CLT": "12.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
