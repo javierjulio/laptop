@@ -2,7 +2,7 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "3c130caa7d4ddc078e80dc119911e62016c83135"
+        "revision": "ab2b0fb774de7344c5728d25583e5eb1c3779924"
       }
     },
     "cask": {
@@ -43,7 +43,7 @@
         }
       },
       "docker": {
-        "version": "3.2.2,61853",
+        "version": "3.3.0,62916",
         "options": {
           "full_name": "docker",
           "args": {
@@ -70,7 +70,7 @@
         }
       },
       "github": {
-        "version": "2.6.6-74281ffb",
+        "version": "2.7.2-5b94c877",
         "options": {
           "full_name": "github",
           "args": {
@@ -79,7 +79,7 @@
         }
       },
       "gog-galaxy": {
-        "version": "2.0.35.19a",
+        "version": "2.0.37.330",
         "options": {
           "full_name": "gog-galaxy",
           "args": {
@@ -88,7 +88,7 @@
         }
       },
       "google-chrome": {
-        "version": "89.0.4389.90,4389.90",
+        "version": "89.0.4389.114",
         "options": {
           "full_name": "google-chrome",
           "args": {
@@ -124,7 +124,7 @@
         }
       },
       "tableplus": {
-        "version": "3.12.5,364",
+        "version": "3.12.6,366",
         "options": {
           "full_name": "tableplus",
           "args": {
@@ -142,7 +142,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.54.3",
+        "version": "1.55.1",
         "options": {
           "full_name": "visual-studio-code",
           "args": {
@@ -160,7 +160,7 @@
         }
       },
       "mailtrackerblocker": {
-        "version": "0.3.24",
+        "version": "0.3.29",
         "options": {
           "full_name": "mailtrackerblocker",
           "args": {
@@ -172,7 +172,7 @@
     "mas": {
       "Things": {
         "id": "904280696",
-        "version": "3.13.9"
+        "version": "3.13.10"
       },
       "DaisyDisk": {
         "id": "411643860",
@@ -180,11 +180,11 @@
       },
       "Day One": {
         "id": "1055511498",
-        "version": "6.0.1"
+        "version": "6.0.2"
       },
       "Developer": {
         "id": "640199958",
-        "version": "8.4.1"
+        "version": "9.0.1"
       },
       "Fantastical": {
         "id": "975937182",
@@ -204,11 +204,11 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "125.0.0"
+        "version": "126.0.0"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "11.0"
+        "version": "11.0.1"
       },
       "Numbers": {
         "id": "409203825",
@@ -229,7 +229,7 @@
       "Reeder 5": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.13.0"
+        "version": "4.14.1"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -244,12 +244,20 @@
   "system": {
     "macos": {
       "catalina": {
-        "HOMEBREW_VERSION": "3.0.9-23-g04d1142",
+        "HOMEBREW_VERSION": "3.0.10-204-g1ce8ea6",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "ee97e97811531b0fa889aba4ccd95e61f7f46fa6",
-        "CLT": "12.0.32.2",
+        "Homebrew/homebrew-core": "ade3fe0845ac17fdda431822acdced9fb77930e7",
+        "CLT": "12.0.0.32.2",
         "Xcode": "12.0",
         "macOS": "10.15.7"
+      },
+      "big_sur": {
+        "HOMEBREW_VERSION": "3.0.11-148-gb117529",
+        "HOMEBREW_PREFIX": "/usr/local",
+        "Homebrew/homebrew-core": "e70ef73f0b663d3fba3d208412c608817cff259a",
+        "CLT": "12.0.0.32.2",
+        "Xcode": "12.0",
+        "macOS": "11.2.3"
       }
     }
   }
