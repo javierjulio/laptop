@@ -25,4 +25,4 @@ jobs:
     - name: Bats version
       run: bats -v
     - name: Run tests
-      run: bats -r test/
+      run: SHELLCHECK_OPTS="--exclude=SC1091" bats -r test/
