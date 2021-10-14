@@ -26,7 +26,7 @@ if [ $num_rubies -eq 0 ]; then
 
   # Only openssl needs to be specified as readline is taken care of
   # https://github.com/rbenv/ruby-build/issues/1421#issuecomment-602822981
-  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl)"
+  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl@1.1)"
   rbenv install -s "$ruby_version"
   rbenv global "$ruby_version"
   rbenv shell "$ruby_version"
