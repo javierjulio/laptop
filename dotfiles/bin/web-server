@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+(
+  set -x;
+
+  # First param is the port.
+  # If no port given, it defaults to 8000.
+  python3 -m http.server "${1}"
+)
