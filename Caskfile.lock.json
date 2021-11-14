@@ -2,12 +2,12 @@
   "entries": {
     "tap": {
       "homebrew/cask": {
-        "revision": "37ebca368b4e886a5bbabeb8e64da073379f3dc4"
+        "revision": "5a38c916124d504b832bccf7e60fdb70505b024d"
       }
     },
     "cask": {
       "1password": {
-        "version": "7.9",
+        "version": "7.9.1",
         "options": {
           "full_name": "1password",
           "args": {
@@ -25,7 +25,7 @@
         }
       },
       "browserstacklocal": {
-        "version": "3.3.0",
+        "version": "3.3.1",
         "options": {
           "full_name": "browserstacklocal",
           "args": {
@@ -43,7 +43,7 @@
         }
       },
       "docker": {
-        "version": "4.1.1,69879",
+        "version": "4.2.0,70708",
         "options": {
           "full_name": "docker",
           "args": {
@@ -52,7 +52,7 @@
         }
       },
       "firefox": {
-        "version": "93.0",
+        "version": "94.0.1",
         "options": {
           "full_name": "firefox",
           "args": {
@@ -88,7 +88,7 @@
         }
       },
       "google-chrome": {
-        "version": "94.0.4606.81",
+        "version": "95.0.4638.69",
         "options": {
           "full_name": "google-chrome",
           "args": {
@@ -124,7 +124,7 @@
         }
       },
       "tableplus": {
-        "version": "4.2.0,388",
+        "version": "4.5.0,396",
         "options": {
           "full_name": "tableplus",
           "args": {
@@ -142,7 +142,7 @@
         }
       },
       "visual-studio-code": {
-        "version": "1.61.0",
+        "version": "1.62.2",
         "options": {
           "full_name": "visual-studio-code",
           "args": {
@@ -160,7 +160,7 @@
         }
       },
       "mailtrackerblocker": {
-        "version": "0.4.13",
+        "version": "0.5.1",
         "options": {
           "full_name": "mailtrackerblocker",
           "args": {
@@ -172,23 +172,23 @@
     "mas": {
       "Things": {
         "id": "904280696",
-        "version": "3.13.14"
+        "version": "3.14.4"
       },
       "DaisyDisk": {
         "id": "411643860",
-        "version": "4.20.3"
+        "version": "4.21.3"
       },
       "Day One": {
         "id": "1055511498",
-        "version": "6.7"
+        "version": "6.10"
       },
       "Developer": {
         "id": "640199958",
-        "version": "9.2.2"
+        "version": "9.3"
       },
       "Fantastical": {
         "id": "975937182",
-        "version": "3.4.2"
+        "version": "3.4.5"
       },
       "Honey": {
         "id": "1472777122",
@@ -196,7 +196,7 @@
       },
       "iA Writer": {
         "id": "775737590",
-        "version": "5.6.12"
+        "version": "5.6.16"
       },
       "Instapaper": {
         "id": "288545208",
@@ -204,23 +204,23 @@
       },
       "Jira": {
         "id": "1475897096",
-        "version": "134.1.0"
+        "version": "140.1.0"
       },
       "Keynote": {
         "id": "409183694",
-        "version": "11.1"
+        "version": "11.2"
       },
       "Numbers": {
         "id": "409203825",
-        "version": "11.1"
+        "version": "11.2"
       },
       "Okta Extension App": {
         "id": "1439967473",
-        "version": "5.47.0"
+        "version": "6.4.0"
       },
       "Pages": {
         "id": "409201541",
-        "version": "11.1"
+        "version": "11.2"
       },
       "Playgrounds": {
         "id": "1496833156",
@@ -229,7 +229,7 @@
       "Reeder 5": null,
       "Slack": {
         "id": "803453959",
-        "version": "4.18.0"
+        "version": "4.20.0"
       },
       "The Unarchiver": {
         "id": "425424353",
@@ -237,7 +237,7 @@
       },
       "Wipr": {
         "id": "1320666476",
-        "version": "1.25"
+        "version": "1.28.1"
       }
     }
   },
@@ -252,9 +252,9 @@
         "macOS": "10.15.7"
       },
       "big_sur": {
-        "HOMEBREW_VERSION": "3.2.16-31-g976f9da",
+        "HOMEBREW_VERSION": "3.3.3-86-g1f0ab4a",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "f362df2a135a076bbf21d352a62a866f8c48a079",
+        "Homebrew/homebrew-core": "aba8499163724f6efb29d21aa1c10465908a0a0a",
         "CLT": "12.0.0.32.2",
         "Xcode": "12.4",
         "macOS": "11.6"

@@ -22,7 +22,6 @@ brew 'heroku'
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
-brew 'yarn'
 brew 'shared-mime-info' # mimemagic gem license issue (Rails dependency - be replaced?)
 
 # brew 'kubernetes-cli' # Install version 1.10.5 below
