@@ -6,9 +6,9 @@ cask 'appcleaner'
 cask 'browserstacklocal'
 cask 'cheatsheet'
 cask 'docker'
-cask 'epic-games'
+# cask 'epic-games'
 cask 'firefox'
-cask 'flotato'
+# cask 'flotato'
 cask 'github'
 # cask 'gog-galaxy'
 cask 'google-chrome'
@@ -17,18 +17,18 @@ cask 'mailtrackerblocker'
 cask 'ngrok'
 cask 'openemu'
 cask 'tableplus'
-cask 'steam'
+# cask 'steam'
 cask 'visual-studio-code'
 
 # Automatically prompted to sign in to MAS if signed out.
 mas 'Things', id: 904280696
 mas 'DaisyDisk', id: 411643860
-mas 'Day One', id: 1055511498
+# mas 'Day One', id: 1055511498
 mas 'Developer', id: 640199958 # Apple Developer app
 mas 'Fantastical', id: 975937182
 mas 'Honey', id: 1472777122
 mas 'iA Writer', id: 775737590
-mas 'Instapaper', id: 288545208
+# mas 'Instapaper', id: 288545208
 mas 'Jira', id: 1475897096
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
