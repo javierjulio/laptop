@@ -37,8 +37,8 @@ if [ $num_rubies -eq 0 ]; then
 
   log_info "Resolve 'already initialized constant' warnings..."
   # https://github.com/ruby/fileutils/issues/22#issuecomment-424230668
-  gem uninstall fileutils
-  gem update fileutils --default
+  gem uninstall fileutils mutex_m
+  gem update fileutils mutex_m --default
 
   log_info "Installing common gems... (answer yes on overriding executables)"
   # Answer "yes" with overriding executables e.g. bundler
