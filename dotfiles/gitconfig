@@ -28,6 +28,7 @@
   rom = rebase origin/master
   rus = rebase upstream/staging
   rum = rebase upstream/master
+  reset-origin-head = remote set-head origin --auto # Reset local if default branch is changed remotely: e.g. master/production to main
   s = status
   uci = reset --soft HEAD^ # Undo last commit with changes intact
 [color]
