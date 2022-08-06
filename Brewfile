@@ -24,4 +24,3 @@ brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
 brew 'kubernetes-cli'
-brew 'sops'
