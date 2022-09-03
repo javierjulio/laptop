@@ -1,0 +1,21 @@
+#!/bin/bash
+
+set -e
+
+count=0
+max_count=500
+
+while "$@"
+do
+  (( count++ ))
+  echo
+  echo "Run $count finished."
+  echo "--------------------"
+  [ "$count" -eq $max_count ] && break
+done
+
+echo "Exited after $count times."
+
+if [ "$count" -eq $max_count ]; then
+  echo "Max iteration of $max_count reached."
+fi
