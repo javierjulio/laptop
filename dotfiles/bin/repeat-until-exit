@@ -5,6 +5,16 @@ set -e
 count=0
 max_count=500
 
+if [ "$#" -eq 0 ]; then
+  echo "Usage: repeat-until-exit <command>"
+  echo ""
+  echo "Run a given command repeatedly until it exits or ${max_count} iterations reached."
+  echo ""
+  echo "Example:"
+  echo "  repeat-until-exit bin/rspec spec/requests/users_spec.rb:9"
+  exit 1
+fi
+
 while "$@"
 do
   (( count++ ))
