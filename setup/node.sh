@@ -24,7 +24,7 @@ if [ $num_nodes -eq 0 ]; then
   nodenv shell "$node_version"
 
   log_info "Installing common packages..."
-  npm install -g npm yarn parcel localtunnel
+  npm install -g npm yarn
 
   log_info "Node ${node_version} installed."
 else
