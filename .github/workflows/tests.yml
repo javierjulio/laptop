@@ -11,9 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-10.15] # Catalina
-        # TODO: Once new macOS is available use this instead
-        # os: [macos-10.15, macos-latest]
+        os: [macos-11, macos-12]
     name: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v3
