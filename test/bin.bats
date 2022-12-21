@@ -103,3 +103,9 @@ setup() {
   assert_line_match 1 "([^\/]*[\/])*[^\/]+"
   assert [ -d "${lines[1]}" ]
 }
+
+@test "start-development displays an error if no server related file found" {
+  run start-development
+  assert_failure
+  assert_output "Error: No dev server found. Looking for a Procfile.dev, Procfile or package.json file."
+}

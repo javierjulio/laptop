@@ -14,6 +14,6 @@ elif [ -f ./Procfile ]; then
 elif [ -f ./package.json ]; then
   ( set -x; npm run start )
 else
-  echo "\033[1;31m** No dev server **\033[0m"
-  echo "Looking for a Procfile(.dev) or package.json file."
+  echo "Error: No dev server found. Looking for a Procfile.dev, Procfile or package.json file."
+  exit 1
 fi
