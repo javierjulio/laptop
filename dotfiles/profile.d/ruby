@@ -8,8 +8,8 @@ alias bopen='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
 
-alias berc='bundle exec rails console'
-alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test'
+alias berc='bin/rails console'
+alias berdm='bin/rails db:migrate && bin/rails db:migrate RAILS_ENV=test'
 alias rl='tail -f log/development.log'
 
 if [ -d "$HOME/.rbenv" ]; then

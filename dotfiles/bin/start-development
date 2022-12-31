@@ -3,8 +3,8 @@
 set -e
 set -o pipefail
 
-if [ -f ./config/boot.rb ]; then
-  ( set -x; bundle exec rails log:clear LOGS=all )
+if [ -f ./bin/rails ]; then
+  ( set -x; ./bin/rails log:clear LOGS=all )
 fi
 
 if [ -f ./Procfile.dev ]; then
