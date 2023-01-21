@@ -13,7 +13,7 @@ brew 'p7zip' # high compression file archiver (creates .7z files)
 brew 'rbenv'
 brew 'nodenv'
 brew 'imagemagick@6', link: true # https://stackoverflow.com/a/43035892
-brew 'elixir'
+# brew 'elixir' # Find a current tool for managing versions
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
