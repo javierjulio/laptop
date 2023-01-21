@@ -7,13 +7,15 @@ if [ -f ./bin/rails ]; then
   ( set -x; ./bin/rails log:clear LOGS=all )
 fi
 
-if [ -f ./Procfile.dev ]; then
+if [ -f ./Procfile.docker ]; then
+  ( set -x; foreman start -f Procfile.docker )
+elif [ -f ./Procfile.dev ]; then
   ( set -x; foreman start -f Procfile.dev )
 elif [ -f ./Procfile ]; then
   ( set -x; foreman start )
 elif [ -f ./package.json ]; then
   ( set -x; npm run start )
 else
-  echo "Error: No dev server found. Looking for a Procfile.dev, Procfile or package.json file."
+  echo "Error: No dev server found. Looking for a Procfile.docker, Procfile.dev, Procfile or package.json file."
   exit 1
 fi
