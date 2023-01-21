@@ -1,7 +1,6 @@
 tap 'homebrew/bundle'
 tap 'homebrew/core'
 tap 'homebrew/services'
-tap 'heroku/brew'
 brew 'readline'
 brew 'git'
 brew 'grc' # Terminal colorizer
@@ -19,7 +18,6 @@ brew 'postgresql@11', link: true, restart_service: true
 brew 'redis', restart_service: true
 brew 'rabbitmq', restart_service: true
 brew 'elixir'
-brew 'heroku'
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
