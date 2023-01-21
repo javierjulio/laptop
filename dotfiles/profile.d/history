@@ -1,6 +1,6 @@
 #!/bin/sh
 
-export HISTSIZE="50000" # Number of lines kept in session history
+export HISTSIZE="20000" # Number of lines kept in session history
 export HISTFILE="$HOME/.zsh_history"
 export SAVEHIST="${HISTSIZE}" # Number of lines saved in history after logout
 
