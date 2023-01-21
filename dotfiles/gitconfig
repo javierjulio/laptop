@@ -22,11 +22,8 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   p = push
   po = push origin
-  pos = push origin staging
   pom = push origin master
-  ros = rebase origin/staging
   rom = rebase origin/master
-  rus = rebase upstream/staging
   rum = rebase upstream/master
   reset-origin-head = remote set-head origin --auto # Reset local if default branch is changed remotely: e.g. master/production to main
   s = status
