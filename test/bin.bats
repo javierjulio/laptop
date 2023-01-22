@@ -38,7 +38,6 @@ setup() {
 }
 
 @test "shellcheck.sh runs successfully" {
-  export SHELLCHECK_OPTS="--exclude=SC1091"
   run shellcheck.sh
   assert_success
 }

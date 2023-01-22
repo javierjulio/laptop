@@ -19,7 +19,7 @@ alias r='reload'
 alias c='clear'
 alias q='exit'
 
-# shellcheck disable=SC1090
+# shellcheck disable=SC1091
 reload() {
   [ -n "$ZSH_VERSION" ] && . "$HOME/.zshrc"
   [ -n "$BASH" ] && . "$HOME/.profile"

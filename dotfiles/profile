@@ -10,7 +10,7 @@ brew_prefix="$(brew --prefix)"
 
 # Load bash completion
 if [ -f "$brew_prefix/etc/bash_completion" ]; then
-  # shellcheck disable=SC1090
+  # shellcheck disable=SC1091
   . "$brew_prefix/etc/bash_completion"
 
   # Set autocomplete for "g" git alias
@@ -19,7 +19,7 @@ fi
 
 # Load grc (Terminal colorizer)
 if [ -f "$brew_prefix/etc/grc.bashrc" ]; then
-  # shellcheck disable=SC1090
+  # shellcheck disable=SC1091
   . "$brew_prefix/etc/grc.bashrc"
 fi
 
@@ -36,7 +36,7 @@ unset brew_prefix profile_config
 if [ ! -f "$HOME/.bash_local" ]; then
   touch "$HOME/.bash_local"
 fi
-# shellcheck disable=SC1090
+# shellcheck disable=SC1091
 source "$HOME/.bash_local"
 
 # Google Cloud SDK
