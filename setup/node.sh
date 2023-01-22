@@ -7,7 +7,7 @@ log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
 
-log_info "Running Node setup..."
+log_info "Running Node setup."
 
 find_latest_node() {
   nodenv install -l | grep "^[[:space:]]*\d*\.\d*\.\d*" | tail -1 | sed -e 's/^ *//'
@@ -23,7 +23,7 @@ if [ $num_nodes -eq 0 ]; then
   nodenv global "$node_version"
   nodenv shell "$node_version"
 
-  log_info "Installing common packages..."
+  log_info "Installing global packages..."
   npm install -g npm yarn
 
   log_info "Node ${node_version} installed."

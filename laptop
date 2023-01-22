@@ -9,10 +9,10 @@ log_info "Running laptop script..."
 setup/dotfiles.sh
 setup/homebrew.sh
 
-log_info "Setting macOS defaults..."
+log_info "Setting macOS defaults."
 setup/macos.sh
 
-log_info "Cloning GitHub projects..."
+log_info "Cloning GitHub projects."
 setup/projects.sh
 
 setup/ruby.sh

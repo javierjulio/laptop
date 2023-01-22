@@ -7,7 +7,7 @@ log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
 
-log_info "Running Ruby setup..."
+log_info "Running Ruby setup."
 
 find_latest_ruby() {
   rbenv install --list-all | grep -v - | tail -1 | sed -e 's/^ *//'
