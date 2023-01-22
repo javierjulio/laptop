@@ -71,6 +71,11 @@ if [ -f "$brew_prefix/etc/grc.zsh" ]; then
   . "$brew_prefix/etc/grc.zsh"
 fi
 
+# Load 1Password auto complete
+if command -v op >/dev/null 2>&1; then
+  eval "$(op completion zsh)"; compdef _op op
+fi
+
 # bindkey "^[f" forward-word
 # bindkey "^[b" backward-word
 # bindkey -e
