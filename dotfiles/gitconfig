@@ -22,9 +22,11 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
   p = push
   po = push origin
-  pom = push origin master
-  rom = rebase origin/master
-  rum = rebase upstream/master
+  # https://stackoverflow.com/questions/66232497/git-alias-which-works-for-main-or-master-or-other/66236845
+  pom = "!f(){ git push origin $(git symbolic-ref refs/remotes/origin/HEAD | cut -d'/' -f4) $@;}; f"
+  rom = "!f(){ git rebase $(git symbolic-ref refs/remotes/origin/HEAD) $@;}; f"
+  # https://davidwalsh.name/get-default-branch-name
+  rum = "!f(){ git rebase upstream/$(git remote show upstream | grep 'HEAD branch' | cut -d' ' -f5) $@;}; f"
   reset-origin-head = remote set-head origin --auto # Reset local if default branch changed remotely e.g. master->main
   s = status
   uci = reset --soft HEAD^ # Undo last commit with changes intact
