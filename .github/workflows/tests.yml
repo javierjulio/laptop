@@ -12,6 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
+        # Check if macos-13 is available https://github.com/actions/runner-images#available-images
         os: [macos-11, macos-12]
     name: ${{ matrix.os }}
     steps:
