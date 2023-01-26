@@ -5,10 +5,12 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 ## Installation
 * Set [Terminal with Full Disk Access](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-623799514) temporarily
 * `xcode-select --install` for command line tools ([FAQ](https://www.godo.dev/tutorials/xcode-command-line-tools-installation-faq/))
-* Collect GitHub personal access token from 1Password (Git CLI)
+* [Create a temporary GitHub PAT](https://github.com/settings/tokens/new) and use when prompted
 * `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
 * Import [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) as default and then restart
 * `cd ~/Projects/laptop && ./laptop`
+* Open Keychain Access and delete matching GitHub PAT login item
+* Running `git push` should prompt for login using [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)
 * [Enable Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync) using GitHub login
 * `brew doctor` to verify setup
 
