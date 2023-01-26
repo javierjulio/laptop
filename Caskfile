@@ -1,4 +1,5 @@
 tap 'homebrew/cask'
+tap 'microsoft/git'
 cask_args appdir: '/Applications'
 
 cask '1password'
@@ -13,6 +14,7 @@ cask 'firefox'
 cask 'forklift'
 cask 'gb-studio'
 cask 'gdevelop'
+cask 'git-credential-manager-core'
 cask 'github'
 # cask 'gog-galaxy'
 cask 'google-chrome'
