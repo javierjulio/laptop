@@ -22,6 +22,11 @@ setopt HIST_NO_STORE # don't add history commands to history
 setopt NO_AUTO_MENU
 setopt NO_MENU_COMPLETE
 
+# Set PATH, MANPATH, etc., for Homebrew.
+if [ -f "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 brew_prefix="$(brew --prefix)"
 
 # # Load bash completion
