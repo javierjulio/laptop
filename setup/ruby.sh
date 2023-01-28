@@ -17,7 +17,7 @@ log_info() {
 }
 
 find_latest_ruby() {
-  rbenv install --list-all | grep -v - | tail -1 | sed -e 's/^ *//'
+  rbenv install --list | grep --invert-match - | tail -1 | sed -e 's/^ *//'
 }
 
 install_ruby() {

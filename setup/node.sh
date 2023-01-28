@@ -17,7 +17,7 @@ log_info() {
 }
 
 find_latest_node() {
-  nodenv install --list | grep "^[[:space:]]*\d*\.\d*\.\d*" | tail -1 | sed -e 's/^ *//'
+  nodenv install --list | grep "^\d*\.\d*\.\d*$" | tail -1 | sed -e 's/^ *//'
 }
 
 install_node() {
