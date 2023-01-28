@@ -18,3 +18,4 @@ brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
 brew 'exiftool' # File metadata editor
 brew 'kubernetes-cli'
+brew 'libpq', link: true # https://stackoverflow.com/questions/13086073/rails-install-pg-cant-find-the-libpq-fe-h-header#comment106033859_13086562
