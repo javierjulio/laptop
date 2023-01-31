@@ -47,5 +47,5 @@ if [ $num_rubies -eq 0 ]; then
 elif [ "$#" -eq 1 ]; then
   install_ruby "$1"
 else
-  log_info "Using Ruby $(rbenv global) (global)"
+  log_info "Ruby $(rbenv global) (global) already installed."
 fi

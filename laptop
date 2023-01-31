@@ -4,7 +4,7 @@ log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
 
-log_info "Running laptop script..."
+log_info "Running laptop script."
 
 setup/dotfiles.sh
 setup/homebrew.sh

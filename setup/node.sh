@@ -41,5 +41,5 @@ if [ $num_nodes -eq 0 ]; then
 elif [ "$#" -eq 1 ]; then
   install_node "$1"
 else
-  log_info "Using Node $(nodenv global) (global)"
+  log_info "Node $(nodenv global) (global) already installed."
 fi
