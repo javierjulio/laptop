@@ -57,7 +57,14 @@ brew_prefix="$(brew --prefix)"
 # zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
 # fpath=(~/.zsh $fpath)
 
-autoload -Uz compinit && compinit
+if type brew &>/dev/null; then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# autoload -Uz compinit && compinit
 
   # [[ -f /usr/local/share/zsh/site-functions/_git ]] && \
   #   rm  -f /usr/local/share/zsh/site-functions/_git
