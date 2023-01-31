@@ -1,10 +1,9 @@
 #!/bin/bash
 
 set -e
-set -o pipefail
 
 if [ -f ./bin/rails ]; then
-  ( set -x; ./bin/rails log:clear LOGS=all )
+  ( set -x; ./bin/rails log:clear LOGS=all; ./bin/rails db:migrate )
 fi
 
 if [ -f ./Procfile.docker ]; then
