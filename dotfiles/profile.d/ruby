@@ -16,5 +16,8 @@ if [ -d "$HOME/.rbenv" ]; then
   eval "$(rbenv init -)"
 fi
 
+# Always output Ruby deprecation warnings
+export RUBYOPT="-W:deprecated"
+
 # Use VS Code when opening a gem
 export BUNDLER_EDITOR="code"
