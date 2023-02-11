@@ -22,11 +22,10 @@ find_latest_node() {
 
 install_node() {
   node_version="$1"
-  log_info "Installing Node ${node_version}..."
+  log_info "Installing Node ${node_version}."
   nodenv install --skip-existing "$node_version"
   nodenv shell "$node_version"
   log_info "Node ${node_version} installed."
-  log_info "Installing global npm packages..."
   npm install -g npm yarn
 }
 
