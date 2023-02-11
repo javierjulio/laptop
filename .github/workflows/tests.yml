@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  BATS_CORE_VERSION: 1.8.2
+
 jobs:
   build:
     runs-on: ${{ matrix.os }}
@@ -20,7 +23,7 @@ jobs:
       - name: Setup bats-core
         uses: mig4/setup-bats@v1
         with:
-          bats-version: 1.2.1
+          bats-version: ${{ env.BATS_CORE_VERSION }}
       - name: Install Shellcheck
         run: brew install shellcheck
       - name: Bats version
