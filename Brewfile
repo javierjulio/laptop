@@ -21,3 +21,4 @@ brew 'libpq', link: true # https://stackoverflow.com/questions/13086073/rails-in
 brew 'actionlint'
 brew 'detect-secrets'
 brew 'hadolint'
+brew 'yamllint'
