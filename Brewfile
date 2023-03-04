@@ -20,3 +20,4 @@ brew 'kubernetes-cli'
 brew 'libpq', link: true # https://stackoverflow.com/questions/13086073/rails-install-pg-cant-find-the-libpq-fe-h-header#comment106033859_13086562
 brew 'actionlint'
 brew 'detect-secrets'
+brew 'hadolint'
