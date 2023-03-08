@@ -22,3 +22,4 @@ brew 'actionlint' # GitHub Actions lint
 brew 'detect-secrets'
 brew 'hadolint' # Dockerfile lint
 brew 'yamllint'
+brew 'ld-find-code-refs' # LaunchDarkly
