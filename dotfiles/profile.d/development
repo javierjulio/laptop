@@ -1,5 +1,9 @@
 #!/bin/sh
 
+if [ -d "$HOME/.docker/bin" ]; then
+  export PATH="$HOME/.docker/bin:$PATH"
+fi
+
 # Run `code` to open Visual Studio Code from the Terminal.
 # https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
 if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
