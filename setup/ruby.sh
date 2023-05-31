@@ -25,7 +25,7 @@ install_ruby() {
   log_info "Installing Ruby ${ruby_version}."
   # Only openssl needs to be specified as readline is taken care of
   # https://github.com/rbenv/ruby-build/issues/1421#issuecomment-602822981
-  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl@1.1)"
+  export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl@3)"
   rbenv install --skip-existing "$ruby_version"
   rbenv shell "$ruby_version"
   log_info "Ruby ${ruby_version} installed."
