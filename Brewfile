@@ -1,6 +1,3 @@
-tap 'homebrew/bundle'
-tap 'homebrew/core'
-tap 'homebrew/services'
 brew 'readline'
 brew 'git'
 brew 'grc' # Terminal colorizer
