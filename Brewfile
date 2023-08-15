@@ -20,3 +20,4 @@ brew 'detect-secrets'
 brew 'hadolint' # Dockerfile lint
 brew 'yamllint'
 brew 'ld-find-code-refs' # LaunchDarkly
+brew 'gh' # GitHub CLI
