@@ -11,7 +11,9 @@ ActiveRecord::Base.logger = Logger.new(STDOUT)
 # will see the full debug query with all parameter values.
 # Solution: https://stackoverflow.com/a/26704547
 console_log = Rails.root.join('log', 'console.log')
-ActiveRecord::Base.logger.extend(ActiveSupport::Logger.broadcast(Logger.new(console_log)))
+if ::Rails::VERSION::STRING < "7.1"
+  ActiveRecord::Base.logger.extend(ActiveSupport::Logger.broadcast(Logger.new(console_log)))
+end
 
 def r
   reload!
