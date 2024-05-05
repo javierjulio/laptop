@@ -2,9 +2,9 @@ name: Tests
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
 
 env:
   BATS_CORE_VERSION: 1.8.2
@@ -15,13 +15,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Check if macos-14 is available https://github.com/actions/runner-images#available-images
-        os: [macos-12, macos-13]
+        # For newer versions: https://github.com/actions/runner-images#available-images
+        os:
+          - macos-13
+          - macos-14
     name: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup bats-core
-        uses: mig4/setup-bats@v1
+      - uses: actions/checkout@v4
+      - uses: mig4/setup-bats@v1
         with:
           bats-version: ${{ env.BATS_CORE_VERSION }}
       - name: Install Shellcheck
