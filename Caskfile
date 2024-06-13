@@ -20,7 +20,7 @@ cask 'google-chrome'
 cask 'google-cloud-sdk'
 cask 'ngrok'
 cask 'notion'
-cask 'openemu'
+# cask 'openemu'
 cask 'tableplus'
 # cask 'steam'
 cask 'visual-studio-code'
@@ -28,7 +28,7 @@ cask 'visual-studio-code'
 # Automatically prompted to sign in to MAS if signed out.
 mas 'Things', id: 904280696
 mas 'DaisyDisk', id: 411643860
-mas 'Day One', id: 1055511498
+# mas 'Day One', id: 1055511498
 mas 'Developer', id: 640199958 # Apple Developer app
 mas 'Fantastical', id: 975937182
 mas 'Honey', id: 1472777122
