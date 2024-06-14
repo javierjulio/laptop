@@ -22,9 +22,13 @@ jobs:
     name: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
-      - uses: mig4/setup-bats@v1
+      - uses: bats-core/bats-action@2.0.0
         with:
           bats-version: ${{ env.BATS_CORE_VERSION }}
+          support-install: false
+          assert-install: false
+          detik-install: false
+          file-install: false
       - name: Install Shellcheck
         run: brew install shellcheck
       - name: Bats version
