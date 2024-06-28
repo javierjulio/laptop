@@ -28,4 +28,5 @@ clone_repo "javierjulio/soccer-manager-game"
 
 clone_repo "activeadmin/activeadmin"
 clone_repo "activeadmin/arbre"
+clone_repo "activeadmin/demo.activeadmin.info" "activeadmin-demo"
 clone_repo "activeadmin/inherited_resources"
