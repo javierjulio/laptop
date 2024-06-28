@@ -41,6 +41,10 @@ log_info "Running Ruby setup."
 if [ $num_rubies -eq 0 ]; then
   ruby_version="$(find_latest_ruby)"
   install_ruby "$ruby_version"
+
+  # shellcheck disable=SC1090
+  source "$HOME/.zshrc"
+
   rbenv global "$ruby_version"
 elif [ "$#" -eq 1 ]; then
   install_ruby "$1"

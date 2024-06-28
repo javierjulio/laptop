@@ -12,6 +12,13 @@ setup/homebrew.sh
 # shellcheck disable=SC1090
 source "$HOME/.zshrc"
 
+log_info "Running Brew bundler..."
+brew bundle --no-upgrade
+brew bundle --file=Caskfile
+
+# shellcheck disable=SC1090
+source "$HOME/.zshrc"
+
 log_info "Setting macOS defaults."
 setup/macos.sh
 

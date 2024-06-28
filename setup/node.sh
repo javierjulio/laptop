@@ -36,6 +36,10 @@ log_info "Running Node setup."
 if [ $num_nodes -eq 0 ]; then
   node_version="$(find_latest_node)"
   install_node "$node_version"
+
+  # shellcheck disable=SC1090
+  source "$HOME/.zshrc"
+
   nodenv global "$node_version"
 elif [ "$#" -eq 1 ]; then
   install_node "$1"
