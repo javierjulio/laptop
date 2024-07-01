@@ -27,7 +27,7 @@ def time(iterations: 1)
 end
 
 def copy
-  system "echo #{IRB.CurrentContext.last_value} | pbcopy"
+  system "echo \"#{IRB.CurrentContext.last_value}\" | pbcopy"
   true
 end
 
