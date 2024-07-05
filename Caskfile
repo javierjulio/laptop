@@ -17,6 +17,7 @@ cask 'microsoft-edge'
 cask 'openemu'
 cask 'steam'
 cask 'visual-studio-code'
+cask 'warp' # Enhanced CLI terminal https://www.warp.dev
 
 # Automatically prompted to sign in to MAS if signed out.
 mas 'Things', id: 904280696
