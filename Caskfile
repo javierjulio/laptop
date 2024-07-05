@@ -2,7 +2,7 @@ tap 'microsoft/git'
 cask_args appdir: '/Applications'
 
 cask '1password'
-# cask '1password-cli'
+cask '1password-cli'
 cask 'appcleaner'
 cask 'cheatsheet'
 # cask 'docker'
