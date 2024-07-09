@@ -20,6 +20,7 @@ cask 'warp' # Enhanced CLI terminal https://www.warp.dev
 cask 'zoom'
 
 # Automatically prompted to sign in to MAS if signed out.
+mas '1Password for Safari', id: 1569813296 # Safari Extension
 mas 'Things', id: 904280696
 mas 'DaisyDisk', id: 411643860
 # mas 'Day One', id: 1055511498
