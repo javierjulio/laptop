@@ -4,20 +4,23 @@ log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
 
+reload_profile() {
+  # shellcheck disable=SC1090
+  source "$HOME/.zshrc"
+}
+
 log_info "Running laptop script."
 
 setup/dotfiles.sh
 setup/homebrew.sh
 
-# shellcheck disable=SC1090
-source "$HOME/.zshrc"
+reload_profile
 
 log_info "Running Brew bundler..."
 brew bundle --no-upgrade
 brew bundle --file=Caskfile
 
-# shellcheck disable=SC1090
-source "$HOME/.zshrc"
+reload_profile
 
 log_info "Setting macOS defaults."
 setup/macos.sh
@@ -25,8 +28,15 @@ setup/macos.sh
 log_info "Cloning GitHub projects."
 setup/projects.sh
 
-setup/ruby.sh
-setup/node.sh
+reload_profile
+
+setup/ruby.sh 3.3.4
+rbenv global 3.3.4
+
+reload_profile
+
+setup/node.sh 22.4.0
+nodenv global 22.4.0
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 if [ "$terminal_theme" != "Ocean Dark" ]; then
