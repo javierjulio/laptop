@@ -25,6 +25,7 @@ clone_repo "javierjulio/memory-game"
 clone_repo "javierjulio/new-star-manager-data"
 clone_repo "javierjulio/nonograms-game"
 clone_repo "javierjulio/soccer-manager-game"
+clone_repo "javierjulio/tailwind-all-access"
 clone_repo "javierjulio/writebook"
 
 clone_repo "activeadmin/activeadmin"
