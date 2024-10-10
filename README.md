@@ -4,7 +4,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 
 ## Installation
 * Set [Terminal with Full Disk Access](https://github.com/mathiasbynens/dotfiles/issues/849#issuecomment-623799514) temporarily
-* `xcode-select --install` for command line tools ([FAQ](https://www.godo.dev/tutorials/xcode-command-line-tools-installation-faq/))
+* `xcode-select --install` for command line tools ([FAQ](https://www.junian.net/dev/xcode-command-line-tools-installation-faq/))
 * [Create a temporary GitHub PAT](https://github.com/settings/tokens/new) and use when prompted
 * `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
 * Import [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) as default and then restart
