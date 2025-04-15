@@ -30,8 +30,8 @@ setup/projects.sh
 
 reload_profile
 
-setup/ruby.sh 3.3.4
-rbenv global 3.3.4
+setup/ruby.sh 3.4.3
+rbenv global 3.4.3
 
 reload_profile
 
