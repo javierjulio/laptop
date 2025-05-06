@@ -17,3 +17,4 @@ brew 'actionlint' # GitHub Actions lint
 brew 'hadolint' # Dockerfile lint
 brew 'yamllint'
 brew 'gh' # GitHub CLI
+brew 'typos-cli'
