@@ -3,6 +3,7 @@ brew 'git'
 brew 'grc' # Terminal colorizer
 brew 'gawk'
 brew 'bash-completion'
+brew 'coreutils' # GNU core utilities e.g. `shuf`
 brew 'libyaml' # recommended by ruby-build and rbenv
 brew 'bats-core'
 brew 'p7zip' # high compression file archiver (creates .7z files)
