@@ -28,6 +28,7 @@ clone_repo "javierjulio/nonograms-game"
 clone_repo "javierjulio/soccer-manager-game"
 clone_repo "javierjulio/tailwind-all-access"
 clone_repo "javierjulio/writebook"
+clone_repo "javierjulio/wq"
 
 clone_repo "activeadmin/activeadmin"
 clone_repo "activeadmin/arbre"
