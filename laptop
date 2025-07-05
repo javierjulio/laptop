@@ -35,8 +35,8 @@ rbenv global 3.4.3
 
 reload_profile
 
-setup/node.sh 22.4.0
-nodenv global 22.4.0
+setup/node.sh 22.17.0
+nodenv global 22.17.0
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
 if [ "$terminal_theme" != "Ocean Dark" ]; then
