@@ -7,7 +7,7 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * `xcode-select --install` for command line tools ([FAQ](https://www.junian.net/dev/xcode-command-line-tools-installation-faq/))
 * [Create a temporary GitHub PAT](https://github.com/settings/tokens/new) and use when prompted
 * `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
-* Import [Terminal Theme](https://github.com/javierjulio/laptop/tree/master/themes) as default and then restart
+* Import [Terminal Themes](https://github.com/javierjulio/laptop/tree/master/themes), set one as the default and then restart Terminal
 * `cd ~/Projects/laptop && ./laptop`
 * Open Keychain Access and delete matching GitHub PAT login item
 * Running `git push` should prompt for login using [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)
