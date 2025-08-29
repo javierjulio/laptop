@@ -1,11 +1,9 @@
 #!/bin/sh
 
-caskroom_prefix="$(brew --caskroom)"
-
 source_file() {
-  if [ -f "$caskroom_prefix/google-cloud-sdk/latest/google-cloud-sdk/$1" ]; then
+  if [ -f "/opt/homebrew/share/google-cloud-sdk/$1" ]; then
     # shellcheck disable=SC1090
-    . "$caskroom_prefix/google-cloud-sdk/latest/google-cloud-sdk/$1"
+    . "/opt/homebrew/share/google-cloud-sdk/$1"
   fi
 }
 
@@ -13,4 +11,3 @@ source_file() {
 [ -n "$BASH" ] && source_file "path.bash.inc"
 
 unset -f source_file
-unset caskroom_prefix
