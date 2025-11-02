@@ -14,6 +14,14 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * [Enable Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync) using GitHub login
 * `brew doctor` to verify setup
 
+### Windows 11 App Setup
+
+Open a Command Prompt as administrator and run the following to install apps:
+
+```
+winget install --id=Valve.Steam -e  && winget install --id=Google.Chrome -e  && winget install --id=AgileBits.1Password -e  && winget install --id=EpicGames.EpicGamesLauncher -e  && winget install --id=Amazon.Games -e  && winget install --id=Ubisoft.Connect -e  && winget install --id=ElectronicArts.EADesktop -e  && winget install --id=Blizzard.BattleNet -e  && winget install --id=WeMod.WeMod -e  && winget install --id=ItchIo.Itch -e  && winget install --id=GOG.Galaxy -e  && winget install --id=Google.PlayGames.Beta -e  && winget install --id=JetBrains.dotPeek -e  && winget install --id=PPSSPPTeam.PPSSPP -e  && winget install --id=PCSX2Team.PCSX2 -e  && winget install --id=Libretro.RetroArch -e
+```
+
 ### Development
 
 Run tests: `bats -r test`
