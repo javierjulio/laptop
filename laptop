@@ -39,9 +39,9 @@ setup/node.sh 22.17.0
 nodenv global 22.17.0
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
-if [ "$terminal_theme" != "Ocean Dark" ]; then
+if [ "$terminal_theme" != "Nord" ]; then
   log_info "Install my Terminal theme."
-  log_info "Location: laptop/themes/Ocean Dark.terminal"
+  log_info "Location: laptop/themes/Nord.terminal"
 fi
 
 log_info "Done"
