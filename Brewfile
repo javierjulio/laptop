@@ -9,6 +9,7 @@ brew 'bats-core'
 brew 'p7zip' # high compression file archiver (creates .7z files)
 brew 'rbenv'
 brew 'nodenv'
+brew 'uv' # Python package/project management (all in one tool)
 # brew 'elixir' # Find a current tool for managing versions
 brew 'mas' # Mac App Store command line interface
 brew 'shellcheck'
