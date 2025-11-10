@@ -28,17 +28,24 @@ Run tests: `bats -r test`
 
 For more info on setting macOS defaults programmatically: https://lapcatsoftware.com/articles/containers.html
 
-#### Resources
+## Resources
+
+On using `defaults` macOS CLI: https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
+
+### Similar projects
 * https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/janmoesen/tilde
 * https://github.com/gerhard/setup
-#### Terminal Themes
+
+### Terminal Themes
+* https://github.com/nordtheme/terminal-app
 * https://github.com/lysyi3m/osx-terminal-themes
 * https://draculatheme.com/terminal/
-#### zsh Transition
+
+### zsh Transition
 * https://support.apple.com/en-us/HT208050
 * https://scriptingosx.com/2019/06/moving-to-zsh/
 * For git completion with `g` alias:
