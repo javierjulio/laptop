@@ -32,7 +32,8 @@ For more info on setting macOS defaults programmatically: https://lapcatsoftware
 
 On using `defaults` macOS CLI: https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
 
-### Similar projects
+* https://github.com/jamesdh/dotfiles/blob/master/bootstrap.sh
+* https://github.com/gibfahn/dot/blob/main/helpers/setup.sh
 * https://github.com/rkalis/dotfiles
 * https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
