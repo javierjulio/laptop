@@ -32,7 +32,7 @@ install_ruby() {
     log_info "Ruby ${ruby_version} installed."
     gem update --system
     gem update
-    gem install irb foreman rails
+    gem install irb foreman rails wq
   else
     log_info "Skipped Ruby install."
   fi
