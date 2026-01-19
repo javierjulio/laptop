@@ -14,6 +14,7 @@ cask 'google-chrome'
 cask 'microsoft-edge'
 cask 'openemu'
 cask 'steam'
+cask 'tiled' # 2D level editor https://www.mapeditor.org
 cask 'visual-studio-code'
 cask 'warp' # Enhanced CLI terminal https://www.warp.dev
 cask 'zoom'
