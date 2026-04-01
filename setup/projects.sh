@@ -12,8 +12,6 @@ clone_repo() {
 }
 
 clone_repo "javierjulio/javierjulio.github.io" "javierjulio"
-clone_repo "javierjulio/binlist-elixir"
-clone_repo "javierjulio/binlist-node"
 clone_repo "javierjulio/cheats"
 clone_repo "javierjulio/chris-courses"
 clone_repo "javierjulio/envied"
@@ -27,7 +25,6 @@ clone_repo "javierjulio/new-star-manager-data"
 clone_repo "javierjulio/nonograms-game"
 clone_repo "javierjulio/soccer-manager-game"
 clone_repo "javierjulio/tailwind-all-access"
-clone_repo "javierjulio/writebook"
 clone_repo "javierjulio/wq"
 
 clone_repo "activeadmin/activeadmin"
