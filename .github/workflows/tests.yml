@@ -17,7 +17,6 @@ jobs:
       matrix:
         # For newer versions: https://github.com/actions/runner-images#available-images
         os:
-          - macos-14
           - macos-15
     name: ${{ matrix.os }}
     steps:
