@@ -21,8 +21,8 @@ jobs:
           - macos-26
     name: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
       - uses: bats-core/bats-action@2.0.0
+      - uses: actions/checkout@v6
         with:
           bats-version: ${{ env.BATS_CORE_VERSION }}
           support-install: false
