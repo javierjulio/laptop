@@ -21,10 +21,11 @@ jobs:
           - macos-26
     name: ${{ matrix.os }}
     steps:
-      - uses: bats-core/bats-action@2.0.0
       - uses: actions/checkout@v6
+      - uses: bats-core/bats-action@4.0.0
         with:
           bats-version: ${{ env.BATS_CORE_VERSION }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           support-install: false
           assert-install: false
           detik-install: false
