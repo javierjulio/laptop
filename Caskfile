@@ -11,7 +11,7 @@ cask 'gdevelop'
 cask 'git-credential-manager'
 cask 'github'
 cask 'google-chrome'
-cask 'openemu'
+# cask 'openemu' # deprecated, fails macOS Gatekeeper check, disabled on 2026-09-01
 cask 'steam'
 cask 'tiled' # 2D level editor https://www.mapeditor.org
 cask 'visual-studio-code'
