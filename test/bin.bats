@@ -63,7 +63,7 @@ setup() {
 @test "remote-ip displays your remote IP address" {
   run remote-ip
   assert_success
-  assert_output_match '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'
+  assert_output_match '^([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+|[a-f0-9:]+)$'
 }
 
 @test "remote-ip runs from tmp directory due to PATH" {
