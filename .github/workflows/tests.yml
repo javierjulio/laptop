@@ -30,9 +30,6 @@ jobs:
           assert-install: false
           detik-install: false
           file-install: false
-      - name: Install Shellcheck
-        run: brew install shellcheck
-      - name: Bats version
-        run: bats -v
-      - name: Run tests
-        run: bats -r test/
+      - run: brew install shellcheck
+      - run: bats --version
+      - run: bats --recursive test/
