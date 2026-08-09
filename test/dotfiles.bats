@@ -7,22 +7,22 @@ setup() {
 }
 
 @test "the BUNDLER_EDITOR variable is set" {
-  source "dotfiles/profile.d/ruby"
+  source "dotfiles/profile.d/ruby.sh"
   run echo $BUNDLER_EDITOR
   assert_success
   assert_output "code"
 }
 
 @test "the EDITOR variable is set" {
-  source "dotfiles/profile.d/development"
+  source "dotfiles/profile.d/development.sh"
   run echo $EDITOR
   assert_success
   assert_output "code --wait"
 }
 
 @test "the PATH variable contains dotfiles/.bin path" {
-  source "dotfiles/profile.d/system"
+  source "dotfiles/profile.d/paths.sh"
   run echo "$PATH"
   assert_success
-  assert_output_match "^${TMP_DIR}\/\.bin:"
+  assert_output_match "${TMP_DIR}\/\.bin:"
 }

@@ -23,10 +23,8 @@ if [ -f "$brew_prefix/etc/grc.bashrc" ]; then
   . "$brew_prefix/etc/grc.bashrc"
 fi
 
-# TODO: if reverting to Bash then explicitly list supported files here
-for profile_config in "$HOME"/.profile.d/*
+for profile_config in "$HOME"/.profile.d/*.sh
 do
-  [ "$(basename "$profile_config")" = "prompt" ] && continue
   # shellcheck disable=SC1090
   source "$profile_config"
 done
@@ -39,22 +37,13 @@ fi
 # shellcheck disable=SC1091
 source "$HOME/.bash_local"
 
-# Google Cloud SDK
-if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc" ]; then
-  # shellcheck disable=SC1091
-  . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.bash.inc"
-fi
-if [ -f "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc" ]; then
-  # shellcheck disable=SC1091
-  . "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.bash.inc"
-fi
-
 # Bash Prompt
 # folder_name: (git_branch_name)
 export PS1="\[\e[0;36m\]\W:\[\e[0;33m\]\$(__git_ps1)\[\e[0m\] "
 
 # Bash History
 export HISTFILESIZE="${HISTSIZE}";
+export HISTFILE="$HOME/.bash_history"
 export HISTCONTROL="ignoredups"
 # Use standard ISO 8601 timestamp.
 # %F equivalent to %Y-%m-%d
@@ -62,4 +51,3 @@ export HISTCONTROL="ignoredups"
 export HISTTIMEFORMAT='%F %T '
 
 alias h='history'
-alias hsearch='history | grep --color=auto'

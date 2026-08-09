@@ -1,8 +1,15 @@
 #!/bin/sh
 
-# For pipx installed packages
-if [ -d "$HOME/.local/bin" ]; then
-  export PATH="$HOME/.local/bin:$PATH"
+if [ -d "$HOME/.bin" ]; then
+  export PATH="$HOME/.bin:$PATH"
+fi
+
+if [ -d "$HOME/.rbenv" ]; then
+  eval "$(rbenv init -)"
+fi
+
+if [ -d "$HOME/.nodenv" ]; then
+  eval "$(nodenv init -)"
 fi
 
 if [ -d "$HOME/.docker/bin" ]; then
@@ -10,11 +17,7 @@ if [ -d "$HOME/.docker/bin" ]; then
 fi
 
 # Run `code` to open Visual Studio Code from the Terminal.
-# https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line
+# https://code.visualstudio.com/docs/setup/mac#_launch-vs-code-from-the-command-line
 if [ -d "/Applications/Visual Studio Code.app/Contents/Resources/app/bin" ]; then
   export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
 fi
-
-export EDITOR="code --wait"
-
-alias s="start-development"

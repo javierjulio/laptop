@@ -4,7 +4,7 @@ load test_helper
 
 setup() {
   common_setup
-  source "dotfiles/profile.d/system"
+  source "dotfiles/profile.d/paths.sh"
 }
 
 @test "urls: with no input or file, it fails with error message" {

@@ -1,29 +1,11 @@
 #!/bin/sh
 
-if [ -d "$HOME/.bin" ]; then
-  export PATH="$HOME/.bin:$PATH"
-fi
-
-alias opendir='open -R .'
-
-alias ..='cd ..'
-alias home='cd ~'
-alias documents='cd ~/Documents'
-alias p='cd ~/Projects'
-alias projects='cd ~/Projects'
-alias laptop='cd ~/Projects/laptop'
-alias dotfiles='cd ~/Projects/laptop/dotfiles'
-alias jj='cd ~/Projects/javierjulio'
-
-alias r='reload'
-alias c='clear'
-alias q='exit'
-
 # shellcheck disable=SC1091
 reload() {
   [ -n "$ZSH_VERSION" ] && . "$HOME/.zshrc"
   [ -n "$BASH" ] && . "$HOME/.profile"
 }
+alias r='reload'
 
 executable() {
   chmod +x "$@"

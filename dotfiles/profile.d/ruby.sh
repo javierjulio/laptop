@@ -4,17 +4,13 @@ alias be='bundle exec'
 alias bi='bundle install'
 alias bu='bundle update'
 alias bo='bundle outdated'
-alias bopen='bundle open' # bundle open GEM_NAME
+alias bopen='bundle open' # bundle open rails
 alias ber='bundle exec rake'
 alias bert='bundle exec rake test'
 
 alias berc='bin/rails console'
 alias berdm='bin/rails db:migrate && bin/rails db:migrate RAILS_ENV=test'
 alias rl='tail -f log/development.log'
-
-if [ -d "$HOME/.rbenv" ]; then
-  eval "$(rbenv init -)"
-fi
 
 # Always output Ruby deprecation warnings
 export RUBYOPT="-W:deprecated"

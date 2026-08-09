@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export EDITOR="code --wait"
+
 source_file() {
   if [ -f "/opt/homebrew/share/google-cloud-sdk/$1" ]; then
     # shellcheck disable=SC1090
