@@ -26,7 +26,7 @@ install_node() {
   if nodenv install "$node_version"; then
     nodenv shell "$node_version"
     log_info "Node ${node_version} installed."
-    npm install -g npm yarn
+    npm install -g npm yarn @openai/codex
   else
     log_info "Skipped Node install."
   fi
