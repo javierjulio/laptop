@@ -1,0 +1,38 @@
+#!/bin/zsh
+#
+# Summary: Install a Ruby version using rbenv and ruby-build
+#
+# Usage: setup-ruby <version>
+
+set -e
+
+if [ "$#" -eq 0 ]; then
+  echo "Error: Missing or invalid version."
+  echo "Usage: setup-ruby <version>"
+  exit 1
+fi
+
+# shellcheck disable=SC1090
+source "$HOME/.zshrc" # needed for `rbenv shell` usage
+
+log_info() {
+  echo "$(date +%H:%M:%S) - $1"
+}
+
+export RUBY_CONFIGURE_OPTS="--disable-install-doc"
+
+install_ruby() {
+  ruby_version="$1"
+  log_info "Installing Ruby ${ruby_version}."
+  rbenv install "$ruby_version" --skip-existing
+  rbenv shell "$ruby_version"
+  log_info "Ruby ${ruby_version} installed."
+  gem update --system
+  gem update
+  gem install irb foreman rails wq
+}
+
+if [ "$#" -eq 1 ]; then
+  log_info "Running Ruby setup."
+  install_ruby "$1"
+fi

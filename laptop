@@ -111,7 +111,7 @@ clone_project "activeadmin/inherited_resources"
 
 reload_profile
 
-setup/ruby.sh 4.0.7
+setup-ruby 4.0.7
 rbenv global 4.0.7
 
 reload_profile
