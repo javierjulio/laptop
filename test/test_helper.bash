@@ -16,7 +16,14 @@ common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
   # Create dotfiles symlinks in tmp dir
-  setup/dotfiles.sh
+  (
+    cd dotfiles || exit
+
+    for dotfile in *
+    do
+      ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
+    done
+  )
 }
 
 teardown() {

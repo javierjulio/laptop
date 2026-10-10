@@ -23,7 +23,14 @@ clone_project() {
 
 log_info "Running laptop script."
 
-setup/dotfiles.sh
+(
+  cd dotfiles || exit
+
+  for dotfile in *
+  do
+    ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
+  done
+)
 
 if command -v brew >/dev/null 2>&1; then
   log_info "Updating Homebrew..."
