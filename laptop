@@ -24,7 +24,14 @@ clone_project() {
 log_info "Running laptop script."
 
 setup/dotfiles.sh
-setup/homebrew.sh
+
+if command -v brew >/dev/null 2>&1; then
+  log_info "Updating Homebrew..."
+  brew update
+else
+  log_info "Installing Homebrew..."
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
 reload_profile
 
