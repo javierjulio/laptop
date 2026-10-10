@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+TERMINAL_PROFILE="Nord"
+
 log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
@@ -38,10 +40,13 @@ reload_profile
 setup/node.sh 24.20.0
 nodenv global 24.20.0
 
-terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings" 2>/dev/null)
-if [ "$terminal_theme" != "Nord" ]; then
-  log_info "Install my Terminal theme."
-  log_info "Location: laptop/themes/Nord.terminal"
+terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings")
+if [ "$terminal_theme" != "$TERMINAL_PROFILE" ]; then
+  log_info "Installing $TERMINAL_PROFILE Terminal theme..."
+  open "$(pwd)/themes/$TERMINAL_PROFILE.terminal"
+  sleep 1
+  osascript -e 'tell application "Terminal" to set default settings to settings set "'"$TERMINAL_PROFILE"'"'
+  osascript -e 'tell application "Terminal" to set startup settings to settings set "'"$TERMINAL_PROFILE"'"'
 fi
 
 log_info "Done"
