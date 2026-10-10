@@ -116,7 +116,7 @@ rbenv global 4.0.7
 
 reload_profile
 
-setup/node.sh 24.20.0
+setup-node 24.20.0
 nodenv global 24.20.0
 
 terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings")
