@@ -1,5 +1,6 @@
 #!/bin/zsh
 
+PROJECTS_PREFIX="$HOME/Projects"
 TERMINAL_PROFILE="Nord"
 
 log_info() {
@@ -9,6 +10,15 @@ log_info() {
 reload_profile() {
   # shellcheck disable=SC1090
   source "$HOME/.zshrc"
+}
+
+clone_project() {
+  local dir
+  dir=$(basename "${2:-$1}")
+  if [ ! -d "$PROJECTS_PREFIX/$dir" ]; then
+    git clone "https://github.com/$1.git" "$PROJECTS_PREFIX/${dir}"
+    echo "Cloned $1 successfully."
+  fi
 }
 
 log_info "Running laptop script."
@@ -28,7 +38,26 @@ log_info "Setting macOS defaults."
 setup/macos.sh
 
 log_info "Cloning GitHub projects."
-setup/projects.sh
+clone_project "javierjulio/javierjulio.github.io" "javierjulio"
+clone_project "javierjulio/cheats"
+clone_project "javierjulio/chris-courses"
+clone_project "javierjulio/envied"
+clone_project "javierjulio/game-dev"
+clone_project "javierjulio/gdevelop-examples"
+clone_project "javierjulio/how-to-program-games"
+clone_project "javierjulio/humble-bundle-key-exporter"
+clone_project "javierjulio/manager-game-sources"
+clone_project "javierjulio/memory-game"
+clone_project "javierjulio/new-star-manager-data"
+clone_project "javierjulio/nonograms-game"
+clone_project "javierjulio/real-world-code"
+clone_project "javierjulio/soccer-manager-game"
+clone_project "javierjulio/tailwind-all-access"
+clone_project "javierjulio/wq"
+clone_project "activeadmin/activeadmin"
+clone_project "activeadmin/arbre"
+clone_project "activeadmin/demo.activeadmin.info" "activeadmin-demo"
+clone_project "activeadmin/inherited_resources"
 
 reload_profile
 
