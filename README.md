@@ -25,30 +25,19 @@ winget install --id=Valve.Steam -e  && winget install --id=Google.Chrome -e  && 
 
 Run tests: `bats -r test`
 
-For more info on setting macOS defaults programmatically: https://lapcatsoftware.com/articles/containers.html
-
 ## Resources
 
-On using `defaults` macOS CLI: https://pawelgrzybek.com/change-macos-user-preferences-via-command-line/
-
+* Setting macOS defaults using CLI: https://lapcatsoftware.com/articles/containers.html
 * https://github.com/jamesdh/dotfiles/blob/master/bootstrap.sh
 * https://github.com/gibfahn/dot/blob/main/helpers/setup.sh
 * https://github.com/rkalis/dotfiles
-* https://github.com/paveg/dotfiles
 * https://github.com/ascarter/dotfiles
 * https://github.com/mathiasbynens/dotfiles
 * https://github.com/janmoesen/tilde
-* https://github.com/gerhard/setup
+* https://support.apple.com/en-us/HT208050
+* https://scriptingosx.com/2019/06/moving-to-zsh/
 
 ### Terminal Themes
 * https://github.com/nordtheme/terminal-app
 * https://github.com/lysyi3m/osx-terminal-themes
 * https://draculatheme.com/terminal/
-
-### zsh Transition
-* https://support.apple.com/en-us/HT208050
-* https://scriptingosx.com/2019/06/moving-to-zsh/
-* For git completion with `g` alias:
-  * https://github.com/robbyrussell/oh-my-zsh/issues/7459#issuecomment-499487413
-  * https://medium.com/@oliverspryn/adding-git-completion-to-zsh-60f3b0e7ffbc
-* For bash completion: https://github.com/eddiezane/lunchy/issues/57#issuecomment-448588918
