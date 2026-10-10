@@ -9,9 +9,9 @@ shopt -s nocaseglob
 brew_prefix="$(brew --prefix)"
 
 # Load bash completion
-if [ -f "$brew_prefix/etc/bash_completion" ]; then
+if [ -r "$brew_prefix/etc/profile.d/bash_completion.sh" ]; then
   # shellcheck disable=SC1091
-  . "$brew_prefix/etc/bash_completion"
+  . "$brew_prefix/etc/profile.d/bash_completion.sh"
 
   # Set autocomplete for "g" git alias
   __git_complete g __git_main
