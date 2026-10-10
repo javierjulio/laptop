@@ -8,8 +8,8 @@ log_info() {
 }
 
 reload_profile() {
-  # shellcheck disable=SC1090
-  source "$HOME/.zshrc"
+  [ -n "$ZSH_VERSION" ] && . "$HOME/.zshrc"
+  [ -n "$BASH" ] && . "$HOME/.profile"
 }
 
 clone_project() {
