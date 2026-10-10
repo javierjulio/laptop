@@ -27,7 +27,7 @@ install_ruby() {
   # https://github.com/rbenv/ruby-build/issues/1421#issuecomment-602822981
   export RUBY_CONFIGURE_OPTS="--disable-install-doc --with-openssl-dir=$(brew --prefix openssl@3)"
 
-  if rbenv install "$ruby_version"; then
+  if rbenv install "$ruby_version" --skip-existing; then
     rbenv shell "$ruby_version"
     log_info "Ruby ${ruby_version} installed."
     gem update --system
