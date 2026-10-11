@@ -8,8 +8,8 @@ log_info() {
 }
 
 reload_profile() {
-  [ -n "$ZSH_VERSION" ] && . "$HOME/.zshrc"
-  [ -n "$BASH" ] && . "$HOME/.profile"
+  [ -n "$ZSH_VERSION" ] && source "$HOME/.zshrc"
+  [ -n "$BASH" ] && source "$HOME/.profile"
 }
 
 symlink_dotfiles() {
