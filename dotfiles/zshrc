@@ -1,5 +1,15 @@
 #!/bin/zsh
 
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=50000 # Number of lines kept in session history
+SAVEHIST=100000 # Maximum number of lines in history file on disk
+
+# Use standard ISO 8601 timestamp.
+# %F equivalent to %Y-%m-%d
+# %T equivalent to %H:%M:%S (24-hours format)
+alias h="history -t '%F %T ' 1"
+alias hs="fc -n -l 1 | awk '{print \$1}' | sort | uniq -c | sort -n"
+
 # Case-insensitive globbing (used in pathname expansion)
 setopt NO_CASE_GLOB
 
@@ -9,11 +19,11 @@ setopt NO_CASE_GLOB
 setopt CORRECT
 
 setopt HIST_VERIFY
-setopt SHARE_HISTORY
+setopt SHARE_HISTORY # share history across multiple zsh sessions
 setopt EXTENDED_HISTORY # add timestamps to history
+setopt APPEND_HISTORY
 setopt INC_APPEND_HISTORY # adds history incrementally
 setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_REDUCE_BLANKS
 setopt HIST_NO_STORE # don't add history commands to history
 
