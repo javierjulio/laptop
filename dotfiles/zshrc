@@ -76,11 +76,6 @@ fi
   # fi
 # fi
 
-# Load grc (Terminal colorizer)
-if [ -f "$HOMEBREW_PREFIX/etc/grc.zsh" ]; then
-  source "$HOMEBREW_PREFIX/etc/grc.zsh"
-fi
-
 # Load 1Password auto complete
 if command -v op >/dev/null 2>&1; then
   eval "$(op completion zsh)"; compdef _op op

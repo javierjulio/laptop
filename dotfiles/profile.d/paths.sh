@@ -12,11 +12,13 @@ source_file() {
 if [ -n "$ZSH_VERSION" ]; then
   source_file "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.zsh.inc"
   source_file "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.zsh.inc"
+  source_file "$HOMEBREW_PREFIX/etc/grc.zsh"
 fi
 
 if [ -n "$BASH" ]; then
   source_file "$HOMEBREW_PREFIX/share/google-cloud-sdk/path.bash.inc"
   source_file "$HOMEBREW_PREFIX/share/google-cloud-sdk/completion.bash.inc"
+  source_file "$HOMEBREW_PREFIX/etc/grc.bashrc"
 fi
 
 unset -f source_file

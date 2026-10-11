@@ -20,12 +20,6 @@ if [ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]; then
   __git_complete g __git_main
 fi
 
-# Load grc (Terminal colorizer)
-if [ -f "$HOMEBREW_PREFIX/etc/grc.bashrc" ]; then
-  # shellcheck disable=SC1091
-  source "$HOMEBREW_PREFIX/etc/grc.bashrc"
-fi
-
 for profile_config in "$HOME"/.profile.d/*.sh
 do
   # shellcheck disable=SC1090
