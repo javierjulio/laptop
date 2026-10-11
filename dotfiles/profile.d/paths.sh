@@ -1,6 +1,7 @@
 #!/bin/sh
 
 export EDITOR="code --wait"
+export GREP_OPTIONS="--color=auto"
 
 source_file() {
   if [ -f "$1" ]; then
