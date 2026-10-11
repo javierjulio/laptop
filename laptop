@@ -32,11 +32,27 @@ setup_homebrew() {
   fi
 }
 
-add_login_window_text() {
-  local name phone email
-  echo "macOS: Answer prompts for Lock Screen message (requires password)"
-  printf 'Enter phone: ' && read phone
-  printf 'Enter email: ' && read email
+ensure_macos_login_window_text() {
+  local phone email confirmation
+
+  if defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText &>/dev/null; then
+    return
+  fi
+
+  echo "Answer for macOS Lock Screen message"
+
+  while true; do
+    printf 'Enter phone: ' && read -r phone
+    printf 'Is "%s" correct? [y/N] ' "$phone" && read -r confirmation
+    [[ "$confirmation" == [yY] ]] && break
+  done
+
+  while true; do
+    printf 'Enter email: ' && read -r email
+    printf 'Is "%s" correct? [y/N] ' "$email" && read -r confirmation
+    [[ "$confirmation" == [yY] ]] && break
+  done
+
   sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \
     "$(printf "Found this computer?\nPhone: $phone\nEmail: $email")"
 }
@@ -104,7 +120,7 @@ defaults write com.apple.TextEdit NSFixedPitchFont -string "Menlo-Regular"
 # TextEdit: Set larger font size
 defaults write com.apple.TextEdit NSFixedPitchFontSize -int 13
 
-defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText &>/dev/null || add_login_window_text
+ensure_macos_login_window_text
 
 log_info "Cloning GitHub projects."
 clone_project "javierjulio/javierjulio.github.io" "javierjulio"
