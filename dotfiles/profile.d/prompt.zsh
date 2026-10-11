@@ -5,8 +5,8 @@ colors
 
 setopt PROMPT_SUBST
 
-if [ -f "$(brew --prefix)/etc/bash_completion" ]; then
-  source "$(brew --prefix)/etc/bash_completion.d/git-prompt.sh"
+if [ -f "$HOMEBREW_PREFIX/etc/bash_completion" ]; then
+  source "$HOMEBREW_PREFIX/etc/bash_completion.d/git-prompt.sh"
 fi
 
 # The format is as follows if the git prompt is available.

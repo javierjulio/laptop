@@ -14,7 +14,7 @@ setup() {
 }
 
 @test "the EDITOR variable is set" {
-  source "dotfiles/profile.d/development.sh"
+  source "dotfiles/profile.d/paths.sh"
   run echo $EDITOR
   assert_success
   assert_output "code --wait"

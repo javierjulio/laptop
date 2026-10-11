@@ -6,21 +6,24 @@ shopt -s histappend
 # Case-insensitive globbing (used in pathname expansion)
 shopt -s nocaseglob
 
-brew_prefix="$(brew --prefix)"
+# Set PATH, MANPATH, etc., for Homebrew.
+if [ -f "/opt/homebrew/bin/brew" ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Load bash completion
-if [ -r "$brew_prefix/etc/profile.d/bash_completion.sh" ]; then
+if [ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]; then
   # shellcheck disable=SC1091
-  . "$brew_prefix/etc/profile.d/bash_completion.sh"
+  source "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh"
 
   # Set autocomplete for "g" git alias
   __git_complete g __git_main
 fi
 
 # Load grc (Terminal colorizer)
-if [ -f "$brew_prefix/etc/grc.bashrc" ]; then
+if [ -f "$HOMEBREW_PREFIX/etc/grc.bashrc" ]; then
   # shellcheck disable=SC1091
-  . "$brew_prefix/etc/grc.bashrc"
+  source "$HOMEBREW_PREFIX/etc/grc.bashrc"
 fi
 
 for profile_config in "$HOME"/.profile.d/*.sh
@@ -29,7 +32,7 @@ do
   source "$profile_config"
 done
 
-unset brew_prefix profile_config
+unset profile_config
 
 if [ ! -f "$HOME/.bash_local" ]; then
   touch "$HOME/.bash_local"
