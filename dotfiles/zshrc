@@ -27,34 +27,6 @@ if [ -f "/opt/homebrew/bin/brew" ]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
-# # Load bash completion
-# if [ -f "$brew_prefix/etc/bash_completion" ]; then
-  # shellcheck disable=SC1090
-  # source "$brew_prefix/etc/bash_completion.d/git-completion.bash"
-  # echo 'bash completion!'
-# if type brew &>/dev/null; then
-#   FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
-# fi
-
-# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-# autoload -U +X bashcompinit && bashcompinit
-# autoload -U +X compinit && compinit
-# source "$brew_prefix/etc/bash_completion.d/git-completion.bash"
-# source "$brew_prefix/etc/bash_completion.d/git-prompt.sh"
-# [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
-  # . "$brew_prefix/etc/bash_completion"
-  # __git_complete g _git
-  # Set autocomplete for "g" git alias
-  # __git_complete g __git_main
-# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-# fpath=(~/.zsh $fpath)
-
-  # Set autocomplete for "g" git alias
-  # __git_complete g __git_main
-
-# zstyle ':completion:*:*:git:*' script ~/.zsh/git-completion.bash
-# fpath=(~/.zsh $fpath)
-
 if type brew &>/dev/null; then
   FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
@@ -62,30 +34,10 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# autoload -Uz compinit && compinit
-
-  # [[ -f /usr/local/share/zsh/site-functions/_git ]] && \
-  #   rm  -f /usr/local/share/zsh/site-functions/_git
-
-  # source "/usr/local/share/zsh/site-functions/git-completion.bash"
-  # zstyle ':completion:*:*:git:*' script /usr/local/etc/bash_completion.d/git-completion.bash
-  # completion='$(brew --prefix)/share/zsh/site-functions/_git'
-  # if test -f $completion
-  # then
-    # source $completion
-  # fi
-# fi
-
 # Load 1Password auto complete
 if command -v op >/dev/null 2>&1; then
   eval "$(op completion zsh)"; compdef _op op
 fi
-
-# bindkey "^[f" forward-word
-# bindkey "^[b" backward-word
-# bindkey -e
-# bindkey '^[[1;9C' forward-word
-# bindkey '^[[1;9D' backward-word
 
 # Make tabbing autocomplete regardless of case. (https://superuser.com/a/1092328)
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
@@ -94,12 +46,9 @@ for profile_config in "$HOME"/.profile.d/*; do
   source "$profile_config"
 done
 
+unset profile_config
+
 if [ ! -f "$HOME/.zsh_local" ]; then
   touch "$HOME/.zsh_local"
 fi
 source "$HOME/.zsh_local"
-
-# compinit -u
-# bashcompinit
-
-unset profile_config
