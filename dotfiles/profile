@@ -20,8 +20,7 @@ if [ -r "$HOMEBREW_PREFIX/etc/profile.d/bash_completion.sh" ]; then
   __git_complete g __git_main
 fi
 
-for profile_config in "$HOME"/.profile.d/*.sh
-do
+for profile_config in "$HOME"/.profile.d/*.sh; do
   # shellcheck disable=SC1090
   source "$profile_config"
 done

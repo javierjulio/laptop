@@ -90,8 +90,7 @@ fi
 # Make tabbing autocomplete regardless of case. (https://superuser.com/a/1092328)
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-for profile_config in "$HOME"/.profile.d/*
-do
+for profile_config in "$HOME"/.profile.d/*; do
   source "$profile_config"
 done
 

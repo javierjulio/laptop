@@ -15,8 +15,7 @@ if [ "$#" -eq 0 ]; then
   exit 1
 fi
 
-while "$@"
-do
+while "$@"; do
   (( count++ ))
   echo
   echo "Run $count finished."
