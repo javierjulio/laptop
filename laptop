@@ -63,6 +63,17 @@ clone_project() {
   fi
 }
 
+setup_terminal_theme() {
+  local name
+  name=$(defaults read ~/Library/Preferences/com.apple.Terminal "Default Window Settings")
+  [[ "$name" == "$TERMINAL_PROFILE" ]] && return
+  log_info "Installing $TERMINAL_PROFILE Terminal theme..."
+  open "$(pwd)/themes/$TERMINAL_PROFILE.terminal"
+  sleep 1
+  osascript -e 'tell application "Terminal" to set default settings to settings set "'"$TERMINAL_PROFILE"'"'
+  osascript -e 'tell application "Terminal" to set startup settings to settings set "'"$TERMINAL_PROFILE"'"'
+}
+
 log_info "Running laptop script."
 symlink_dotfiles
 setup_homebrew
@@ -151,13 +162,8 @@ reload_profile
 setup-node 24.20.0
 nodenv global 24.20.0
 
-terminal_theme=$(defaults read ~/Library/Preferences/com.apple.Terminal.plist "Default Window Settings")
-if [ "$terminal_theme" != "$TERMINAL_PROFILE" ]; then
-  log_info "Installing $TERMINAL_PROFILE Terminal theme..."
-  open "$(pwd)/themes/$TERMINAL_PROFILE.terminal"
-  sleep 1
-  osascript -e 'tell application "Terminal" to set default settings to settings set "'"$TERMINAL_PROFILE"'"'
-  osascript -e 'tell application "Terminal" to set startup settings to settings set "'"$TERMINAL_PROFILE"'"'
-fi
+reload_profile
+
+setup_terminal_theme
 
 log_info "Done"
