@@ -33,11 +33,8 @@ setup_homebrew() {
 }
 
 ensure_macos_login_window_text() {
-  local phone email confirmation
-
-  if defaults read /Library/Preferences/com.apple.loginwindow LoginwindowText &>/dev/null; then
-    return
-  fi
+  local phone email confirmation domain="/Library/Preferences/com.apple.loginwindow" key="LoginwindowText"
+  [[ $(defaults read "$domain" "$key") ]] && return
 
   echo "Answer for macOS Lock Screen message"
 
@@ -53,8 +50,8 @@ ensure_macos_login_window_text() {
     [[ "$confirmation" == [yY] ]] && break
   done
 
-  sudo defaults write /Library/Preferences/com.apple.loginwindow LoginwindowText \
-    "$(printf "Found this computer?\nPhone: $phone\nEmail: $email")"
+  sudo defaults write "$domain" "$key" \
+    "$(printf "Found this computer?\nPhone: %s\nEmail: %s" "$phone" "$email")"
 }
 
 clone_project() {
