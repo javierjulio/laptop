@@ -19,8 +19,7 @@ common_setup() {
   (
     cd dotfiles || exit
 
-    for dotfile in *
-    do
+    for dotfile in *; do
       ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
     done
   )
