@@ -25,7 +25,7 @@ install_node() {
   nodenv install "$node_version" --skip-existing
   nodenv shell "$node_version"
   log_info "Node ${node_version} installed."
-  npm install -g npm yarn @openai/codex
+  npm install -g npm corepack @openai/codex
 }
 
 if [ "$#" -eq 1 ]; then
