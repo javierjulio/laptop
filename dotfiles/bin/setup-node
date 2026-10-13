@@ -20,15 +20,19 @@ log_info() {
 }
 
 install_node() {
-  node_version="$1"
+  local node_version="$1"
+  if nodenv versions --bare | grep -Fxq -- "$node_version"; then
+    log_info "Node ${node_version} already installed."
+    return
+  fi
+
   log_info "Installing Node ${node_version}."
-  nodenv install "$node_version" --skip-existing
+  nodenv install "$node_version"
   nodenv shell "$node_version"
   log_info "Node ${node_version} installed."
   npm install -g npm corepack @openai/codex
 }
 
 if [ "$#" -eq 1 ]; then
-  log_info "Running Node setup."
   install_node "$1"
 fi
