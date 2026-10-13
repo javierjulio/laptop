@@ -19,12 +19,16 @@ log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
 
-export RUBY_CONFIGURE_OPTS="--disable-install-doc"
-
 install_ruby() {
-  ruby_version="$1"
+  local ruby_version="$1"
+  if rbenv versions --bare | grep -Fxq -- "$ruby_version"; then
+    log_info "Ruby ${ruby_version} already installed."
+    return
+  fi
+
+  export RUBY_CONFIGURE_OPTS="--disable-install-doc"
   log_info "Installing Ruby ${ruby_version}."
-  rbenv install "$ruby_version" --skip-existing
+  rbenv install "$ruby_version"
   rbenv shell "$ruby_version"
   log_info "Ruby ${ruby_version} installed."
   gem update --system
@@ -33,6 +37,5 @@ install_ruby() {
 }
 
 if [ "$#" -eq 1 ]; then
-  log_info "Running Ruby setup."
   install_ruby "$1"
 fi
