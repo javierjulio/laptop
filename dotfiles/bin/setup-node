@@ -12,9 +12,6 @@ if [ "$#" -eq 0 ]; then
   exit 1
 fi
 
-# shellcheck disable=SC1090
-source "$HOME/.zshrc" # needed for `nodenv shell` usage
-
 log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
@@ -28,6 +25,7 @@ install_node() {
 
   log_info "Installing Node ${node_version}."
   nodenv install "$node_version"
+  eval "$(nodenv init -)" # required for `nodenv shell` to work
   nodenv shell "$node_version"
   log_info "Node ${node_version} installed."
   npm install -g npm corepack @openai/codex
