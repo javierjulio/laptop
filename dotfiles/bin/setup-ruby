@@ -12,9 +12,6 @@ if [ "$#" -eq 0 ]; then
   exit 1
 fi
 
-# shellcheck disable=SC1090
-source "$HOME/.zshrc" # needed for `rbenv shell` usage
-
 log_info() {
   echo "$(date +%H:%M:%S) - $1"
 }
@@ -29,6 +26,7 @@ install_ruby() {
   export RUBY_CONFIGURE_OPTS="--disable-install-doc"
   log_info "Installing Ruby ${ruby_version}."
   rbenv install "$ruby_version"
+  eval "$(rbenv init -)" # required for `rbenv shell` to work
   rbenv shell "$ruby_version"
   log_info "Ruby ${ruby_version} installed."
   gem update --system
