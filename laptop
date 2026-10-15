@@ -32,6 +32,19 @@ setup_homebrew() {
   fi
 }
 
+ensure_macos_immediate_screen_lock() {
+  local result immediate="screenLock delay is immediate"
+  [[ $(sysadminctl -screenLock status 2>&1) == *"$immediate"* ]] && return
+
+  # the `-` usage makes sysadminctl prompt for password without echoing it
+  sysadminctl -screenLock immediate -password - >/dev/null 2>&1
+  result=$?
+
+  if (( result != 0 )) || [[ "$(sysadminctl -screenLock status 2>&1)" != *"$immediate"* ]]; then
+    echo "Unable to set macOS screen lock delay to immediate."
+  fi
+}
+
 ensure_macos_login_window_text() {
   local phone email confirmation domain="/Library/Preferences/com.apple.loginwindow" key="LoginwindowText"
   [[ $(defaults read "$domain" "$key") ]] && return
@@ -132,6 +145,7 @@ defaults write com.apple.TextEdit NSFixedPitchFont -string "Menlo-Regular"
 # TextEdit: Set larger font size
 defaults write com.apple.TextEdit NSFixedPitchFontSize -int 13
 
+ensure_macos_immediate_screen_lock
 ensure_macos_login_window_text
 
 log_info "Cloning GitHub projects."
