@@ -95,6 +95,9 @@ osascript -e 'tell application "System Preferences" to quit'
 # Finder: Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# Menu Bar: Enable the Bluetooth icon
+defaults -currentHost write com.apple.controlcenter Bluetooth -int 18
+
 # Dock: Automatically hide and show Dock
 defaults write com.apple.dock autohide -bool true
 # Dock: Don’t show recent applications in Dock
