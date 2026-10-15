@@ -9,7 +9,6 @@ Thoughtbot's [Ruby guide to Mac OSX development](http://robots.thoughtbot.com/po
 * `git clone https://javierjulio@github.com/javierjulio/laptop.git ~/Projects/laptop`
 * `cd ~/Projects/laptop && ./laptop`
 * Open Keychain Access and delete matching GitHub PAT login item
-* Running `git push` should prompt for login using [Git Credential Manager](https://github.com/GitCredentialManager/git-credential-manager)
 * [Enable Settings Sync in Visual Studio Code](https://code.visualstudio.com/docs/editor/settings-sync) using GitHub login
 * `brew doctor` to verify setup
 
