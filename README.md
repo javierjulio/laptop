@@ -26,6 +26,7 @@ Run tests: `bats -r test`
 
 ## Resources
 
+* https://github.com/yuzhoumo/macos-configs
 * Setting macOS defaults using CLI: https://lapcatsoftware.com/articles/containers.html
 * https://github.com/jamesdh/dotfiles/blob/master/bootstrap.sh
 * https://github.com/gibfahn/dot/blob/main/helpers/setup.sh
