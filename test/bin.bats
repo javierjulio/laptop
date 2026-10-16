@@ -4,7 +4,17 @@ load test_helper
 
 setup() {
   common_setup
-  source "dotfiles/profile.d/paths.sh"
+}
+
+@test "ensure HOME is now the TMP_DIR path" {
+  run echo "$HOME"
+  assert_equal "$TMP_DIR" "$HOME"
+}
+
+@test "first path in PATH is now TMP_DIR/.bin and it exists" {
+  run echo "${PATH%%:*}"
+  assert_output "${TMP_DIR}/.bin"
+  assert [ -d "${lines[0]}" ]
 }
 
 @test "urls: with no input or file, it fails with error message" {
@@ -94,13 +104,12 @@ setup() {
   assert_output "${TMP_DIR}/.bin/delete-ds-store"
 }
 
-@test "paths will display each path from PATH variable on a new line" {
+@test "paths displays each path in PATH on a new line" {
   run paths
   assert_success
   assert_line_match 0 "([^\/]*[\/])*[^\/]+"
-  assert [ -d "${lines[0]}" ]
   assert_line_match 1 "([^\/]*[\/])*[^\/]+"
-  assert [ -d "${lines[1]}" ]
+  assert_line_match 2 "([^\/]*[\/])*[^\/]+"
 }
 
 @test "start-development displays an error if no server related file found" {

@@ -15,7 +15,6 @@ create_tmp_file() {
 common_setup() {
   mkdir -p "$TMP_DIR"
   export HOME="${TMP_DIR}"
-  # Create dotfiles symlinks in tmp dir
   (
     cd dotfiles || exit
 
@@ -23,6 +22,8 @@ common_setup() {
       ln -nsf "${PWD}/${dotfile}" "${HOME}/.${dotfile}"
     done
   )
+  source "${TMP_DIR}/.profile.d/paths.sh"
+  export PATH="${TMP_DIR}/.bin:$PATH"
 }
 
 teardown() {
