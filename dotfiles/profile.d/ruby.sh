@@ -12,8 +12,8 @@ alias berc='bin/rails console'
 alias berdm='bin/rails db:migrate && bin/rails db:migrate RAILS_ENV=test'
 alias rl='tail -f log/development.log'
 
-# Always output Ruby deprecation warnings
-export RUBYOPT="-W:deprecated"
-
-# Use VS Code when opening a gem
+# Open gem source code in Visual Studio Code
 export BUNDLER_EDITOR="code"
+
+# Output Ruby deprecation warnings
+export RUBYOPT="-W:deprecated"
