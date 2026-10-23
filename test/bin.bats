@@ -58,10 +58,12 @@ setup() {
   assert_output "${TMP_DIR}/.bin/shellcheck.sh"
 }
 
-@test "local-ip displays your local IP address" {
+@test "local-ip displays your local IP addresses" {
   run local-ip
-  assert_success
-  assert_output_match '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'
+  assert [ "${#lines[@]}" -gt 0 ]
+  for index in "${!lines[@]}"; do
+    assert_line_match "$index" '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'
+  done
 }
 
 @test "local-ip runs from tmp directory due to PATH" {
