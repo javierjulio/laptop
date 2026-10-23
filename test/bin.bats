@@ -117,3 +117,21 @@ setup() {
   assert_failure
   assert_output "Error: No dev server found. Looking for a Procfile.docker, Procfile.dev, Procfile or package.json file."
 }
+
+@test "repeat-until-exit repeats successful commands and stops on failure" {
+  run repeat-until-exit bash -c 'echo attempt >> "$1"; [ "$(wc -l < "$1")" -lt 3 ]' _ "${TMP_DIR}/attempts"
+
+  assert_success
+  assert_line "Run 1 finished."
+  assert_line "Run 2 finished."
+  assert_line "Exited after 2 times."
+  assert_equal 3 "$(wc -l < "${TMP_DIR}/attempts" | tr -d ' ')"
+}
+
+@test "repeat-until-exit stops at the maximum iteration count" {
+  run repeat-until-exit true
+
+  assert_success
+  assert_line "Run 500 finished."
+  assert_line "Max iteration of 500 reached."
+}
