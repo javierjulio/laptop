@@ -15,5 +15,8 @@ alias rl='tail -f log/development.log'
 # Open gem source code in Visual Studio Code
 export BUNDLER_EDITOR="code"
 
+# Use plain IRB for Rails console
+export DISABLE_PRY_RAILS="1"
+
 # Output Ruby deprecation warnings
 export RUBYOPT="-W:deprecated"
