@@ -137,3 +137,13 @@ setup() {
   assert_line "Run 500 finished."
   assert_line "Max iteration of 500 reached."
 }
+
+@test "executable makes a file executable" {
+  source "${TMP_DIR}/.profile.d/functions.sh"
+  create_tmp_file "tool"
+
+  run executable "${TMP_DIR}/tool"
+
+  assert_success
+  assert [ -x "${TMP_DIR}/tool" ]
+}
