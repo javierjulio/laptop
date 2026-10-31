@@ -17,6 +17,15 @@ setup() {
   assert [ -d "${lines[0]}" ]
 }
 
+@test "paths displays PATH entries in order" {
+  run /usr/bin/env PATH="/first:/second:/usr/bin" /bin/bash "${SCRIPT_ROOT}/dotfiles/bin/paths"
+
+  assert_success
+  assert_line "/first"
+  assert_line "/second"
+  assert_line "/usr/bin"
+}
+
 @test "urls: with no input or file, it fails with error message" {
   [ "$CI" = "true" ] && skip "this fails on CI due to [-t 0] check"
 
