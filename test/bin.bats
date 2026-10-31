@@ -138,6 +138,19 @@ setup() {
   assert_line "Max iteration of 500 reached."
 }
 
+@test "search finds matching files in the current directory" {
+  source "${TMP_DIR}/.profile.d/functions.sh"
+  mkdir -p "${TMP_DIR}/search"
+  printf 'needle\n' > "${TMP_DIR}/search/matches.txt"
+  printf 'other\n' > "${TMP_DIR}/search/does-not-match.txt"
+  cd "${TMP_DIR}/search"
+
+  run search needle
+
+  assert_success
+  assert_output "./matches.txt"
+}
+
 @test "executable makes a file executable" {
   source "${TMP_DIR}/.profile.d/functions.sh"
   create_tmp_file "tool"
