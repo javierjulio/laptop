@@ -26,6 +26,22 @@ setup() {
   assert_line "/usr/bin"
 }
 
+@test "setup-node reports usage when no version is provided" {
+  run setup-node
+
+  assert_failure
+  assert_line "Error: Missing or invalid version."
+  assert_line "Usage: setup-node <version>"
+}
+
+@test "setup-ruby reports usage when no version is provided" {
+  run setup-ruby
+
+  assert_failure
+  assert_line "Error: Missing or invalid version."
+  assert_line "Usage: setup-ruby <version>"
+}
+
 @test "urls: with no input or file, it fails with error message" {
   [ "$CI" = "true" ] && skip "this fails on CI due to [-t 0] check"
 
