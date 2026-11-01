@@ -3,7 +3,7 @@
 set -e
 
 if [ -f ./bin/rails ]; then
-  ( set -x; ./bin/rails log:clear; ./bin/rails db:migrate )
+  ( set -x; ./bin/rails log:clear db:migrate )
 fi
 
 if [ -f ./Procfile.docker ]; then
