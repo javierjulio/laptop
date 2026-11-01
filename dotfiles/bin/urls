@@ -13,14 +13,18 @@ if [ -z "$1" ] && [ -t 0 ]; then
 fi
 
 find_urls() {
-  grep -E -o 'https?://[^ ]+'
+  grep -E -o 'https?://[^[:space:]]+' | sed -E 's/[.,;:!?]+$//'
 }
 
 remove_duplicates() {
   nl | sort -uk2 | sort -nk1 | cut -f2-
 }
 
-urls=$(cat < "${1:-/dev/stdin}" | find_urls | remove_duplicates)
+extract_urls() {
+  find_urls | remove_duplicates
+}
+
+urls=$(cat < "${1:-/dev/stdin}" | extract_urls)
 
 if [ -z "$urls" ]; then
   echo "urls: no URLs found"
