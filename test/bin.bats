@@ -142,7 +142,7 @@ setup() {
 @test "start-development displays an error if no server related file found" {
   run start-development
   assert_failure
-  assert_output "Error: No dev server found. Looking for a Procfile.docker, Procfile.dev, Procfile or package.json file."
+  assert_output "Error: No dev server found. Looking for a Procfile.dev, Procfile or package.json file."
 }
 
 @test "repeat-until-exit repeats successful commands and stops on failure" {
