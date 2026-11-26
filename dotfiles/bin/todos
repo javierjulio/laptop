@@ -21,7 +21,7 @@ grep -rn -EI "TODO|FIXME|HACK" \
   --exclude-dir=log \
   --exclude-dir=.vscode . |
   # prints: file path on 1st line, then line number and search match on 2nd line
-  awk -F: '{ printf "\n"; print $1; printf("%4s:%s%s", $2, $3, $4); printf "\n"; }' |
+  awk -F: '{ file = $1; line = $2; sub(/^[^:]*:[^:]*:/, ""); printf "\n%s\n%4s:%s\n", file, line, $0 }' |
   # Colorize search results (by default looks in ~/.grc)
   grcat conf.todos |
   # Remove all leading whitepsace from match line
