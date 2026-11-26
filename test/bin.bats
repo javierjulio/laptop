@@ -43,7 +43,7 @@ setup() {
 }
 
 @test "urls: with no input or file, it fails with error message" {
-  [ "$CI" = "true" ] && skip "this fails on CI due to [-t 0] check"
+  [ -t 0 ] || skip "requires stdin to be a terminal due to [-t 0] check"
 
   run urls
   assert_failure
