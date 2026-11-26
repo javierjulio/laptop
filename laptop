@@ -47,7 +47,7 @@ ensure_macos_immediate_screen_lock() {
 
 ensure_macos_login_window_text() {
   local phone email confirmation domain="/Library/Preferences/com.apple.loginwindow" key="LoginwindowText"
-  [[ $(defaults read "$domain" "$key") ]] && return
+  [[ $(defaults read "$domain" "$key" 2>/dev/null) ]] && return
 
   echo "Answer for macOS Lock Screen message"
 
