@@ -2,10 +2,8 @@
 
 require 'irb'
 require 'irb/completion'
-require 'rubygems'
 
 IRB.conf[:AUTO_INDENT] = true # Ruby 2.7: true is new default https://bit.ly/2IYxNqc
-IRB.conf[:USE_READLINE] = true
 IRB.conf[:PROMPT_MODE] = :SIMPLE # Use `>>` for prompt.
 IRB.conf[:SAVE_HISTORY] = 1000
 
