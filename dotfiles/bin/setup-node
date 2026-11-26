@@ -6,7 +6,7 @@
 
 set -e
 
-if [ "$#" -eq 0 ]; then
+if [ "$#" -ne 1 ]; then
   echo "Error: Missing or invalid version."
   echo "Usage: setup-node <version>"
   exit 1
@@ -31,6 +31,4 @@ install_node() {
   npm install -g npm corepack @openai/codex
 }
 
-if [ "$#" -eq 1 ]; then
-  install_node "$1"
-fi
+install_node "$1"
