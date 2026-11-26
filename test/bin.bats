@@ -114,7 +114,8 @@ setup() {
   create_tmp_file "sub/.DS_Store"
   create_tmp_file "sub/sub/.DS_Store"
 
-  run cd $TMP_DIR && delete-ds-store
+  cd "$TMP_DIR"
+  run delete-ds-store
 
   assert_success
   assert [ -d "${TMP_DIR}" ]
